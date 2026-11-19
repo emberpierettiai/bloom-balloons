@@ -1,6 +1,6 @@
 # Bloom Balloons: estado do projeto (19 nov 2026)
 
-Site de teste publicado: https://emberpierettiai.github.io/bloom-balloons/
+Site publicado: https://shopbloomballoons.com (GitHub Pages, dominio no GoDaddy). Espelho: https://emberpierettiai.github.io/bloom-balloons/
 Site oficial (pausado no Netlify da dona): https://shopbloomballoons.com
 
 ## Como reconstruir
@@ -14,7 +14,7 @@ Os arquivos na raiz do repositório são gerados. As fontes ficam nesta pasta `s
 - `src/shop.js`: loja (categorias, produto, carrinho, pedido por texto). `src/*.css`: estilos.
 - `src/img-extra/`: imagens novas. As fotos originais já estão em `assets/img/` na raiz.
 - A primeira execução precisa de `assets/img` dentro da pasta de saída: copie `assets/img` da raiz para `/tmp/bloom-site/assets/img` antes de rodar.
-- `pages_copy.py` copia o resultado para a raiz e marca as páginas com `noindex`. Na versão oficial o `noindex` não deve existir.
+- `pages_copy.py` copia o resultado para a raiz e grava o arquivo `CNAME` (dominio proprio). NAO adicionar `noindex`: o site e o oficial.
 
 ## O que já está feito
 - Estrutura de loja inspirada em ready4yourparty.com: início, categorias, produto, carrinho, busca, filtros.
