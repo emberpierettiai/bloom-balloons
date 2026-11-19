@@ -38,7 +38,7 @@
    "t": "unit",
    "from": 55
   },
-  "xmasset": {
+  "set35": {
    "t": "unit",
    "from": 35
   }
@@ -587,12 +587,13 @@
    "k": [
     "hel-xmas-gingerbread"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Gingerbread, tree and snowman balloon set",
    "es": "Set de globos de galleta de jengibre, árbol y muñeco de nieve",
    "occ": [
     "seasonal"
-   ]
+   ],
+   "av": true
   },
   {
    "id": "christmas-friends-balloon-set",
@@ -603,12 +604,13 @@
    "k": [
     "hel-xmas-faces"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Christmas friends balloon set",
    "es": "Set de globos de amigos navideños",
    "occ": [
     "seasonal"
-   ]
+   ],
+   "av": true
   },
   {
    "id": "christmas-snowman-balloon-set",
@@ -619,12 +621,13 @@
    "k": [
     "hel-xmas-snowman"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Snowman, stocking and peppermint balloon set",
    "es": "Set de globos de muñeco de nieve, bota y caramelo",
    "occ": [
     "seasonal"
-   ]
+   ],
+   "av": true
   },
   {
    "id": "christmas-reindeer-balloon-set",
@@ -635,12 +638,13 @@
    "k": [
     "hel-xmas-reindeer"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Reindeer with gift box balloon set",
    "es": "Set de globos de reno con caja de regalo",
    "occ": [
     "seasonal"
-   ]
+   ],
+   "av": true
   },
   {
    "id": "christmas-santa-balloon-set",
@@ -651,12 +655,13 @@
    "k": [
     "hel-xmas-santa"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Santa Claus balloon set",
    "es": "Set de globos de Papá Noel",
    "occ": [
     "seasonal"
-   ]
+   ],
+   "av": true
   },
   {
    "id": "christmas-orb-balloon-set",
@@ -667,9 +672,146 @@
    "k": [
     "hel-xmas-orbs"
    ],
-   "pr": "xmasset",
+   "pr": "set35",
    "en": "Red, green and gold orb balloon set",
    "es": "Set de globos orbe rojo, verde y dorado",
+   "occ": [
+    "seasonal"
+   ],
+   "av": true
+  },
+  {
+   "id": "valentines-ruby-champagne-set",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-ruby-champagne"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Red and champagne heart balloon set",
+   "es": "Set de globos corazón rojo y champán",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-ruby-trio-set",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-ruby-trio"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Red heart balloon trio",
+   "es": "Trío de globos corazón rojo",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-jumbo-heart",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-jumbo-heart"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Oversized red heart balloon",
+   "es": "Globo corazón rojo gigante",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-message-hearts-set",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-pastel-message"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Valentine's message heart balloon set",
+   "es": "Set de globos corazón con mensaje de San Valentín",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-open-heart-set",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-open-heart"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Open heart and message balloon set",
+   "es": "Set de globos corazón calado y con mensaje",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-iloveyou-letters",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-iloveyou-letters"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“I love you” letter balloon display",
+   "es": "Globos de letras “I love you”",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-pastel-trio",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-pastel-trio"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Pastel and iridescent heart balloon trio",
+   "es": "Trío de globos corazón pastel e iridiscente",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "valentines-teddy-balloon",
+   "cat": "helium",
+   "ht": [
+    "valentines"
+   ],
+   "k": [
+    "hel-val-teddy"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“I love you” teddy bear balloon",
+   "es": "Globo de osito “I love you”",
    "occ": [
     "seasonal"
    ]
@@ -792,6 +934,18 @@
     "#A9CBEA",
     "#F6EDE4"
    ]
+  },
+  {
+   "id": "valentines",
+   "big": true,
+   "en": "Valentine's Day",
+   "es": "San Valentín",
+   "c": [
+    "#C8414B",
+    "#EE9FB3",
+    "#E2C17E"
+   ],
+   "k": "hel-val-ruby-champagne"
   },
   {
    "id": "love",
