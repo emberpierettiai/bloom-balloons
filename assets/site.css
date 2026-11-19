@@ -328,3 +328,13 @@ section.sec{padding:34px 0 30px}
 #p-msg a{text-underline-offset:3px}
 .story h2,.faq+*,#faq h2{text-align:left}
 @media(max-width:560px){.tiles.big .tile span{font-size:1.2rem;padding:46px 12px 12px}.tile span{font-size:1.15rem;padding:40px 12px 12px;overflow-wrap:anywhere}}
+/* ---- home category row: illustrated cards (holiday icon set) ---- */
+#tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+@media(max-width:1000px){#tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){#tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.itile{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 10px 14px;background:#FBF6EC;border:5px solid #9FB28C;border-radius:30px;text-decoration:none;color:#3F2A22;box-shadow:inset 0 0 0 3px rgba(255,255,255,.75),inset 0 -10px 16px rgba(159,178,140,.16),0 6px 14px rgba(107,74,63,.10);transition:transform .2s,box-shadow .2s}
+.itile:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 3px rgba(255,255,255,.75),inset 0 -10px 16px rgba(159,178,140,.16),0 10px 22px rgba(107,74,63,.16)}
+.itile .art{display:block;position:relative;width:100%;aspect-ratio:1/1}
+.itile .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.itile .lbl{display:flex;align-items:center;justify-content:center;min-height:2.2em;text-align:center;font:400 1.3rem/1.08 var(--disp);text-transform:uppercase;letter-spacing:.03em}
+@media(max-width:520px){.itile{border-width:4px;border-radius:24px}.itile .lbl{font-size:1.2rem}}
