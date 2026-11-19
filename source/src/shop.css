@@ -1,0 +1,68 @@
+
+/* ---- shop: category, product, cart ---- */
+.cartl{position:relative}
+.cart-n{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--choc);color:var(--off);font:600 .72rem/20px "DM Sans",sans-serif;text-align:center}
+.page{padding-top:28px;padding-bottom:84px;min-height:60vh}
+.crumbs{font-size:.85rem;margin-bottom:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.crumbs a{text-underline-offset:3px}.crumbs i{opacity:.5;font-style:normal}.crumbs span{opacity:.75}
+.ph1{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:.5rem}
+.cat-pr{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));max-width:760px;margin:18px 0 0}
+.ph.car .trk>a{flex:0 0 100%;scroll-snap-align:center;display:block;height:100%}
+.ph.car .trk>a img{width:100%;height:100%;object-fit:cover;display:block}
+.card h3 a{text-decoration:none}.card h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+a.gtg-ph{display:block}
+.pcard .ph{aspect-ratio:1/1}
+.pcard .gtg-ph svg{object-fit:contain}
+.pprice{font:500 1.05rem "Playfair Display",Georgia,serif!important}
+.gtg-teaser{margin-top:22px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.gtg-teaser .ph{aspect-ratio:4/3;height:100%}
+@media(max-width:760px){.gtg-teaser{grid-template-columns:1fr}}
+/* product */
+.pwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+@media(max-width:860px){.pwrap{grid-template-columns:1fr;gap:24px}}
+.pgal .ph{border-radius:18px;aspect-ratio:1/1;border:1px solid var(--champ)}
+.pgal .gtg-ph{aspect-ratio:4/3}
+.pmain .nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,254,251,.92);color:var(--choc);font-size:24px;line-height:1;cursor:pointer;z-index:3}
+.pmain .prev{left:10px}.pmain .next{right:10px}
+.thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.thumbs button{width:72px;height:72px;padding:0;border:2px solid transparent;border-radius:12px;overflow:hidden;cursor:pointer;background:var(--cream)}
+.thumbs button[aria-pressed=true]{border-color:var(--choc)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.pinfo{display:flex;flex-direction:column;gap:12px}
+.pinfo p{margin:0}
+.pbig{font:500 1.5rem "Playfair Display",Georgia,serif}
+.pbig small{font:400 .9rem "DM Sans",sans-serif;opacity:.8}
+.shown{font-size:.9rem;opacity:.85}
+.popts{display:grid;gap:14px}
+.qty{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:500}
+.qty>div{display:inline-flex;align-items:center;border:1.5px solid var(--champ);border-radius:999px;background:var(--off)}
+.qty button{width:44px;height:44px;border:0;background:none;color:var(--choc);font-size:1.2rem;cursor:pointer;border-radius:50%}
+.qty output{min-width:30px;text-align:center;font-weight:600}
+.qty.sm{gap:12px;margin-top:6px}.qty.sm button{width:36px;height:36px}
+.btn.big{padding:.95rem 1.7rem;font-size:1rem}
+#p-msg,#co-msg{font-weight:500;min-height:1.4em;margin:0}
+.also{margin-top:72px;font-size:clamp(1.6rem,3vw,2.2rem)}
+/* cart */
+.cwrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;align-items:start;margin-top:24px}
+@media(max-width:900px){.cwrap{grid-template-columns:1fr}}
+.clist{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:14px}
+.clist li{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:14px;align-items:start;padding:14px;border:1px solid var(--champ);border-radius:16px;background:var(--off)}
+.cth{width:84px;height:84px;border-radius:12px;overflow:hidden;background:var(--sage);display:block}
+.cth img{width:100%;height:100%;object-fit:cover;display:block}
+.cinf{display:flex;flex-direction:column;gap:4px;min-width:0}.cinf a{text-decoration:none}.cinf small{opacity:.85;overflow-wrap:anywhere}
+.cpr{font:500 1rem "Playfair Display",Georgia,serif;white-space:nowrap}
+@media(max-width:520px){.clist li{grid-template-columns:64px minmax(0,1fr)}.cth{width:64px;height:64px}.cpr{grid-column:2}}
+.lnk{background:none;border:0;padding:8px 4px;color:var(--choc);font:500 .85rem "DM Sans",sans-serif;text-decoration:underline;cursor:pointer}
+#cof{margin-top:0}#cof h2{grid-column:1/-1;font-size:1.9rem;margin:0}
+.fulf{border:0;padding:0;margin:0;min-width:0;display:flex;flex-wrap:wrap;gap:10px}
+.fulf legend{font-size:.88rem;font-weight:600;padding:0;margin-bottom:8px}
+.fulf label{position:relative;flex:1 1 140px;cursor:pointer}
+.fulf input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.fulf span{display:block;text-align:center;padding:.8rem 1rem;border:1.5px solid var(--champ);border-radius:12px;font-size:.95rem;font-weight:600;background:var(--off)}
+.fulf input:checked+span{background:var(--choc);border-color:var(--choc);color:var(--off)}
+.fulf input:focus-visible+span{outline:3px solid var(--choc);outline-offset:3px}
+[hidden]{display:none!important}
+.ph.car .trk{width:100%}
+.qty .lnk{width:auto;height:auto;font-size:.85rem;border-radius:6px;padding:8px 4px}
+.cth.gtg{display:grid;place-items:center;background:var(--cream);border:1px solid var(--champ)}
+.cth.gtg svg{width:54px;height:54px}

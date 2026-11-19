@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloom Balloons | Balloon Arches, Sculptures & Bouquets in South Florida</title>
+<meta name="description" content="Balloon arches, garlands, sculptures and helium bouquets in South Florida. Beautiful Balloons. Unforgettable Moments.">
+<link rel="icon" href="assets/img/logo.jpg">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--off:#FFFEFB;--cream:#FFF9F6;--champ:#EED9C6;--sage:#C8D6C0;--olive:#A6B597;--choc:#6B4A3F;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--off);color:var(--choc);font:400 16px/1.65 "DM Sans",system-ui,sans-serif}
+img{max-width:100%}
+h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1;margin:0}
+h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:1.15rem;margin:0 0 .4rem}
+h1{font-size:clamp(2.6rem,6.5vw,4.8rem)}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:.6rem}
+p{margin:0 0 1rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--choc);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.alt{background:var(--cream)}
+.sage{background:var(--sage)}
+.lead{max-width:60ch;font-size:1.08rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid var(--choc);font:600 .95rem "DM Sans",sans-serif;text-decoration:none;cursor:pointer;background:transparent;color:var(--choc);transition:background .2s,color .2s}
+.btn.pri{background:var(--choc);color:var(--off)}
+.btn:hover{background:var(--champ);color:var(--choc)}
+.btn.pri:hover{background:#563a31;color:var(--off)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,254,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--champ)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--off);z-index:21}
+.bar{display:flex;align-items:center;gap:18px;height:74px}
+.bar img{height:58px;width:auto;display:block}
+nav{display:flex;gap:18px;margin-left:auto;font-size:.92rem;white-space:nowrap}
+nav a{text-decoration:none;padding:6px 0;border-bottom:1.5px solid transparent}
+nav a:hover{border-color:var(--olive)}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{white-space:nowrap}.lang button{background:none;border:0;font:600 .85rem "DM Sans";color:var(--choc);cursor:pointer;padding:6px;opacity:.55}
+.lang button[aria-pressed=true]{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.ic{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--champ);display:grid;place-items:center}
+.ic svg{width:18px;height:18px;fill:var(--choc)}
+.burger{display:none;background:none;border:1.5px solid var(--champ);border-radius:8px;width:42px;height:42px;cursor:pointer;color:var(--choc);font-size:1.3rem}
+@media(max-width:1180px){
+ nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--off);padding:14px 22px 22px;border-bottom:1px solid var(--champ);gap:6px}
+ nav.open{display:flex}nav a{padding:10px 0}
+ .burger{display:block;margin-left:auto}.tools{margin-left:0}.bar{gap:10px}.hide-m{display:none}
+}
+/* hero */
+.hero{padding:56px 0 84px;background:linear-gradient(180deg,var(--cream),var(--off))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero .sub{font:500 1.15rem "Playfair Display",serif;margin:1.2rem 0 .8rem}
+.hero .tag{font-size:.9rem;opacity:.8;margin-bottom:1.6rem}
+.ph{position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;background:var(--sage);display:grid;place-items:center;text-align:center;color:var(--choc)}
+.ph span{position:relative;z-index:2;font-size:.85rem;background:rgba(255,254,251,.85);padding:6px 12px;border-radius:999px;margin:0 12px}
+.ph i{position:absolute;border-radius:50%;opacity:.9}
+.ph.duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--champ)}
+.ph.duo img{position:static}
+.ph.car{display:block}.ph.car .trk{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.ph.car .trk::-webkit-scrollbar{display:none}.ph.car img{position:static;flex:0 0 100%;scroll-snap-align:center}.ph.car .nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,254,251,.9);color:var(--choc);font-size:22px;line-height:1;cursor:pointer;z-index:3}.ph.car .prev{left:8px}.ph.car .next{right:8px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .ph img{object-position:center 30%}
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.story .ph{aspect-ratio:4/5;border-radius:200px 200px 24px 24px}
+@media(max-width:760px){.story{grid-template-columns:1fr}.story .ph{max-width:340px}}
+.hero .ph{aspect-ratio:4/5}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero .ph{aspect-ratio:1/1;border-radius:140px 140px 20px 20px}}
+/* grids */
+.grid{display:grid;gap:22px;margin-top:36px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.g6{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.g3,.g6{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g6{grid-template-columns:1fr}section{padding:60px 0}}
+.card{background:var(--off);border:1px solid var(--champ);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{border-radius:0;aspect-ratio:4/3}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .body p{font-size:.93rem;margin:0}
+.card .row{margin-top:auto;padding-top:14px}
+.card .btn{padding:.6rem 1.05rem;font-size:.85rem}
+.sw{display:flex;gap:6px;margin:6px 0}
+.sw b{width:18px;height:18px;border-radius:50%;border:1px solid rgba(107,74,63,.35)}
+.price{font-size:.85rem;opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{padding:.6rem 1.2rem;border:1.5px solid var(--choc);border-radius:999px;background:transparent;font:500 .92rem "DM Sans";color:var(--choc);cursor:pointer}
+.chip:hover{background:var(--off)}
+.why{border-top:1.5px solid var(--olive);padding-top:16px}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:36px}
+.steps li{counter-increment:s;border-left:1.5px solid var(--olive);padding-left:16px}
+.steps li::before{content:counter(s);font:500 2.2rem "Cormorant Garamond",serif;display:block;line-height:1}
+@media(max-width:800px){.steps{grid-template-columns:1fr 1fr}}
+.gal{columns:3 220px;column-gap:16px;margin-top:24px}
+.gi{display:block;width:100%;margin:0 0 16px;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--cream)}
+.gi img{display:block;width:100%;height:auto;transition:transform .3s}.gi:hover img{transform:scale(1.03)}
+.chip[aria-pressed=true]{background:var(--choc);color:var(--off)}
+dialog{border:0;border-radius:18px;padding:0;width:min(92vw,520px);background:var(--off);color:var(--choc);overflow:hidden}
+dialog::backdrop{background:rgba(60,40,34,.6)}
+#lbi{display:block;width:100%;max-height:62vh;object-fit:contain;background:var(--cream)}
+.lbt{padding:16px 20px 22px}.lbt p{font-size:.9rem;margin:0 0 12px}
+#lbx{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,254,251,.9);color:var(--choc);font-size:1.4rem;cursor:pointer}
+/* form */
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px;background:var(--off);border:1px solid var(--champ);border-radius:20px;padding:28px}
+form .full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:500}
+input,select,textarea{font:400 1rem "DM Sans";padding:.7rem .85rem;border:1.5px solid var(--champ);border-radius:10px;background:var(--off);color:var(--choc);width:100%}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:#9b3d2e}
+.err{color:#8a3324;font-size:.8rem;min-height:1em}
+.note{font-size:.85rem;background:var(--cream);border:1px dashed var(--olive);border-radius:10px;padding:10px 14px}
+#msg{font-weight:500}
+@media(max-width:640px){form{grid-template-columns:1fr;padding:20px}}
+footer{background:var(--choc);color:var(--off);padding:56px 0 96px;font-size:.95rem}
+footer a{color:var(--off);text-decoration:none}
+footer a:hover{color:var(--champ);text-decoration:underline}
+footer h3{color:var(--champ);font-size:1.05rem;margin-bottom:.9rem}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1.3fr;gap:36px}
+.fl{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.copy{border-top:1px solid rgba(238,217,198,.35);margin-top:36px;padding-top:20px;text-align:center;font-size:.85rem}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:var(--choc);display:grid;place-items:center;box-shadow:0 6px 18px rgba(107,74,63,.3)}
+.wa svg{width:28px;height:28px;fill:var(--off)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a href="#top" aria-label="Bloom Balloons"><img alt="Bloom Balloons" src="assets/img/logo.jpg"></a>
+<button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav id="nav" aria-label="Main">
+<a href="#top" data-i="n_home"></a><a href="#shop" data-i="n_shop"></a><a href="#cats" data-i="n_arch"></a><a href="#cats" data-i="n_sculpt"></a><a href="#cats" data-i="n_helium"></a><a href="#gallery" data-i="n_gal"></a><a href="#about" data-i="n_about"></a><a href="#quote" data-i="n_contact"></a>
+</nav>
+<div class="tools">
+<div class="lang" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">🇺🇸 EN</button><button data-l="es" aria-pressed="false">🇪🇸 ES</button></div>
+<a class="ic hide-m" href="https://www.instagram.com/bigdreamevents.usa/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 1.8A3.2 3.2 0 003.8 7v10A3.2 3.2 0 007 20.2h10a3.2 3.2 0 003.2-3.2V7A3.2 3.2 0 0017 3.8z"/></svg></a>
+<a class="btn pri hide-m" href="#quote" data-i="get_quote"></a>
+</div></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1 data-i="h1"></h1>
+<p class="sub" data-i="h_sub"></p>
+<p class="tag" data-i="h_tag"></p>
+<div class="row"><a class="btn pri" href="#shop" data-i="b_shop"></a><a class="btn" href="#quote" data-i="b_quote"></a><a class="btn" data-wa="default" target="_blank" rel="noopener" data-i="b_wa"></a></div>
+</div>
+<div class="ph"><img src="assets/img/hero.jpg" alt="Mother and daughter in front of a circus-themed party setup"></div>
+</div></div>
+
+<section id="cats"><div class="wrap">
+<h2 data-i="cat_h"></h2><p class="lead" data-i="cat_p"></p>
+<div class="grid g2" id="cats-grid"></div>
+</div></section>
+
+<section class="alt" id="shop"><div class="wrap">
+<h2 data-i="feat_h"></h2><p class="lead" data-i="feat_p"></p>
+<div class="grid g6" id="prod-grid"></div>
+</div></section>
+
+<section><div class="wrap">
+<h2 data-i="occ_h"></h2>
+<div class="chips" id="occ"></div>
+</div></section>
+
+<section id="about"><div class="wrap story"><div class="ph"><img src="assets/img/story.jpg" alt="Isabella smiling in a dress embroidered with flowers" loading="lazy"></div><div><h2 data-i="st_h"></h2><p class="lead" data-i="st_1"></p><p data-i="st_2"></p><p data-i="st_3"></p></div></div></section>
+
+<section class="sage"><div class="wrap">
+<h2 data-i="why_h"></h2>
+<div class="grid g6" id="why"></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<h2 data-i="gal_h"></h2><p class="lead" data-i="gal_p"></p>
+<div class="row" id="gal-f" role="group" aria-label="Filters" style="margin-top:22px"></div>
+<div class="gal" id="gal-grid"></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2 data-i="how_h"></h2>
+<ol class="steps" id="steps"></ol>
+</div></section>
+
+<section id="quote"><div class="wrap" style="max-width:860px">
+<h2 data-i="q_h"></h2><p class="lead" data-i="q_p"></p>
+<p class="note" data-i="q_note"></p>
+<form id="qf" novalidate>
+<label>Name<input name="name" required autocomplete="name"><span class="err"></span></label>
+<label>Email<input name="email" type="email" required autocomplete="email"><span class="err"></span></label>
+<label><span data-i="f_phone"></span><input name="phone" type="tel" autocomplete="tel"></label>
+<label><span data-i="f_zip"></span><input name="zip" inputmode="numeric" maxlength="5" required><span class="err"></span></label>
+<label><span data-i="f_type"></span><select name="type" id="type"><option value="std" data-i="o_std"></option><option value="inst" data-i="o_inst"></option></select></label>
+<label><span data-i="f_date"></span><input name="date" type="date" id="date" required><span class="err"></span></label>
+<label><span data-i="f_ful"></span><select name="ful"><option value="delivery" data-i="o_del"></option><option value="pickup" data-i="o_pick"></option><option value="install" data-i="o_inst2"></option></select></label>
+<label><span data-i="f_colors"></span><input name="colors" placeholder="Sage, ivory, champagne"></label>
+<label class="full"><span data-i="f_desc"></span><textarea name="desc" rows="4"></textarea></label>
+<p class="note full" id="lead-note"></p>
+<div class="row full"><button class="btn pri" type="submit" data-i="submit"></button><a class="btn" id="wa-form" target="_blank" rel="noopener" data-i="cont_wa"></a></div>
+<p class="full" id="msg" role="status"></p>
+</form>
+</div></section>
+
+<section class="sage"><div class="wrap" style="text-align:center">
+<h2 data-i="ig_h"></h2><p class="lead" style="margin:0 auto 1.4rem" data-i="ig_p"></p>
+<a class="btn pri" href="https://www.instagram.com/bigdreamevents.usa/" target="_blank" rel="noopener" data-i="ig_b"></a>
+<p style="margin:14px 0 0">@bigdreamevents.usa</p>
+</div></section>
+
+<section><div class="wrap" style="text-align:center">
+<h2 data-i="fin_h"></h2>
+<div class="row" style="justify-content:center;margin-top:22px"><a class="btn pri" href="#shop" data-i="fin_shop"></a><a class="btn" data-wa="default" target="_blank" rel="noopener" data-i="b_wa"></a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap fgrid">
+<div><strong style="font:500 1.7rem 'Cormorant Garamond',serif">Bloom Balloons</strong><p style="margin:.4rem 0 .8rem" data-i="slogan2"></p><p data-i="foot_area"></p></div>
+<div><h3 data-i="ql_h"></h3><ul class="fl"><li><a href="#about" data-i="n_about"></a></li><li><a href="#cats" data-i="n_arch"></a></li><li><a href="#cats" data-i="n_sculpt"></a></li><li><a href="#cats" data-i="n_helium"></a></li><li><a href="#gallery" data-i="n_gal"></a></li><li><a href="#quote" data-i="n_contact"></a></li></ul></div>
+<div><h3 data-i="ci_h"></h3><ul class="fl"><li><a href="mailto:contact@bigdreamevents.com">contact@bigdreamevents.com</a></li><li><a href="https://www.instagram.com/bigdreamevents.usa/" target="_blank" rel="noopener">bigdreamevents.usa</a></li><li><a href="tel:+19734447348">+1 (973) 444-7348</a></li><li><a data-wa="default" target="_blank" rel="noopener" data-i="wa_talk"></a></li><li><a href="https://bigdreamevents.com" target="_blank" rel="noopener" data-i="bde"></a></li></ul></div>
+</div><div class="wrap copy">Copyright © Bloom Balloons 2026</div></footer>
+
+<a class="wa" data-wa="default" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zm-3 4.1c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.6 0 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4l-.5-.3-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.8-.4-1.8-.8-2.8-2-.3-.4-.7-1-.8-1.3-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-2c-.2-.5-.4-.4-.6-.4z"/></svg></a>
+
+<dialog id="lb" aria-label="Photo"><button id="lbx" aria-label="Close">×</button><img id="lbi" alt=""><div class="lbt"><h3 id="lbh"></h3><p id="lbm"></p><button class="btn pri" id="lbc"></button></div></dialog>
+<script>
+const WA="19734447348";
+const waLink=m=>`https://wa.me/${WA}?text=${encodeURIComponent(m)}`;
+const T={
+en:{n_home:"Home",n_shop:"Shop Balloons",n_arch:"Balloon Arches",n_sculpt:"Balloon Sculptures",n_helium:"Helium Balloons",n_gal:"Gallery",n_about:"About",n_contact:"Contact",get_quote:"Get a Quote",
+h1:"Beautiful Balloons. Unforgettable Moments.",h_sub:"From elegant balloon arches and artistic sculptures to personalized helium balloon bouquets, we create beautiful details for life’s most meaningful celebrations.",h_tag:"Balloon Art & Celebrations in South Florida",b_shop:"Shop Balloons",b_quote:"Get a Custom Quote",b_wa:"Chat on WhatsApp",ph_hero:"Hero photo goes here",
+cat_h:"Shop by category",cat_p:"Two ways to bring your celebration to life.",explore:"Explore Collection",ask:"Ask on WhatsApp",
+feat_h:"Featured balloons",feat_p:"Sample listings. Prices, photos and colors will be added by Bloom Balloons.",details:"View Details",inq:"WhatsApp Inquiry",price_q:"Price on request",
+occ_h:"Shop by occasion",why_h:"Why choose Bloom Balloons?",gal_h:"Our balloon work",f_all:"All",f_arch:"Balloon Arches",f_sc:"Balloon Sculptures",f_col:"Columns & Helium",f_bd:"Birthdays",f_co:"Corporate Events",f_se:"Seasonal Designs",gal_p:"Real Bloom Balloons projects. Tap a photo to see the details.",want:"I Want Something Like This",
+how_h:"How it works",q_h:"Request a quote",q_p:"Tell us about your celebration and we’ll reply with availability and pricing.",q_note:"Prototype form: nothing is sent to a server yet. Use “Continue on WhatsApp” to reach us now.",
+f_phone:"Phone",f_zip:"Event ZIP Code",f_type:"Order type",f_date:"Event date",f_ful:"Delivery, pickup or installation",f_colors:"Preferred colors",f_desc:"Describe your idea",o_std:"Standard order",o_inst:"Large installation",o_del:"Delivery",o_pick:"Pickup",o_inst2:"Installation",
+submit:"Submit Quote Request",cont_wa:"Continue on WhatsApp",ig_h:"Follow Our Balloon Journey",ig_p:"See our latest creations on Instagram.",ig_b:"Visit Our Instagram",fin_h:"Let’s Make Your Celebration Bloom.",fin_shop:"Shop Our Balloons",slogan2:"Where Every Celebration Begins to Bloom.",st_h:"Our story",st_1:"Bloom Balloons is the balloon boutique of Big Dream Events, the Florida celebration company founded by Michele.",st_2:"It all started with her daughter Isabella’s first birthday. Michele couldn’t find a party company that understood the celebration she imagined, so she created it herself.",st_3:"Since 2019 she has designed celebrations across Florida. Bloom Balloons brings that same care to balloon arches, sculptures and bouquets.",ql_h:"Quick Links",ci_h:"Contact Information",wa_talk:"Let’s Talk on WhatsApp",bde:"Visit Big Dream Events",foot_area:"Serving South Florida since 2019. Delivery, pickup and installation, subject to availability.",
+lead_std:"Standard orders need at least 3 business days’ notice and are subject to availability.",lead_inst:"Large installations need at least 20 days’ notice and are subject to design and scheduling confirmation.",
+e_req:"Required field",e_mail:"Enter a valid email",e_zip:"Enter a 5-digit ZIP Code",e_date:d=>`Earliest requestable date: ${d}`,proto:"Prototype: this form is not connected to a server yet, so nothing was sent. Tap “Continue on WhatsApp” to send your request.",
+wa_hi:"Hi Bloom Balloons! I found your website and would love more information about your balloon creations.",
+wa_p:(p,c,s,q,d,z,m)=>`Hi Bloom Balloons!\n\nI’m interested in:\n\nProduct: ${p}\nColors: ${c}\nSize: ${s}\nQuantity: ${q}\nRequested Date: ${d}\nZIP Code: ${z}\nFulfillment: ${m}\n\nCould you please confirm availability and pricing?`,
+wa_g:(p)=>`Hi Bloom Balloons! I’d like something like this gallery design: ${p}. Could you share availability and pricing?`,tbd:"To be confirmed",
+cats:[["Balloon Arches & Garlands","Organic and classic arches that frame the moment."],["Helium Balloons & Bouquets","Personalized bouquets, numbers and letters."]],
+occ:["Birthdays","Baby Showers","Bridal Showers","Weddings","Graduations","Anniversaries","Corporate Events","Grand Openings","Holidays"],
+why:[["Custom Designs","Every piece starts from your idea."],["Creative Balloon Artistry","Shapes and textures beyond the ordinary."],["Beautiful Color Combinations","Palettes chosen to flatter your space."],["Attention to Detail","Clean finishes, secure builds."],["Easy Ordering","Order online or by WhatsApp."],["Memorable Celebrations","Details guests remember."]],
+steps:[["Explore","Browse our collections."],["Personalize","Pick colors, size and message."],["Request or Order","Send a quote request or message us."],["Celebrate","We handle the balloons."]],
+prods:["Helium Balloon Bouquet","Organic Balloon Garland","Personalized Balloon Gift","Custom Balloon Sculpture"],sizes:["Per quote","Per quote","Per quote","Per quote"],gal:["Circus-themed garland","Garland over a doorway","Farm party garland","Cat princess columns","Bear and garland","Balloon butterfly"]},
+es:{n_home:"Inicio",n_shop:"Tienda",n_arch:"Arcos de globos",n_sculpt:"Esculturas de globos",n_helium:"Globos con helio",n_gal:"Galería",n_about:"Nosotros",n_contact:"Contacto",get_quote:"Cotizar",
+h1:"Globos hermosos. Momentos inolvidables.",h_sub:"Desde elegantes arcos de globos y esculturas artísticas hasta ramos personalizados con helio, creamos detalles hermosos para las celebraciones más importantes de la vida.",h_tag:"Arte con globos y celebraciones en el sur de Florida",b_shop:"Ver globos",b_quote:"Cotización personalizada",b_wa:"Escribir por WhatsApp",ph_hero:"Aquí va la foto principal",
+cat_h:"Compra por categoría",cat_p:"Dos formas de dar vida a tu celebración.",explore:"Ver colección",ask:"Preguntar por WhatsApp",
+feat_h:"Globos destacados",feat_p:"Productos de ejemplo. Bloom Balloons agregará precios, fotos y colores.",details:"Ver detalles",inq:"Consultar por WhatsApp",price_q:"Precio a consultar",
+occ_h:"Compra por ocasión",why_h:"¿Por qué elegir Bloom Balloons?",gal_h:"Nuestro trabajo con globos",f_all:"Todo",f_arch:"Arcos de globos",f_sc:"Esculturas",f_col:"Columnas y helio",f_bd:"Cumpleaños",f_co:"Eventos corporativos",f_se:"Diseños de temporada",gal_p:"Proyectos reales de Bloom Balloons. Toca una foto para ver los detalles.",want:"Quiero algo así",
+how_h:"Cómo funciona",q_h:"Solicita una cotización",q_p:"Cuéntanos sobre tu celebración y te responderemos con disponibilidad y precios.",q_note:"Formulario de prueba: aún no se envía nada a un servidor. Usa “Continuar por WhatsApp” para contactarnos ahora.",
+f_phone:"Teléfono",f_zip:"Código postal del evento",f_type:"Tipo de pedido",f_date:"Fecha del evento",f_ful:"Entrega, recogida o instalación",f_colors:"Colores preferidos",f_desc:"Describe tu idea",o_std:"Pedido estándar",o_inst:"Instalación grande",o_del:"Entrega",o_pick:"Recogida",o_inst2:"Instalación",
+submit:"Enviar solicitud",cont_wa:"Continuar por WhatsApp",ig_h:"Sigue nuestro camino entre globos",ig_p:"Mira nuestras últimas creaciones en Instagram.",ig_b:"Visita nuestro Instagram",fin_h:"Hagamos florecer tu celebración.",fin_shop:"Ver nuestros globos",slogan2:"Donde cada celebración comienza a florecer.",st_h:"Nuestra historia",st_1:"Bloom Balloons es la boutique de globos de Big Dream Events, la empresa de celebraciones en Florida fundada por Michele.",st_2:"Todo empezó con el primer cumpleaños de su hija Isabella. Michele no encontró una empresa de fiestas que entendiera la celebración que imaginaba, así que la creó ella misma.",st_3:"Desde 2019 diseña celebraciones en toda Florida. Bloom Balloons lleva ese mismo cuidado a los arcos, esculturas y ramos de globos.",ql_h:"Enlaces rápidos",ci_h:"Información de contacto",wa_talk:"Hablemos por WhatsApp",bde:"Visita Big Dream Events",foot_area:"Servimos el sur de Florida desde 2019. Entrega, recogida e instalación, sujetas a disponibilidad.",
+lead_std:"Los pedidos estándar requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad.",lead_inst:"Las decoraciones grandes con globos requieren mínimo 20 días de anticipación y están sujetas a confirmación de diseño y agenda.",
+e_req:"Campo obligatorio",e_mail:"Ingresa un correo válido",e_zip:"Ingresa un código postal de 5 dígitos",e_date:d=>`Primera fecha disponible para solicitar: ${d}`,proto:"Prototipo: este formulario aún no está conectado a un servidor, así que no se envió nada. Toca “Continuar por WhatsApp” para enviar tu solicitud.",
+wa_hi:"¡Hola, Bloom Balloons! Encontré su página web y me gustaría recibir más información sobre sus creaciones con globos.",
+wa_p:(p,c,s,q,d,z,m)=>`¡Hola, Bloom Balloons!\n\nMe interesa:\n\nProducto: ${p}\nColores: ${c}\nTamaño: ${s}\nCantidad: ${q}\nFecha solicitada: ${d}\nCódigo postal: ${z}\nModalidad: ${m}\n\n¿Podrían confirmar disponibilidad y precios?`,
+wa_g:(p)=>`¡Hola, Bloom Balloons! Me gustaría algo como este diseño de la galería: ${p}. ¿Podrían compartir disponibilidad y precios?`,tbd:"Por confirmar",
+cats:[["Arcos y guirnaldas de globos","Arcos orgánicos y clásicos que enmarcan el momento."],["Globos con helio y ramos","Ramos personalizados, números y letras."]],
+occ:["Cumpleaños","Baby showers","Despedidas de soltera","Bodas","Graduaciones","Aniversarios","Eventos corporativos","Inauguraciones","Días festivos"],
+why:[["Diseños personalizados","Cada pieza nace de tu idea."],["Arte creativo con globos","Formas y texturas fuera de lo común."],["Combinaciones de color hermosas","Paletas pensadas para tu espacio."],["Atención al detalle","Acabados limpios y montajes seguros."],["Pedidos fáciles","Pide en línea o por WhatsApp."],["Celebraciones memorables","Detalles que tus invitados recuerdan."]],
+steps:[["Explora","Mira nuestras colecciones."],["Personaliza","Elige colores, tamaño y mensaje."],["Solicita o pide","Envía una cotización o escríbenos."],["Celebra","Nosotros nos encargamos de los globos."]],
+prods:["Ramo de globos con helio","Guirnalda orgánica de globos","Regalo personalizado con globos","Escultura de globos personalizada"],sizes:["Según cotización","Según cotización","Según cotización","Según cotización"],gal:["Guirnalda de circo","Guirnalda en la puerta","Guirnalda de granja","Columnas de gatita princesa","Oso y guirnalda","Mariposa de globos"]}
+};
+const IMG={letters:"assets/img/letters.jpg",sophie:"assets/img/sophie.jpg",door:"assets/img/door.jpg",farm:"assets/img/farm.jpg",lemon:"assets/img/lemon.jpg",prince:"assets/img/prince.jpg",easter:"assets/img/easter.jpg",pinkarch:"assets/img/pinkarch.jpg",silverarch:"assets/img/silverarch.jpg",christmas:"assets/img/christmas.jpg",heartarch:"assets/img/heartarch.jpg",candy:"assets/img/candy.jpg",india:"assets/img/india.jpg",italia:"assets/img/italia.jpg",elena:"assets/img/elena.jpg",butterfly:"assets/img/butterfly.jpg",princess:"assets/img/princess.jpg",welcome:"assets/img/welcome.jpg",treefairy:"assets/img/treefairy.jpg",mermaid:"assets/img/mermaid.jpg",catpair:"assets/img/catpair.jpg",fox:"assets/img/fox.jpg",raccoon:"assets/img/raccoon.jpg",bubble:"assets/img/bubble.jpg",hearts:"assets/img/hearts.jpg"};
+const pic=(k,a)=>IMG[k]?`<img src="${IMG[k]}" alt="${a}" loading="lazy">`:"";
+const CK=["sophie","catpair"],GK=["circus","door","farm","catpair","bear","butterfly"];
+const PP={0:["catpair","letters"]};
+const CAR={1:[1,2,3,4,5,6,7].map(n=>"assets/img/garland"+n+".jpg"),2:[1,2,3,4].map(n=>"assets/img/gift"+n+".jpg"),3:["assets/img/gift2.jpg"]};
+const COL=[["#C8D6C0","#FFF9F6","#EED9C6"],["#A6B597","#FFF9F6","#EED9C6"],["#C8D6C0","#EED9C6","#A6B597"],["#A6B597","#EED9C6","#FFF9F6"]];
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+let L="en";try{L=localStorage.getItem("bb-lang")||(navigator.language||"").startsWith("es")?"es":"en";if(localStorage.getItem("bb-lang"))L=localStorage.getItem("bb-lang")}catch(e){}
+const balloons=(c)=>`<i style="width:34%;aspect-ratio:1;background:${c[0]};top:12%;left:30%"></i><i style="width:30%;aspect-ratio:1;background:${c[1]};top:32%;left:8%"></i><i style="width:30%;aspect-ratio:1;background:${c[2]};top:30%;left:58%"></i>`;
+function today(){return new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"}))}
+function addBiz(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);if(d.getDay()%6)n--}return d}
+const iso=d=>d.toISOString?new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10):d;
+function minDate(){const t=today();return $("#type").value==="inst"?new Date(t.getTime()+20*864e5):addBiz(t,3)}
+function render(){
+ const t=T[L];document.documentElement.lang=L;
+ $$("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+ $$(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===L));
+ $$("[data-wa=default]").forEach(a=>a.href=waLink(t.wa_hi));
+ $("#cats-grid").innerHTML=t.cats.map((c,i)=>`<article class="card"><div class="ph">${pic(CK[i],c[0])}</div><div class="body"><h3>${c[0]}</h3><p>${c[1]}</p><div class="row"><a class="btn pri" href="#shop">${t.explore}</a><a class="btn" target="_blank" rel="noopener" href="${waLink(t.wa_p(c[0],t.tbd,t.tbd,"1",t.tbd,t.tbd,t.tbd))}">${t.ask}</a></div></div></article>`).join("");
+ $("#prod-grid").innerHTML=t.prods.map((p,i)=>`<article class="card">${CAR[i]?`<div class="ph car" role="group" aria-label="${p}"><div class="trk">${CAR[i].map(u=>`<img src="${u}" alt="${p}" loading="lazy">`).join("")}</div>${CAR[i].length>1?`<button type="button" class="nav prev" aria-label="Previous">‹</button><button type="button" class="nav next" aria-label="Next">›</button>`:""}</div>`:`<div class="ph${PP[i]?" duo":""}" role="img" aria-label="${p}">${PP[i]?PP[i].map(k=>`<img src="${IMG[k]}" alt="${p}" loading="lazy">`).join(""):balloons(COL[i])+"<span>Photo</span>"}</div>`}<div class="body"><h3>${p}</h3><div class="sw" aria-hidden="true">${COL[i].map(c=>`<b style="background:${c}"></b>`).join("")}</div><p class="price">${t.price_q}</p><div class="row"><a class="btn pri" href="#quote">${t.details}</a><a class="btn" target="_blank" rel="noopener" href="${waLink(t.wa_p(p,t.tbd,t.sizes[i],"1",t.tbd,t.tbd,t.tbd))}">${t.inq}</a></div></div></article>`).join("");
+$("#prod-grid").querySelectorAll(".car").forEach(c=>{const t=c.querySelector(".trk");if(!c.querySelector(".prev"))return;c.querySelector(".prev").onclick=()=>t.scrollBy({left:-t.clientWidth,behavior:"smooth"});c.querySelector(".next").onclick=()=>t.scrollBy({left:t.clientWidth,behavior:"smooth"})});
+ $("#occ").innerHTML=t.occ.map(o=>`<a class="chip" style="text-decoration:none" href="#quote">${o}</a>`).join("");
+ $("#why").innerHTML=t.why.map(w=>`<div class="why"><h3>${w[0]}</h3><p>${w[1]}</p></div>`).join("");
+ $("#steps").innerHTML=t.steps.map(s=>`<li><h3>${s[0]}</h3><p>${s[1]}</p></li>`).join("");
+ drawGal();
+ lead();
+}
+const GAL=[["sophie", "Pink gingham baby shower garland", "Guirnalda de baby shower con vichy rosa", "arches birthdays", "sage pink white"], ["princess", "Princess sculpture with number 8", "Escultura de princesa con número 8", "sculptures birthdays", "pink gold white"], ["door", "Organic garland over a doorway", "Guirnalda orgánica sobre una puerta", "arches seasonal", "pink sage yellow"], ["catpair", "Kitty princess columns", "Columnas de gatita princesa", "columns birthdays", "pink white gold"], ["farm", "Farm-themed garland", "Guirnalda temática de granja", "arches birthdays", "sage cream brown"], ["welcome", "Baby girl welcome sculpture", "Escultura de bienvenida para bebé", "sculptures birthdays", "pink sage gold"], ["silverarch", "Chrome silver entrance arch", "Arco de entrada plateado cromado", "arches corporate", "silver"], ["butterfly", "Balloon butterfly", "Mariposa de globos", "sculptures", "black sage pink"], ["lemon", "Lemon-theme garland", "Guirnalda temática de limones", "arches birthdays", "navy yellow white"], ["fox", "Woodland fox column", "Columna del bosque con zorro", "columns birthdays", "sage green cream"], ["easter", "Pastel Easter garland", "Guirnalda pastel de Pascua", "arches seasonal", "pastel"], ["candy", "Candy house installation", "Instalación casa de dulces", "sculptures corporate", "lavender white pink"], ["pinkarch", "Classic spiral arch", "Arco espiral clásico", "arches corporate", "pink mauve"], ["mermaid", "Under the sea mermaid piece", "Pieza de sirena bajo el mar", "sculptures birthdays", "teal pink lavender"], ["prince", "Blue and gold garland", "Guirnalda azul y dorada", "arches birthdays", "blue navy gold white"], ["christmas", "Chrome Christmas backdrop", "Fondo navideño cromado", "seasonal corporate", "silver"], ["treefairy", "Enchanted tree with fairy", "Árbol encantado con hada", "sculptures", "sage pink yellow"], ["italia", "Green, white and red column", "Columna verde, blanco y rojo", "columns corporate", "green white red"], ["elena", "Pink and blue garland with round backdrop", "Guirnalda rosa y azul con fondo redondo", "arches birthdays", "pink blue gold"], ["heartarch", "Valentine’s heart garland", "Guirnalda de corazones de San Valentín", "arches seasonal", "red pink"], ["india", "Tricolor garland", "Guirnalda tricolor", "arches corporate", "orange white green"], ["raccoon", "Woodland raccoon column", "Columna del bosque con mapache", "columns birthdays", "sage green brown"], ["bubble", "Bubble balloon with teddy bear", "Globo burbuja con osito", "helium seasonal", "red"], ["hearts", "Heart balloon backdrop", "Fondo de globos de corazones", "seasonal", "red white"]];
+const COLN={sage:["Sage","Salvia"],pink:["Pink","Rosa"],cream:["Cream","Crema"],white:["White","Blanco"],yellow:["Yellow","Amarillo"],navy:["Navy","Azul marino"],blue:["Blue","Azul"],gold:["Gold","Dorado"],green:["Green","Verde"],red:["Red","Rojo"],brown:["Brown","Café"],silver:["Silver","Plateado"],lavender:["Lavender","Lavanda"],orange:["Orange","Naranja"],mauve:["Mauve","Malva"],teal:["Teal","Turquesa"],pastel:["Pastel","Pastel"],black:["Black","Negro"]};
+const FK=["all","arches","sculptures","columns","birthdays","corporate","seasonal"],FL=["f_all","f_arch","f_sc","f_col","f_bd","f_co","f_se"];
+let FLT="all";
+function drawGal(){const t=T[L],j=L==="en"?1:2;
+ $("#gal-f").innerHTML=FK.map((k,i)=>`<button class="chip" data-f="${k}" aria-pressed="${k===FLT}">${t[FL[i]]}</button>`).join("");
+ $$("#gal-f .chip").forEach(b=>b.onclick=()=>{FLT=b.dataset.f;drawGal()});
+ $("#gal-grid").innerHTML=GAL.map((g,i)=>[g,i]).filter(([g])=>FLT==="all"||g[3].split(" ").includes(FLT)).map(([g,i])=>`<button class="gi" data-i="${i}" aria-label="${g[j]}"><img src="${IMG[g[0]]}" alt="${g[j]}" loading="lazy"></button>`).join("");
+ $$("#gal-grid .gi").forEach(b=>b.onclick=()=>openLb(+b.dataset.i));}
+function openLb(i){const t=T[L],j=L==="en"?1:2,g=GAL[i],ref="BB-"+String(i+1).padStart(2,"0");
+ $("#lbi").src=IMG[g[0]];$("#lbi").alt=g[j];$("#lbh").textContent=g[j];
+ $("#lbm").textContent=g[3].split(" ").map(k=>t[FL[FK.indexOf(k)]]).join(" · ")+" · "+g[4].split(" ").map(c=>COLN[c]?COLN[c][j-1]:c).join(", ")+" · "+ref;
+ $("#lbc").textContent=t.want;$("#lbc").onclick=()=>{$("[name=desc]").value=t.wa_g(g[j]+" ("+ref+")");$("#lb").close();location.hash="quote"};
+ $("#lb").showModal();}
+$("#lbx").onclick=()=>$("#lb").close();
+$("#lb").addEventListener("click",e=>{if(e.target.id==="lb")e.target.close()});
+function lead(){const t=T[L],d=minDate();$("#date").min=iso(d);$("#lead-note").textContent=$("#type").value==="inst"?t.lead_inst:t.lead_std}
+$$(".lang button").forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem("bb-lang",L)}catch(e){}render()});
+$("#type").onchange=lead;
+$("#burger").onclick=e=>{const o=$("#nav").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+$$("nav a").forEach(a=>a.addEventListener("click",()=>{$("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded",false)}));
+function formMsg(){const f=new FormData($("#qf")),t=T[L];
+ const m={delivery:t.o_del,pickup:t.o_pick,install:t.o_inst2}[f.get("ful")];
+ return t.wa_p(f.get("type")==="inst"?t.o_inst:t.o_std,f.get("colors")||t.tbd,t.tbd,"1",f.get("date")||t.tbd,f.get("zip")||t.tbd,m)+(f.get("desc")?`\n\n${f.get("desc")}`:"")}
+$("#wa-form").addEventListener("click",e=>{e.currentTarget.href=waLink(formMsg())});
+$("#wa-form").addEventListener("focus",e=>{e.currentTarget.href=waLink(formMsg())});
+$("#wa-form").href=waLink(T.en.wa_hi);
+$("#qf").addEventListener("submit",e=>{e.preventDefault();const t=T[L],f=e.target;let ok=true;
+ $$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
+ const bad=(n,m)=>{const i=f.elements[n];i.setAttribute("aria-invalid","true");i.parentElement.querySelector(".err").textContent=m;ok=false};
+ if(!f.name.value.trim())bad("name",t.e_req);
+ if(!/^\S+@\S+\.\S+$/.test(f.email.value))bad("email",t.e_mail);
+ if(!/^\d{5}$/.test(f.zip.value))bad("zip",t.e_zip);
+ if(!f.date.value)bad("date",t.e_req);else if(f.date.value<f.date.min)bad("date",t.e_date(f.date.min));
+ $("#msg").textContent=ok?t.proto:"";
+});
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* ---- storefront look: display headings, tiles, product rows ---- */
+:root{--disp:"Bebas Neue","Oswald","Arial Narrow",sans-serif}
+h1,h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem)}
+.ctr{text-align:center;margin-left:auto;margin-right:auto}
+section.top{padding:34px 0 26px}
+.h1s{font-size:clamp(1.9rem,4vw,2.8rem);text-align:center;margin-bottom:.4rem}
+section.top .lead{margin-bottom:26px;font-size:1rem}
+section.sec{padding:34px 0 30px}
+.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.tiles.big{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:22px}
+@media(max-width:900px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}}
+@media(max-width:560px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.tiles.big{grid-template-columns:1fr 1fr;gap:12px}}
+.tile{position:relative;display:block;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:var(--sage);text-decoration:none;box-shadow:0 2px 10px rgba(107,74,63,.08)}
+.tiles.big .tile{aspect-ratio:4/5}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tile:hover img{transform:scale(1.05)}
+.tile>svg{position:absolute;inset:14% 18% 30%;width:64%;height:56%}
+.tile.mini{background:var(--cream);border:1px solid var(--champ)}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:46px 14px 14px;background:linear-gradient(180deg,transparent,rgba(58,38,31,.82));color:#fff;font:400 1.28rem/1.05 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.tiles.big .tile span{font-size:1.8rem;padding:70px 20px 18px}
+.tile.mini span{background:none;color:var(--choc)}
+/* product rows */
+.prow{padding:38px 0 12px}
+.prow-h{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.prow-h h2{margin:0}.prow-h .btn{padding:.55rem 1.2rem;font-size:.88rem}
+.rowc{position:relative}
+.rtrk{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.rtrk::-webkit-scrollbar{display:none}
+.rtrk>.pc2{flex:0 0 calc((100% - 60px)/4);scroll-snap-align:start;min-width:0}
+@media(max-width:900px){.rtrk>.pc2{flex-basis:calc((100% - 40px)/3)}}
+@media(max-width:560px){.rtrk{gap:12px}.rtrk>.pc2{flex-basis:calc((100% - 12px)/2.15)}}
+.rowc>.nav{position:absolute;top:36%;width:42px;height:42px;border-radius:50%;border:1px solid var(--champ);background:var(--off);color:var(--choc);font-size:24px;line-height:1;cursor:pointer;z-index:4;box-shadow:0 4px 12px rgba(107,74,63,.15)}
+.rprev{left:-14px}.rnext{right:-14px}
+@media(max-width:1220px){.rprev{left:4px}.rnext{right:4px}}
+/* product card */
+.pc2{text-align:center}
+.pc2 .ph{display:block;aspect-ratio:4/5;border-radius:18px;background:var(--cream)}
+.pc2 .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pc2 .ph:hover>img{transform:scale(1.04)}
+.pc2 .gtg-ph{border:1px solid var(--champ)}
+.pc2 .gtg-ph svg{position:absolute;inset:0;width:100%;height:100%}
+.qv{position:absolute;left:12px;right:12px;bottom:12px;padding:.6rem;border-radius:999px;background:rgba(255,254,251,.95);font:600 .85rem "DM Sans",sans-serif;opacity:0;transform:translateY(6px);transition:.2s;margin:0!important}
+.pc2 .ph:hover .qv,.pc2 .ph:focus-visible .qv{opacity:1;transform:none}
+@media(hover:none){.qv{display:none}}
+.pc2 h3{font:500 1rem/1.35 "DM Sans",sans-serif;margin:12px 6px 4px}
+.pc2 h3 a{text-decoration:none}.pc2 h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.pc2 .pprice{margin:0;font:400 .9rem "DM Sans",sans-serif!important}
+.pc2 .pprice b{font-size:1.12rem;font-weight:500}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 20px;margin-top:8px}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}}
+/* listing pages */
+.ph1{font-size:clamp(2rem,4.2vw,2.9rem)}
+.ph1.ctr{margin-top:10px}
+.lead.ctr{text-align:center}
+.cat-pr{margin:14px auto 0;justify-content:center}
+.tbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 0 18px;font-size:.9rem;flex-wrap:wrap}
+.sortl{flex-direction:row;align-items:center;gap:10px;font-weight:500}
+.sortl select{width:auto;padding:.55rem 2rem .55rem .9rem;border-radius:999px}
+/* product page */
+.pinfo .ph1{font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.pbig{font:500 1.7rem "DM Sans",sans-serif}
+.pinfo .row .btn.big{flex:1 1 100%;text-align:center}
+.also{margin-top:64px;margin-bottom:22px}
+#p-msg a{text-underline-offset:3px}
+.story h2,.faq+*,#faq h2{text-align:left}
+@media(max-width:560px){.tiles.big .tile span{font-size:1.2rem;padding:46px 12px 12px}.tile span{font-size:1.15rem;padding:40px 12px 12px;overflow-wrap:anywhere}}
+/* ---- home category row: illustrated cards (holiday icon set) ---- */
+#tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+@media(max-width:1000px){#tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){#tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.itile{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 10px 14px;background:#FBF6EC;border:5px solid #9FB28C;border-radius:30px;text-decoration:none;color:#3F2A22;box-shadow:inset 0 0 0 3px rgba(255,255,255,.75),inset 0 -10px 16px rgba(159,178,140,.16),0 6px 14px rgba(107,74,63,.10);transition:transform .2s,box-shadow .2s}
+.itile:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 3px rgba(255,255,255,.75),inset 0 -10px 16px rgba(159,178,140,.16),0 10px 22px rgba(107,74,63,.16)}
+.itile .art{display:block;position:relative;width:100%;aspect-ratio:1/1}
+.itile .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.itile .lbl{display:flex;align-items:center;justify-content:center;min-height:2.2em;text-align:center;font:400 1.3rem/1.08 var(--disp);text-transform:uppercase;letter-spacing:.03em}
+@media(max-width:520px){.itile{border-width:4px;border-radius:24px}.itile .lbl{font-size:1.2rem}}
+/* ---- hero below the category row (original serif look) ---- */
+section.top{padding:28px 0 8px}
+.hero{padding:40px 0 56px;background:none}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;text-transform:none;letter-spacing:0;line-height:1.1;font-size:clamp(2.6rem,6vw,4.6rem)}
+#rows{scroll-margin-top:150px}
+.hero .hsub{font:500 1.15rem/1.5 "Playfair Display",Georgia,serif;margin:1.2rem 0 .8rem;max-width:34em}
+/* ---- Shop by Occasion: single auto-advancing slide ---- */
+.oslide{position:relative;max-width:540px;margin:22px auto 0;overflow:hidden;border-radius:24px;box-shadow:0 6px 18px rgba(107,74,63,.12)}
+.otrk{display:flex;transition:transform .7s ease}
+.otrk .tile{flex:0 0 100%;border-radius:0;aspect-ratio:4/5;box-shadow:none}
+.otrk .tile span{font-size:2.1rem;padding:90px 24px 46px}
+.oslide>.nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,254,251,.92);color:var(--choc);font-size:24px;line-height:1;cursor:pointer;z-index:3}
+.oprev{left:12px}.onext{right:12px}
+.odots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:4px;z-index:3}
+.odots button{width:24px;height:24px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.odots button::before{content:"";width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.55)}
+.odots button[aria-current=true]::before{background:#fff;width:11px;height:11px}
+@media(max-width:560px){.otrk .tile span{font-size:1.7rem;padding:70px 18px 44px}}
+@media(prefers-reduced-motion:reduce){.otrk{transition:none}}
+/* ---- Arches & Garlands on the home page: two clear choices ---- */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;align-items:start}
+.duo .duo-a .ph{aspect-ratio:4/7}
+.duo .duo-b .ph{aspect-ratio:8/7}
+@media(max-width:560px){.duo{gap:12px}.duo .duo-b .ph{aspect-ratio:auto;height:0;padding-bottom:calc(87.5% + 0px)}}
+.duo h3{font:600 1.25rem/1.25 "DM Sans",sans-serif;margin-top:14px}
+.duo .pprice{font-size:1.05rem!important}.duo .pprice b{font-size:1.45rem;font-weight:700}
+.dnote{margin:6px auto 0;font-size:.9rem;max-width:34ch;opacity:.9}
+.chip2{position:absolute;left:12px;top:12px;margin:0!important;padding:.35rem .8rem!important;border-radius:999px!important;background:var(--choc)!important;color:var(--off);font:600 .78rem/1.2 "DM Sans",sans-serif!important;letter-spacing:.04em;text-transform:uppercase;z-index:2}
+.duo-b .chip2{background:rgba(255,254,251,.95)!important;color:var(--choc)}
+.pc2 .gtg-ph{background:#FFF9F6}
+@media(max-width:560px){.duo h3{font-size:1rem}.duo .pprice b{font-size:1.15rem}.dnote{font-size:.8rem}.chip2{left:6px;top:6px;font-size:.62rem!important;padding:.28rem .5rem!important}}
+.pc2 .ph{text-decoration:none}
+.pc2 .ph .chip2{position:absolute;left:12px;top:12px;text-decoration:none}
+@media(max-width:560px){.pc2 .ph .chip2{left:6px;top:6px}}
+/* ---- Garland to Go illustration (woman carrying the garland) ---- */
+.pc2 .gtg-ph{background:radial-gradient(circle at 50% 46%,#E3EBDD 0 38%,rgba(227,235,221,0) 39%),#FFF9F6}
+.togo{position:absolute;inset:0;display:block;margin:0!important;padding:5% 6% 4%!important;background:none!important;border-radius:0!important}
+.togo::after{content:"";position:absolute;left:22%;right:22%;bottom:3.2%;height:2.6%;border-radius:50%;background:rgba(107,74,63,.14);filter:blur(3px)}
+.pc2 .gtg-ph .togo img{position:relative;z-index:1;inset:auto;width:100%;height:100%;object-fit:contain;display:block}
+.pc2 .gtg-ph:hover .togo img{transform:translateY(-4px) rotate(-1deg)}
+/* ---- seven category cards; photo variant ---- */
+@media(min-width:1001px){#tiles{grid-template-columns:repeat(7,minmax(0,1fr));gap:14px}.itile .lbl{font-size:1.18rem}}
+@media(max-width:1000px) and (min-width:521px){#tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.itile .art.photo img{object-fit:cover;border-radius:18px}
+/* ---- listing filters, custom request, helium ---- */
+.fgrp{display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap}
+.creq{margin-top:64px;padding:34px 22px;border-radius:22px;background:var(--cream);border:1px solid var(--champ);text-align:center}
+.creq h2{margin-bottom:.4rem}.creq p{max-width:56ch;margin:0 auto 18px}.creq .row{justify-content:center}
+.art-ph{background:#FFF9F6;border:1px solid var(--champ)}
+.art-ph svg,.pc2 .gtg-ph>svg{position:absolute;inset:0;width:100%;height:100%}
+.pickav{display:flex;flex-direction:column;gap:2px;font-size:.92rem}.pickav small{opacity:.85}
+@media(max-width:560px){.tbar{align-items:flex-start}.sortl select{max-width:150px}}
+@media(min-width:901px){.page .tiles.big{grid-template-columns:repeat(4,minmax(0,1fr))}.page .tiles.big .tile span{font-size:1.6rem}}
+/* ---- helium hub: theme groups (image + label below) and small theme tiles ---- */
+.hgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 22px;margin:26px auto 0;max-width:980px}
+.hcard{display:block;text-decoration:none;text-align:center}
+.hart{display:block;position:relative;aspect-ratio:3/2;border-radius:20px;overflow:hidden;background:#FBF6EC;border:1px solid var(--champ);transition:transform .25s,box-shadow .25s}
+.hart img,.hart svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hcard:hover .hart{transform:translateY(-3px);box-shadow:0 10px 22px rgba(107,74,63,.14)}
+.hlbl{display:block;margin-top:10px;font:400 1.25rem/1.1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.tiles.hsmall{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:44px}
+.htile{aspect-ratio:1/1;background:#FBF6EC;border:1px solid var(--champ)}
+.htile>svg{position:absolute;inset:0 0 14%;width:100%;height:86%}
+@media(max-width:760px){.hgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}.tiles.hsmall{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hlbl{font-size:1.1rem}}
+.hgrid{grid-template-columns:repeat(4,minmax(0,1fr));max-width:none}
+.hart{aspect-ratio:1/1}
+.hart img{object-position:center 28%}
+.htile img{object-position:center 22%}
+@media(max-width:760px){.hgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
