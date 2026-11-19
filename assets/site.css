@@ -372,3 +372,9 @@ section.top{padding:28px 0 8px}
 .pc2 .ph{text-decoration:none}
 .pc2 .ph .chip2{position:absolute;left:12px;top:12px;text-decoration:none}
 @media(max-width:560px){.pc2 .ph .chip2{left:6px;top:6px}}
+/* ---- Garland to Go illustration (woman carrying the garland) ---- */
+.pc2 .gtg-ph{background:radial-gradient(circle at 50% 46%,#E3EBDD 0 38%,rgba(227,235,221,0) 39%),#FFF9F6}
+.togo{position:absolute;inset:0;display:block;margin:0!important;padding:5% 6% 4%!important;background:none!important;border-radius:0!important}
+.togo::after{content:"";position:absolute;left:22%;right:22%;bottom:3.2%;height:2.6%;border-radius:50%;background:rgba(107,74,63,.14);filter:blur(3px)}
+.pc2 .gtg-ph .togo img{position:relative;z-index:1;inset:auto;width:100%;height:100%;object-fit:contain;display:block}
+.pc2 .gtg-ph:hover .togo img{transform:translateY(-4px) rotate(-1deg)}
