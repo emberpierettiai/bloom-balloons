@@ -1070,7 +1070,8 @@
    "id": "girls-birthday-cake-trio",
    "cat": "helium",
    "ht": [
-    "girls-birthday"
+    "girls-birthday",
+    "birthday"
    ],
    "k": [
     "hel-gb-cake-trio"
@@ -1334,6 +1335,62 @@
    "occ": [
     "seasonal"
    ]
+  },
+  {
+   "id": "birthday-rainbow-dots",
+   "cat": "helium",
+   "ht": [
+    "birthday"
+   ],
+   "k": [
+    "hel-bd-rainbow-dots"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Rainbow “Happy Birthday” balloon set",
+   "es": "Set de globos “Happy Birthday” arcoíris"
+  },
+  {
+   "id": "birthday-rosegold-cake",
+   "cat": "helium",
+   "ht": [
+    "birthday"
+   ],
+   "k": [
+    "hel-bd-rosegold-cake"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Rose gold birthday cake balloon set",
+   "es": "Set de globos pastel de cumpleaños oro rosa"
+  },
+  {
+   "id": "birthday-sprinkles",
+   "cat": "helium",
+   "ht": [
+    "birthday"
+   ],
+   "k": [
+    "hel-bd-sprinkles"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Sprinkles and cupcake birthday balloon set",
+   "es": "Set de globos de chispas y cupcake"
+  },
+  {
+   "id": "birthday-navy-rainbow",
+   "cat": "helium",
+   "ht": [
+    "birthday"
+   ],
+   "k": [
+    "hel-bd-navy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Navy and rainbow birthday balloon set",
+   "es": "Set de globos de cumpleaños azul marino y arcoíris"
   }
  ],
  "occs": [
