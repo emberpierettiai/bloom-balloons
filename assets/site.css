@@ -382,3 +382,11 @@ section.top{padding:28px 0 8px}
 @media(min-width:1001px){#tiles{grid-template-columns:repeat(7,minmax(0,1fr));gap:14px}.itile .lbl{font-size:1.18rem}}
 @media(max-width:1000px) and (min-width:521px){#tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .itile .art.photo img{object-fit:cover;border-radius:18px}
+/* ---- listing filters, custom request, helium ---- */
+.fgrp{display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap}
+.creq{margin-top:64px;padding:34px 22px;border-radius:22px;background:var(--cream);border:1px solid var(--champ);text-align:center}
+.creq h2{margin-bottom:.4rem}.creq p{max-width:56ch;margin:0 auto 18px}.creq .row{justify-content:center}
+.art-ph{background:#FFF9F6;border:1px solid var(--champ)}
+.art-ph svg,.pc2 .gtg-ph>svg{position:absolute;inset:0;width:100%;height:100%}
+.pickav{display:flex;flex-direction:column;gap:2px;font-size:.92rem}.pickav small{opacity:.85}
+@media(max-width:560px){.tbar{align-items:flex-start}.sortl select{max-width:150px}}
