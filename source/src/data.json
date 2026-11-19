@@ -573,6 +573,102 @@
    "en": "Candy number balloon stack",
    "es": "Torre de globos con número y dulces",
    "colors": "pink lavender"
+  },
+  {
+   "id": "christmas-gingerbread-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-gingerbread"
+   ],
+   "pr": "quote",
+   "en": "Gingerbread, tree and snowman balloon set",
+   "es": "Set de globos de galleta de jengibre, árbol y muñeco de nieve",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "christmas-friends-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-faces"
+   ],
+   "pr": "quote",
+   "en": "Christmas friends balloon set",
+   "es": "Set de globos de amigos navideños",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "christmas-snowman-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-snowman"
+   ],
+   "pr": "quote",
+   "en": "Snowman, stocking and peppermint balloon set",
+   "es": "Set de globos de muñeco de nieve, bota y caramelo",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "christmas-reindeer-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-reindeer"
+   ],
+   "pr": "quote",
+   "en": "Reindeer with gift box balloon set",
+   "es": "Set de globos de reno con caja de regalo",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "christmas-santa-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-santa"
+   ],
+   "pr": "quote",
+   "en": "Santa Claus balloon set",
+   "es": "Set de globos de Papá Noel",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "christmas-orb-balloon-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-orbs"
+   ],
+   "pr": "quote",
+   "en": "Red, green and gold orb balloon set",
+   "es": "Set de globos orbe rojo, verde y dorado",
+   "occ": [
+    "seasonal"
+   ]
   }
  ],
  "occs": [
@@ -636,6 +732,18 @@
     "#3F7A54",
     "#E2C17E"
    ]
+  },
+  {
+   "id": "christmas",
+   "big": true,
+   "en": "Christmas",
+   "es": "Navidad",
+   "c": [
+    "#C8414B",
+    "#3F7A54",
+    "#E2C17E"
+   ],
+   "k": "hel-xmas-gingerbread"
   },
   {
    "id": "themed",
