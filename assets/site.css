@@ -390,3 +390,4 @@ section.top{padding:28px 0 8px}
 .art-ph svg,.pc2 .gtg-ph>svg{position:absolute;inset:0;width:100%;height:100%}
 .pickav{display:flex;flex-direction:column;gap:2px;font-size:.92rem}.pickav small{opacity:.85}
 @media(max-width:560px){.tbar{align-items:flex-start}.sortl select{max-width:150px}}
+@media(min-width:901px){.page .tiles.big{grid-template-columns:repeat(4,minmax(0,1fr))}.page .tiles.big .tile span{font-size:1.6rem}}
