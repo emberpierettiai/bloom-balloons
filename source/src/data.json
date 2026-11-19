@@ -2670,6 +2670,104 @@
    "av": true,
    "en": "Lilac rainbow “Get Well Soon” balloon set",
    "es": "Set de globos arcoíris lila “Get Well Soon”"
+  },
+  {
+   "id": "graduation-cap",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-cap"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Congrats Grad” cap and stars balloon set",
+   "es": "Set de globos birrete “Congrats Grad” y estrellas"
+  },
+  {
+   "id": "graduation-congrats-star",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-congrats-star"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Congrats!” star and sunshine balloon set",
+   "es": "Set de globos estrella “Congrats!” y sol"
+  },
+  {
+   "id": "graduation-bear-globe",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-bear-globe"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Graduate bear and globe balloon set",
+   "es": "Set de globos osito graduado y globo terráqueo"
+  },
+  {
+   "id": "graduation-gold-caps",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-gold-caps"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Gold “Congrats to You Grad!” balloon set",
+   "es": "Set de globos dorado “Congrats to You Grad!”"
+  },
+  {
+   "id": "graduation-dream-big",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-dream-big"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Dream Big” bear, pencil and trophy balloon set",
+   "es": "Set de globos osito “Dream Big”, lápiz y trofeo"
+  },
+  {
+   "id": "graduation-you-did-it",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-youdidit"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Congratulations, You Did It!” balloon set",
+   "es": "Set de globos “Congratulations, You Did It!”"
+  },
+  {
+   "id": "graduation-congrats-trio",
+   "cat": "helium",
+   "ht": [
+    "graduation"
+   ],
+   "k": [
+    "hel-gr-congrats"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Congratulations” balloon trio",
+   "es": "Trío de globos “Congratulations”"
   }
  ],
  "occs": [
@@ -2927,13 +3025,15 @@
   },
   {
    "id": "graduation",
-   "en": "Graduation",
-   "es": "Graduación",
+   "big": true,
+   "en": "Graduation & Congratulations",
+   "es": "Graduación y Felicitaciones",
    "c": [
-    "#4A342C",
+    "#1A1A1A",
     "#E2C17E",
     "#FFFFFF"
-   ]
+   ],
+   "k": "hel-gr-cap"
   },
   {
    "id": "welcome-home",
