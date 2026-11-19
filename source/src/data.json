@@ -2392,6 +2392,57 @@
    "occ": [
     "seasonal"
    ]
+  },
+  {
+   "id": "hanukkah-menorah",
+   "cat": "helium",
+   "ht": [
+    "holidays"
+   ],
+   "k": [
+    "hel-hk-menorah"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Hanukkah” menorah balloon set",
+   "es": "Set de globos menorá “Happy Hanukkah”",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "hanukkah-star",
+   "cat": "helium",
+   "ht": [
+    "holidays"
+   ],
+   "k": [
+    "hel-hk-star"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Star of David balloon set",
+   "es": "Set de globos Estrella de David",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "hanukkah-dreidel",
+   "cat": "helium",
+   "ht": [
+    "holidays"
+   ],
+   "k": [
+    "hel-hk-dreidel"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Dreidel balloon set",
+   "es": "Set de globos dreidel",
+   "occ": [
+    "seasonal"
+   ]
   }
  ],
  "occs": [
@@ -2472,13 +2523,14 @@
   {
    "id": "holidays",
    "big": true,
-   "en": "Holidays",
-   "es": "Fiestas",
+   "en": "Hanukkah",
+   "es": "Janucá",
    "c": [
-    "#C8414B",
-    "#3F7A54",
-    "#E2C17E"
-   ]
+    "#1B3A8C",
+    "#C9CDD4",
+    "#FFFFFF"
+   ],
+   "k": "hel-hk-menorah"
   },
   {
    "id": "thanksgiving",
