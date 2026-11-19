@@ -1391,6 +1391,57 @@
    "av": true,
    "en": "Navy and rainbow birthday balloon set",
    "es": "Set de globos de cumpleaños azul marino y arcoíris"
+  },
+  {
+   "id": "thanksgiving-turkey-set",
+   "cat": "helium",
+   "ht": [
+    "thanksgiving"
+   ],
+   "k": [
+    "hel-tg-turkey"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Turkey, pumpkin and fall leaves balloon set",
+   "es": "Set de globos pavo, calabaza y hojas de otoño",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "thanksgiving-pumpkin-set",
+   "cat": "helium",
+   "ht": [
+    "thanksgiving"
+   ],
+   "k": [
+    "hel-tg-pumpkins"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink and orange pumpkin balloon set",
+   "es": "Set de globos calabaza rosa y naranja",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "thanksgiving-acorn-set",
+   "cat": "helium",
+   "ht": [
+    "thanksgiving"
+   ],
+   "k": [
+    "hel-tg-acorn"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pumpkin, acorn and fall leaves balloon set",
+   "es": "Set de globos calabaza, bellota y hojas de otoño",
+   "occ": [
+    "seasonal"
+   ]
   }
  ],
  "occs": [
@@ -1477,6 +1528,18 @@
     "#3F7A54",
     "#E2C17E"
    ]
+  },
+  {
+   "id": "thanksgiving",
+   "big": true,
+   "en": "Thanksgiving",
+   "es": "Acción de Gracias",
+   "c": [
+    "#C86A2B",
+    "#E0A33C",
+    "#8C3B2A"
+   ],
+   "k": "hel-tg-turkey"
   },
   {
    "id": "christmas",
