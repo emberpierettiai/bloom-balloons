@@ -357,3 +357,18 @@ section.top{padding:28px 0 8px}
 .odots button[aria-current=true]::before{background:#fff;width:11px;height:11px}
 @media(max-width:560px){.otrk .tile span{font-size:1.7rem;padding:70px 18px 44px}}
 @media(prefers-reduced-motion:reduce){.otrk{transition:none}}
+/* ---- Arches & Garlands on the home page: two clear choices ---- */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;align-items:start}
+.duo .duo-a .ph{aspect-ratio:4/7}
+.duo .duo-b .ph{aspect-ratio:8/7}
+@media(max-width:560px){.duo{gap:12px}.duo .duo-b .ph{aspect-ratio:auto;height:0;padding-bottom:calc(87.5% + 0px)}}
+.duo h3{font:600 1.25rem/1.25 "DM Sans",sans-serif;margin-top:14px}
+.duo .pprice{font-size:1.05rem!important}.duo .pprice b{font-size:1.45rem;font-weight:700}
+.dnote{margin:6px auto 0;font-size:.9rem;max-width:34ch;opacity:.9}
+.chip2{position:absolute;left:12px;top:12px;margin:0!important;padding:.35rem .8rem!important;border-radius:999px!important;background:var(--choc)!important;color:var(--off);font:600 .78rem/1.2 "DM Sans",sans-serif!important;letter-spacing:.04em;text-transform:uppercase;z-index:2}
+.duo-b .chip2{background:rgba(255,254,251,.95)!important;color:var(--choc)}
+.pc2 .gtg-ph{background:#FFF9F6}
+@media(max-width:560px){.duo h3{font-size:1rem}.duo .pprice b{font-size:1.15rem}.dnote{font-size:.8rem}.chip2{left:6px;top:6px;font-size:.62rem!important;padding:.28rem .5rem!important}}
+.pc2 .ph{text-decoration:none}
+.pc2 .ph .chip2{position:absolute;left:12px;top:12px;text-decoration:none}
+@media(max-width:560px){.pc2 .ph .chip2{left:6px;top:6px}}
