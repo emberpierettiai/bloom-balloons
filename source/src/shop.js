@@ -89,10 +89,14 @@ function renderHeliumHub(){const t=T[L],c=C("helium");setMeta(c[L],L==="en"?c.de
  const card=h=>`<a class="hcard" href="${hturl(h)}"><span class="hart">${h.k?`<img src="${img(h.k)}" alt="" loading="lazy">`:helArt(h.c,"#FBF6EC")}</span><span class="hlbl">${h[L]}</span></a>`;
  const small=h=>`<a class="tile htile" href="${hturl(h)}">${h.k?`<img src="${img(h.k)}" alt="" loading="lazy">`:helArt(h.c,"#FBF6EC")}<span>${h[L]}</span></a>`;
  const sbp=P("single-helium-balloon"),sb=`<a class="hcard" href="${purl(sbp)}"><span class="hart"><img src="${img("hel-single")}" alt="" loading="lazy"></span><span class="hlbl">${t.sb_h}</span></a>`;
- $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L]]])+`<h1 class="ph1 ctr">${c[L]}</h1><p class="lead ctr">${t.hub_p}</p><div class="hgrid">${sb}${DATA.hthemes.filter(h=>h.big).map(card).join("")}</div><div class="tiles hsmall">${DATA.hthemes.filter(h=>!h.big).map(small).join("")}</div><h2 class="also ctr">${t.hub_all}</h2><div class="prices cat-pr">${catPrices(c)}</div><div class="pgrid" style="margin-top:22px">${catOf("helium").map(pcard).join("")}</div><section class="creq"><h2>${t.cr_h}</h2><p>${t.cr_p}</p><div class="row"><a class="btn pri" href="${smsLink(t.msg_hi)}">${t.b_sms}</a><a class="btn" href="index.html#quote">${t.b_quote}</a></div></section>`;
+ $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L]]])+`<h1 class="ph1 ctr">${c[L]}</h1><p class="lead ctr">${t.hub_p}</p><div class="hgrid">${sb}${DATA.hthemes.filter(h=>h.big&&!h.up).map(card).join("")}</div><div class="tiles hsmall">${DATA.hthemes.filter(h=>!h.big&&!h.up).map(small).join("")}</div><h2 class="also ctr">${t.hub_all}</h2><div class="prices cat-pr">${catPrices(c)}</div><div class="pgrid" style="margin-top:22px">${catOf("helium").map(pcard).join("")}</div><section class="creq"><h2>${t.cr_h}</h2><p>${t.cr_p}</p><div class="row"><a class="btn pri" href="${smsLink(t.msg_hi)}">${t.b_sms}</a><a class="btn" href="index.html#quote">${t.b_quote}</a></div></section>`;
  wireCars($("#app"))}
-function renderHTheme(id){const t=T[L],h=HT(id),c=C("helium");setMeta(`${h[L]} · ${c[L]}`,`${h[L]}. ${t.cat_p}`);
- listing(h[L],"",htOf(id),[[t.home,"index.html"],[c[L],curl(c)],[h[L]]],"",t.cat_soon)}
+function renderHTheme(id){const t=T[L],h=HT(id),c=C("helium"),up=h.up?HT(h.up):null;
+ setMeta(`${h[L]} · ${c[L]}`,`${h[L]}. ${t.cat_p}`);
+ const kids=DATA.hthemes.filter(x=>x.up===id);
+ const extra=kids.length?`<div class="tiles hsmall htsub">${kids.map(k=>`<a class="tile htile" href="${hturl(k)}">${k.k?`<img src="${img(k.k)}" alt="" loading="lazy">`:helArt(k.c,"#FBF6EC")}<span>${k[L]}</span></a>`).join("")}</div>`:"";
+ const trail=[[t.home,"index.html"],[c[L],curl(c)]];if(up)trail.push([up[L],hturl(up)]);trail.push([h[L]]);
+ listing(h[L],"",htOf(id),trail,extra,t.cat_soon)}
 function renderOccasions(){const t=T[L];setMeta(t.m_occs,t.occ_p||t.m_occs);
  $("#app").innerHTML=crumbs([[t.home,"index.html"],[t.m_occs]])+`<h1 class="ph1 ctr">${t.m_occs}</h1><div class="tiles big">${DATA.occs.map(o=>tile(ourl(o),o[L],o.k)).join("")}</div>`}
 function renderOccasion(id){const t=T[L],o=O(id);setMeta(o[L],o[L]+". "+t.cat_p);

@@ -841,7 +841,8 @@
    "id": "mothers-day-gingham-trio",
    "cat": "helium",
    "ht": [
-    "mothers-day"
+    "mothers-day",
+    "girls-birthday"
    ],
    "k": [
     "hel-mom-gingham"
@@ -938,6 +939,230 @@
    "occ": [
     "seasonal"
    ]
+  },
+  {
+   "id": "girls-birthday-crown-hearts",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-crown"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Gold crown and hearts balloon set",
+   "es": "Set de globos corona dorada y corazones"
+  },
+  {
+   "id": "girls-birthday-unicorn",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-unicorn"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Unicorn balloon set",
+   "es": "Set de globos de unicornio"
+  },
+  {
+   "id": "girls-birthday-butterfly",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-butterfly"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Butterfly and daisy birthday balloon set",
+   "es": "Set de globos de mariposa y margarita"
+  },
+  {
+   "id": "girls-birthday-fairy",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-fairy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Fairy balloon set",
+   "es": "Set de globos de hada"
+  },
+  {
+   "id": "girls-birthday-kitty",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-kitty"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Kitty balloon set",
+   "es": "Set de globos de gatita"
+  },
+  {
+   "id": "girls-birthday-castle-pastel",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-castle-pastel"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pastel castle and carriage balloon set",
+   "es": "Set de globos castillo y carruaje pastel"
+  },
+  {
+   "id": "girls-birthday-castle-bright",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-castle-bright"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Castle, carriage and cake balloon set",
+   "es": "Set de globos castillo, carruaje y pastel"
+  },
+  {
+   "id": "girls-birthday-pink-cake",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-pink-cake"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink birthday cake balloon set",
+   "es": "Set de globos pastel de cumpleaños rosa"
+  },
+  {
+   "id": "girls-birthday-standing-cake",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-standing-cake"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Standing birthday cake balloon set",
+   "es": "Set de globos pastel de cumpleaños de pie"
+  },
+  {
+   "id": "girls-birthday-cake-trio",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-cake-trio"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Birthday cake balloon set",
+   "es": "Set de globos pastel de cumpleaños"
+  },
+  {
+   "id": "girls-birthday-cupcake",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-cupcake"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Cupcake and sprinkles birthday balloon set",
+   "es": "Set de globos cupcake y chispas"
+  },
+  {
+   "id": "girls-birthday-shimmer",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-shimmer"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Shimmer birthday balloon set",
+   "es": "Set de globos de cumpleaños brillante"
+  },
+  {
+   "id": "girls-birthday-hotpink",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-hotpink"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Hot pink birthday balloon set",
+   "es": "Set de globos de cumpleaños rosa fuerte"
+  },
+  {
+   "id": "girls-birthday-stars",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-stars"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Birthday star balloon trio",
+   "es": "Trío de globos estrella de cumpleaños"
+  },
+  {
+   "id": "girls-birthday-bow",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-bow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink bow balloon set",
+   "es": "Set de globos de lazo rosa"
+  },
+  {
+   "id": "girls-birthday-smiley",
+   "cat": "helium",
+   "ht": [
+    "girls-birthday"
+   ],
+   "k": [
+    "hel-gb-smiley"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Smiley birthday balloon set",
+   "es": "Set de globos carita feliz de cumpleaños"
   }
  ],
  "occs": [
@@ -990,6 +1215,29 @@
     "#E2C17E"
    ],
    "k": "hel-circus"
+  },
+  {
+   "id": "girls-birthday",
+   "up": "kids-birthday",
+   "en": "Girls Birthday",
+   "es": "Cumpleaños de niña",
+   "c": [
+    "#EE9FB3",
+    "#E2C17E",
+    "#B58CC9"
+   ],
+   "k": "hel-gb-crown"
+  },
+  {
+   "id": "boys-birthday",
+   "up": "kids-birthday",
+   "en": "Boys Birthday",
+   "es": "Cumpleaños de niño",
+   "c": [
+    "#4A7FD4",
+    "#7BC47F",
+    "#F2C94C"
+   ]
   },
   {
    "id": "holidays",
