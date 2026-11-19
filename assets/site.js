@@ -1,0 +1,335 @@
+const SMS_NUM="+19734447348";
+const smsLink=m=>`sms:${SMS_NUM}?&body=${encodeURIComponent(m)}`;
+const T={
+en:{n_home:"Home",n_shop:"Shop Balloons",n_arch:"Balloon Arches",n_sculpt:"Balloon Sculptures",n_helium:"Helium Balloons",n_gal:"Gallery",n_about:"About",n_faq:"FAQ",n_contact:"Contact",get_quote:"Get a Quote",
+meta_t:"Custom Balloon Arches & Garlands in South Florida | Bloom Balloons",meta_d:"Custom, made-to-order balloon arches, garlands, sculptures and helium bouquets for South Florida celebrations since 2019. Request a quote from Bloom Balloons.",
+h1:"Beautiful Balloons. Unforgettable Moments.",h_sub:"From elegant balloon arches and artistic sculptures to personalized helium balloon bouquets, we create beautiful details for life’s most meaningful celebrations.",h_tag:"Balloon Art & Celebrations in South Florida",b_shop:"Shop Balloons",b_quote:"Get a Custom Quote",b_sms:"Text Us",ph_hero:"Hero photo goes here",
+cat_h:"Shop by product type",cat_p:"Every piece is custom and made to order in your colors.",ask:"Ask by Text",order:"Order by Text",ask_q:"Ask for a quote",ann:"Text us your idea & event date for a quote",h_sms:"Text Us",how_sms:"Text Us Your Idea",m_gar:"Garlands & Arches",m_col:"Columns",m_sc:"Sculptures",m_hel:"Helium & Bouquets",m_gtg:"Garland to Go",m_occ:"Occasions",m_faq:"FAQ",m_q:"Quote",occ_p:"Pick your celebration and we’ll add it to your quote request.",f_occ:"Occasion",occ_none:"Select an occasion",occ_other:"Other",msg_ann:"Hi Bloom Balloons! I’d like a quote.\n\nMy idea: \nEvent date: ",
+occ_h:"Shop by occasion",why_h:"Why choose Bloom Balloons?",gal_h:"Our balloon work",f_all:"All",f_arch:"Balloon Arches",f_sc:"Balloon Sculptures",f_col:"Columns & Helium",f_bd:"Birthdays",f_co:"Corporate Events",f_se:"Seasonal Designs",gal_p:"Real Bloom Balloons projects. Tap a photo to see the details.",want:"I Want Something Like This",
+how_h:"How to order",q_h:"Request a quote",q_p:"Tell us about your celebration and we’ll reply with availability and pricing.",q_from:"Prices shown are starting prices; final quote depends on size, colors and location.",
+f_name:"Name",f_email:"Email",f_phone:"Phone",f_zip:"Event ZIP Code",f_date:"Event date",f_ful:"Delivery, pickup or installation",f_colors:"Preferred colors",ph_colors:"Sage, ivory, champagne",f_desc:"Describe your idea",o_del:"Delivery",o_pick:"Pickup",o_inst2:"Installation",
+submit:"Send Quote Request by Text",cont_sms:"Continue by Text",ig_h:"Follow Our Balloon Journey",ig_p:"See our latest creations on Instagram.",ig_b:"Visit Our Instagram",fin_h:"Let’s Make Your Celebration Bloom.",fin_shop:"Shop Our Balloons",slogan2:"Where Every Celebration Begins to Bloom.",st_h:"Our story",st_1:"Bloom Balloons is the balloon boutique of Big Dream Events, the Florida celebration company founded by Michele.",st_2:"It all started with her daughter Isabella’s first birthday. Michele couldn’t find a party company that understood the celebration she imagined, so she created it herself.",st_3:"Since 2019 she has designed celebrations across Florida. Bloom Balloons brings that same care to balloon arches, sculptures and bouquets.",ql_h:"Quick Links",ci_h:"Contact Information",sms_talk:"Let’s Talk by Text",bde:"Visit Big Dream Events",foot_area:"Serving South Florida since 2019. Delivery, pickup and installation, subject to availability.",
+lead_std:"Delivery and pickup orders need at least 3 business days’ notice and are subject to availability.",lead_inst:"Installations need at least 20 days’ notice and are subject to design and scheduling confirmation.",
+e_req:"Required field",e_mail:"Enter a valid email",e_zip:"Enter a 5-digit ZIP Code",e_date:d=>`Earliest requestable date: ${d}`,e_fix:"Please check the highlighted fields.",sent:"Opening your messaging app with your quote request. Just tap send! If it doesn’t open, text us at +1 (973) 444-7348 or email contact@bigdreamevents.com.",
+msg_q:{hi:"Hi Bloom Balloons! I’d like to request a quote.",name:"Name",email:"Email",phone:"Phone",zip:"ZIP Code",ful:"Fulfillment",date:"Event date",occ:"Occasion",colors:"Colors",desc:"Idea",end:"Could you please confirm availability and pricing?"},
+msg_hi:"Hi Bloom Balloons! I found your website and would love more information about your balloon creations.",
+msg_p:(p,c,s,q,d,z,m)=>`Hi Bloom Balloons!\n\nI’m interested in:\n\nProduct: ${p}\nColors: ${c}\nSize: ${s}\nQuantity: ${q}\nRequested Date: ${d}\nZIP Code: ${z}\nFulfillment: ${m}\n\nCould you please confirm availability and pricing?`,
+msg_g:(p)=>`Hi Bloom Balloons! I’d like something like this gallery design: ${p}. Could you share availability and pricing?`,tbd:"",
+gtg:{name:"Balloon Garland to Go",tag:"Pickup only",desc:"A ready-made balloon garland in your colors that you pick up at our studio and take home yourself. No delivery and no installation.",from:"From $60",rate:"$20 per foot · sizes 3 to 10 ft",leg:"Choose your size",ft:"ft",your:n=>`Your size: ${n} ft`,tax:"Florida sales tax is added when you pay.",
+info:["Pick up to 3 colors for your garland.","Metallic colors: +$5/ft","Extra colors and foil balloons cost extra. Ask us for pricing.","Made with a mix of 3 balloon sizes: 5 in, 11 in and 18 in.","Pickup only: setup is not included.","For 6 to 9 ft garlands, bring a small SUV with the seats folded down. Keep sharp objects out of the car, and don’t leave the garland in a hot car for hours or overnight.","An optional stand is available. Ask us for details and pricing.","Pickup orders need at least 3 business days’ notice and are subject to availability."],
+note:"Online checkout isn’t available. Tap “Reserve by Text” to pre-reserve your garland, then text with us to confirm your order and pay.",btn:"Reserve by Text",person:"5 ft 6 in",cap:"Illustration for size reference",
+alt:n=>`Illustration for size reference: a ${n} ft pink, white and gold balloon garland next to a person 5 ft 6 in tall, with a ruler marked from 0 to 10 ft`,
+met:"Metallic colors (+$5/ft)",msg:(n,m)=>`Hi Bloom Balloons!\n\nI'd like to reserve a Garland to Go (pickup only):\n\nSize (ft): ${n}\n${m?"Metallic colors: Yes\n":""}Colors (up to 3): \nRequested pickup date: \n\nPlease confirm availability and total.`},
+cats:[["Balloon Arches & Garlands","Organic and classic arches that frame the moment.",[["Organic garlands","From $25/ft","8 ft minimum"],["Standard garlands","From $19.50/ft"],["Balloon columns","From $80","6 ft","columns"]]],["Custom Balloon Sculptures","Artistic, made-to-order pieces for standout events."],["Helium Balloons & Bouquets","Personalized bouquets, numbers and letters.",[["Bouquets","From $37"]]]],
+occ:["Birthdays","Baby Showers","Bridal Showers","Weddings","Graduations","Anniversaries","Corporate Events","Grand Openings","Holidays"],
+why:[["Custom Designs","Every piece starts from your idea."],["Creative Balloon Artistry","Shapes and textures beyond the ordinary."],["Beautiful Color Combinations","Palettes chosen to flatter your space."],["Attention to Detail","Clean finishes, secure builds."],["Easy Ordering","Order online or by text."],["Memorable Celebrations","Details guests remember."]],
+faq_h:"Frequently asked questions",faq_p:"Quick answers to help you plan your celebration with confidence.",
+faq:[["How far in advance should I order?","Standard delivery and pickup orders need at least 3 business days’ notice, and installations need at least 20 days’ notice. Every order is subject to availability, so for busy celebration dates, the earlier you reach out, the better your chances of reserving your date."],
+["How do I get a price?","Every piece is custom and made to order, so pricing depends on your design. Tell us your event date, ZIP code, colors and idea through the quote form or by text, and we’ll reply with availability and pricing. Starting prices: organic garlands from $25/ft (8 ft minimum), standard garlands from $19.50/ft, balloon columns from $80 (6 ft) and bouquets from $37."],
+["Do you serve my area?","We create balloon décor for celebrations throughout South Florida. Share your event ZIP code in the quote form or by text, and we’ll confirm availability for your location."],
+["Can you match my colors and theme?","Yes. Every design is custom, so we build it around your colors and theme, from soft pastels to chrome metallics. Browse our <a href=\"#gallery\">gallery</a> for inspiration and tap “I Want Something Like This” on any photo to start your request."],
+["Do you offer delivery, pickup and installation?","Yes. Choose delivery, pickup or installation in the quote form and we’ll confirm the details with you. All options are subject to availability, and installations need at least 20 days’ notice."],
+["What can you create?","Balloon arches and garlands, custom balloon sculptures, helium balloon bouquets with numbers and letters, and personalized balloon gifts for birthdays, baby showers, weddings, graduations, corporate events, holidays and more."],
+["How do I contact you?","Text or call us at <a href=\"tel:+19734447348\">+1 (973) 444-7348</a>, email <a href=\"mailto:contact@bigdreamevents.com\">contact@bigdreamevents.com</a>, or find us on Instagram at <a href=\"https://www.instagram.com/bigdreamevents.usa/\" target=\"_blank\" rel=\"noopener\">@bigdreamevents.usa</a>. You can also send your details through the <a href=\"#quote\">quote form</a> on this page."]],
+calt:[["Pink organic balloon arch at a restaurant entrance","Pastel rainbow balloon garland framing a bunny backdrop","Chrome silver organic balloon arch over a doorway","Red heart balloon arch at a venue entrance","Pink and blue balloon garland with gold accents around a round birthday backdrop","Orange, white and green balloon garland beside an arched backdrop","Pink and red balloon garland in a strawberry-themed party setup"],["Princess balloon sculpture with a pink number 8 and balloon flowers","Baby girl welcome balloon sculpture with a rocking horse and teddy bear","Under the sea mermaid balloon sculpture with a teal tail"],["Pair of pink kitty princess balloon columns with bows","Helium balloon column with gold letter balloons and navy and chrome accents","Teddy bear inside a clear bubble balloon with red heart balloons"]],
+steps:[["Text us your idea and date","Share your colors, event date and ZIP code by text or with the quote form."],["Approve your design and quote","We reply with availability and pricing for your custom design."],["We deliver / install","Delivery and pickup orders need at least 3 business days’ notice; installations need at least 20 days’ notice. Subject to availability."]],
+gal:["Circus-themed garland","Garland over a doorway","Farm party garland","Cat princess columns","Bear and garland","Balloon butterfly"]},
+es:{n_home:"Inicio",n_shop:"Tienda",n_arch:"Arcos de globos",n_sculpt:"Esculturas de globos",n_helium:"Globos con helio",n_gal:"Galería",n_about:"Nosotros",n_faq:"Preguntas",n_contact:"Contacto",get_quote:"Cotizar",
+meta_t:"Arcos y guirnaldas de globos en el sur de Florida | Bloom Balloons",meta_d:"Arcos, guirnaldas, esculturas de globos y ramos con helio hechos a pedido para celebraciones en el sur de Florida desde 2019. Cotiza con Bloom Balloons.",
+h1:"Globos hermosos. Momentos inolvidables.",h_sub:"Desde elegantes arcos de globos y esculturas artísticas hasta ramos personalizados con helio, creamos detalles hermosos para las celebraciones más importantes de la vida.",h_tag:"Arte con globos y celebraciones en el sur de Florida",b_shop:"Ver globos",b_quote:"Cotización personalizada",b_sms:"Escríbenos por texto",ph_hero:"Aquí va la foto principal",
+cat_h:"Compra por tipo de producto",cat_p:"Cada pieza es personalizada y hecha a pedido con tus colores.",ask:"Preguntar por texto",order:"Pedir por texto",ask_q:"Pide una cotización",ann:"Escríbenos tu idea y la fecha de tu evento para cotizar",h_sms:"Escríbenos",how_sms:"Escríbenos tu idea",m_gar:"Guirnaldas y arcos",m_col:"Columnas",m_sc:"Esculturas",m_hel:"Helio y bouquets",m_gtg:"Guirnalda para llevar",m_occ:"Ocasiones",m_faq:"Preguntas",m_q:"Cotizar",occ_p:"Elige tu celebración y la agregamos a tu solicitud de cotización.",f_occ:"Ocasión",occ_none:"Elige una ocasión",occ_other:"Otra",msg_ann:"¡Hola, Bloom Balloons! Me gustaría una cotización.\n\nMi idea: \nFecha del evento: ",
+occ_h:"Compra por ocasión",why_h:"¿Por qué elegir Bloom Balloons?",gal_h:"Nuestro trabajo con globos",f_all:"Todo",f_arch:"Arcos de globos",f_sc:"Esculturas",f_col:"Columnas y helio",f_bd:"Cumpleaños",f_co:"Eventos corporativos",f_se:"Diseños de temporada",gal_p:"Proyectos reales de Bloom Balloons. Toca una foto para ver los detalles.",want:"Quiero algo así",
+how_h:"Cómo hacer tu pedido",q_h:"Solicita una cotización",q_p:"Cuéntanos sobre tu celebración y te responderemos con disponibilidad y precios.",q_from:"Los precios mostrados son precios iniciales; la cotización final depende del tamaño, los colores y la ubicación.",
+f_name:"Nombre",f_email:"Correo electrónico",f_phone:"Teléfono",f_zip:"Código postal del evento",f_date:"Fecha del evento",f_ful:"Entrega, recogida o instalación",f_colors:"Colores preferidos",ph_colors:"Salvia, marfil, champán",f_desc:"Describe tu idea",o_del:"Entrega",o_pick:"Recogida",o_inst2:"Instalación",
+submit:"Enviar solicitud por texto",cont_sms:"Continuar por texto",ig_h:"Sigue nuestro camino entre globos",ig_p:"Mira nuestras últimas creaciones en Instagram.",ig_b:"Visita nuestro Instagram",fin_h:"Hagamos florecer tu celebración.",fin_shop:"Ver nuestros globos",slogan2:"Donde cada celebración comienza a florecer.",st_h:"Nuestra historia",st_1:"Bloom Balloons es la boutique de globos de Big Dream Events, la empresa de celebraciones en Florida fundada por Michele.",st_2:"Todo empezó con el primer cumpleaños de su hija Isabella. Michele no encontró una empresa de fiestas que entendiera la celebración que imaginaba, así que la creó ella misma.",st_3:"Desde 2019 diseña celebraciones en toda Florida. Bloom Balloons lleva ese mismo cuidado a los arcos, esculturas y ramos de globos.",ql_h:"Enlaces rápidos",ci_h:"Información de contacto",sms_talk:"Hablemos por texto",bde:"Visita Big Dream Events",foot_area:"Servimos el sur de Florida desde 2019. Entrega, recogida e instalación, sujetas a disponibilidad.",
+lead_std:"Los pedidos con entrega o recogida requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad.",lead_inst:"Las instalaciones requieren mínimo 20 días de anticipación y están sujetas a confirmación de diseño y agenda.",
+e_req:"Campo obligatorio",e_mail:"Ingresa un correo válido",e_zip:"Ingresa un código postal de 5 dígitos",e_date:d=>`Primera fecha disponible para solicitar: ${d}`,e_fix:"Revisa los campos marcados.",sent:"Abriendo tu app de mensajes con tu solicitud. ¡Solo toca enviar! Si no se abre, escríbenos al +1 (973) 444-7348 o al correo contact@bigdreamevents.com.",
+msg_q:{hi:"¡Hola, Bloom Balloons! Me gustaría solicitar una cotización.",name:"Nombre",email:"Correo",phone:"Teléfono",zip:"Código postal",ful:"Modalidad",date:"Fecha del evento",occ:"Ocasión",colors:"Colores",desc:"Idea",end:"¿Podrían confirmar disponibilidad y precios?"},
+msg_hi:"¡Hola, Bloom Balloons! Encontré su página web y me gustaría recibir más información sobre sus creaciones con globos.",
+msg_p:(p,c,s,q,d,z,m)=>`¡Hola, Bloom Balloons!\n\nMe interesa:\n\nProducto: ${p}\nColores: ${c}\nTamaño: ${s}\nCantidad: ${q}\nFecha solicitada: ${d}\nCódigo postal: ${z}\nModalidad: ${m}\n\n¿Podrían confirmar disponibilidad y precios?`,
+msg_g:(p)=>`¡Hola, Bloom Balloons! Me gustaría algo como este diseño de la galería: ${p}. ¿Podrían compartir disponibilidad y precios?`,tbd:"",
+gtg:{name:"Guirnalda de globos para llevar",tag:"Solo recogida",desc:"Una guirnalda de globos lista, hecha con tus colores, que recoges en nuestro estudio y te llevas a casa. Sin entrega y sin instalación.",from:"Desde $60",rate:"$20 por pie · tamaños de 3 a 10 pies",leg:"Elige tu tamaño",ft:"pies",your:n=>`Tu tamaño: ${n} pies`,tax:"El impuesto de ventas de Florida se agrega al momento de pagar.",
+info:["Elige hasta 3 colores para tu guirnalda.","Colores metálicos: +$5/pie","Los colores adicionales y los globos metalizados (foil) tienen un costo extra. Pregúntanos el precio.","Hecha con globos de 3 tamaños: 5, 11 y 18 pulgadas.","Solo recogida: no incluye montaje.","Para guirnaldas de 6 a 9 pies, trae una SUV pequeña con los asientos abatidos. Mantén los objetos filosos fuera del auto y no dejes la guirnalda dentro de un auto caliente por horas ni durante la noche.","Hay una base opcional disponible. Pregúntanos los detalles y el precio.","Los pedidos para recoger requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad."],
+note:"No hay pago en línea. Toca “Reservar por texto” para pre-reservar tu guirnalda y luego escríbenos por texto para confirmar tu pedido y pagar.",btn:"Reservar por texto",person:"5 pies 6 pulg.",cap:"Ilustración como referencia de tamaño",
+alt:n=>`Ilustración como referencia de tamaño: una guirnalda de globos rosados, blancos y dorados de ${n} pies junto a una persona de 5 pies 6 pulgadas, con una regla marcada de 0 a 10 pies`,
+met:"Colores metálicos (+$5/pie)",msg:(n,m)=>`¡Hola, Bloom Balloons!\n\nMe gustaría reservar una Guirnalda de globos para llevar (solo recogida):\n\nTamaño (pies): ${n}\n${m?"Colores metálicos: Sí\n":""}Colores (hasta 3): \nFecha de recogida deseada: \n\nPor favor, confirmen la disponibilidad y el total.`},
+cats:[["Arcos y guirnaldas de globos","Arcos orgánicos y clásicos que enmarcan el momento.",[["Guirnaldas orgánicas","Desde $25/pie","mínimo 8 pies"],["Guirnaldas estándar","Desde $19.50/pie"],["Columnas de globos","Desde $80","6 pies","columns"]]],["Esculturas de globos personalizadas","Piezas artísticas hechas a pedido para eventos únicos."],["Globos con helio y ramos","Ramos personalizados, números y letras.",[["Bouquets","Desde $37"]]]],
+occ:["Cumpleaños","Baby showers","Despedidas de soltera","Bodas","Graduaciones","Aniversarios","Eventos corporativos","Inauguraciones","Días festivos"],
+why:[["Diseños personalizados","Cada pieza nace de tu idea."],["Arte creativo con globos","Formas y texturas fuera de lo común."],["Combinaciones de color hermosas","Paletas pensadas para tu espacio."],["Atención al detalle","Acabados limpios y montajes seguros."],["Pedidos fáciles","Pide en línea o por mensaje de texto."],["Celebraciones memorables","Detalles que tus invitados recuerdan."]],
+faq_h:"Preguntas frecuentes",faq_p:"Respuestas rápidas para que planees tu celebración con confianza.",
+faq:[["¿Con cuánta anticipación debo hacer mi pedido?","Los pedidos estándar con entrega o recogida requieren mínimo 3 días hábiles de anticipación, y las instalaciones requieren mínimo 20 días. Todos los pedidos están sujetos a disponibilidad, así que para fechas de mucha demanda, mientras antes nos escribas, más posibilidades tendrás de reservar tu fecha."],
+["¿Cómo obtengo un precio?","Cada pieza es personalizada y hecha a pedido, así que el precio depende de tu diseño. Cuéntanos la fecha de tu evento, el código postal, los colores y tu idea en el formulario de cotización o por texto, y te responderemos con disponibilidad y precios. Precios iniciales: guirnaldas orgánicas desde $25/pie (mínimo 8 pies), guirnaldas estándar desde $19.50/pie, columnas de globos desde $80 (6 pies) y bouquets desde $37."],
+["¿Llegan a mi zona?","Creamos decoraciones con globos para celebraciones en todo el sur de Florida. Comparte el código postal de tu evento en el formulario de cotización o por texto y te confirmaremos la disponibilidad para tu ubicación."],
+["¿Pueden usar mis colores y mi temática?","Sí. Cada diseño es personalizado, así que lo creamos con tus colores y tu temática, desde tonos pastel suaves hasta metálicos cromados. Mira nuestra <a href=\"#gallery\">galería</a> para inspirarte y toca “Quiero algo así” en cualquier foto para empezar tu solicitud."],
+["¿Ofrecen entrega, recogida e instalación?","Sí. Elige entrega, recogida o instalación en el formulario de cotización y te confirmaremos los detalles. Todas las opciones están sujetas a disponibilidad, y las instalaciones requieren mínimo 20 días de anticipación."],
+["¿Qué pueden crear?","Arcos y guirnaldas de globos, esculturas de globos personalizadas, ramos de globos con helio con números y letras, y regalos personalizados con globos para cumpleaños, baby showers, bodas, graduaciones, eventos corporativos, días festivos y más."],
+["¿Cómo los contacto?","Escríbenos por texto o llámanos al <a href=\"tel:+19734447348\">+1 (973) 444-7348</a>, envíanos un correo a <a href=\"mailto:contact@bigdreamevents.com\">contact@bigdreamevents.com</a> o búscanos en Instagram como <a href=\"https://www.instagram.com/bigdreamevents.usa/\" target=\"_blank\" rel=\"noopener\">@bigdreamevents.usa</a>. También puedes enviarnos tus datos con el <a href=\"#quote\">formulario de cotización</a> de esta página."]],
+calt:[["Arco orgánico de globos rosados en la entrada de un restaurante","Guirnalda de globos arcoíris pastel alrededor de un fondo de conejito","Arco orgánico de globos plateados cromados sobre una puerta","Arco de globos de corazones rojos en la entrada de un salón","Guirnalda de globos rosados y azules con detalles dorados alrededor de un fondo redondo de cumpleaños","Guirnalda de globos naranja, blanco y verde junto a un fondo en arco","Guirnalda de globos rosados y rojos en una decoración de fiesta de fresas"],["Escultura de globos de princesa con un número 8 rosado y flores de globos","Escultura de bienvenida para bebé con caballito mecedor y osito","Escultura de sirena bajo el mar con cola turquesa"],["Par de columnas de globos de gatita princesa rosadas con moños","Columna de globos con helio con letras doradas y detalles azul marino y cromados","Osito dentro de un globo burbuja transparente con globos de corazones rojos"]],
+steps:[["Escríbenos tu idea y la fecha","Comparte tus colores, la fecha del evento y tu código postal por texto o con el formulario de cotización."],["Aprueba tu diseño y cotización","Te respondemos con disponibilidad y precios para tu diseño personalizado."],["Entregamos / instalamos","Los pedidos con entrega o recogida requieren mínimo 3 días hábiles de anticipación; las instalaciones, mínimo 20 días. Sujeto a disponibilidad."]],
+gal:["Guirnalda de circo","Guirnalda en la puerta","Guirnalda de granja","Columnas de gatita princesa","Oso y guirnalda","Mariposa de globos"]}
+};
+const IMG={letters:"assets/img/letters.jpg",sophie:"assets/img/sophie.jpg",door:"assets/img/door.jpg",farm:"assets/img/farm.jpg",lemon:"assets/img/lemon.jpg",prince:"assets/img/prince.jpg",easter:"assets/img/easter.jpg",pinkarch:"assets/img/pinkarch.jpg",silverarch:"assets/img/silverarch.jpg",christmas:"assets/img/christmas.jpg",heartarch:"assets/img/heartarch.jpg",candy:"assets/img/candy.jpg",india:"assets/img/india.jpg",italia:"assets/img/italia.jpg",elena:"assets/img/elena.jpg",butterfly:"assets/img/butterfly.jpg",princess:"assets/img/princess.jpg",welcome:"assets/img/welcome.jpg",treefairy:"assets/img/treefairy.jpg",mermaid:"assets/img/mermaid.jpg",catpair:"assets/img/catpair.jpg",fox:"assets/img/fox.jpg",raccoon:"assets/img/raccoon.jpg",bubble:"assets/img/bubble.jpg",hearts:"assets/img/hearts.jpg"};
+const PID=["garlands","sculptures","helium"];
+const OCI=['<path d="M4 20h16M5.5 20v-7.5h13V20M5.5 15.5c1.8 1.3 3.4 1.3 5 0s3.4-1.3 5 0 2.4 1.3 3 .6M12 12.5V9"/><path d="M12 7c-1.1-.9-1.1-2.1 0-3.5 1.1 1.4 1.1 2.6 0 3.5z"/>','<path d="M10 3h4M9.5 5h5"/><path d="M10 5l-.6 2.2C8 8 7.5 9.2 7.5 11v8a2 2 0 002 2h5a2 2 0 002-2v-8c0-1.8-.5-3-1.9-3.8L14 5M7.5 13h3M7.5 16h3"/>','<circle cx="12" cy="15" r="5.5"/><path d="M9.5 6.5L12 9.5l2.5-3-1.2-2h-2.6z"/>','<circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M13.5 5.5l1.5 2 1.5-2-.8-1.3h-1.4z"/>','<path d="M2 9.5L12 5l10 4.5L12 14z"/><path d="M6.5 11.5v4.5c3 2.2 8 2.2 11 0v-4.5M22 9.5v5"/>','<path d="M12 20s-7.5-4.6-7.5-10.2A4.1 4.1 0 0112 7.4a4.1 4.1 0 017.5 2.4C19.5 15.4 12 20 12 20z"/>','<rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V5.5a1 1 0 011-1h4a1 1 0 011 1v2M3 12.5h18M12 11.5v2"/>','<path d="M4.5 10.5V20h15v-9.5M3 10.5L5 4h14l2 6.5zM10 20v-5h4v5"/>','<path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.8L12 16.5l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/>'];
+const GK=["circus","door","farm","catpair","bear","butterfly"];
+const CAR=[[1,2,3,4,5,6,7].map(n=>"assets/img/garland"+n+".jpg"),[1,2,3].map(n=>"assets/img/gift"+n+".jpg"),["catpair","letters","gift4"].map(k=>"assets/img/"+k+".jpg")];
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+let L="en";try{const s=localStorage.getItem("bb-lang");L=s==="es"||s==="en"?s:((navigator.language||"").toLowerCase().startsWith("es")?"es":"en")}catch(e){}
+function today(){return new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"}))}
+function addBiz(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);if(d.getDay()%6)n--}return d}
+const iso=d=>d.toISOString?new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10):d;
+function minDate(){const t=today();return $("#ful").value==="install"?new Date(t.getTime()+20*864e5):addBiz(t,3)}
+const GTG={n:6,m:false,sizes:[3,4,5,6,7,8,9,10],ppf:20,met:5},GU=24,GG=262,GX=175;
+function gtgRng(s){return()=>{s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gtgBalloons(n){const r=gtgRng(n*97+13),top=GG-n*GU,B=[],C=["#F3C1CB","#F8DCE2","#FFFFFF","url(#gtgGold)"],W=[.34,.16,.28];
+ const col=()=>{let x=r(),i=0;while(i<3&&x>W[i]){x-=W[i];i++}return C[i]};
+ const sx=y=>GX+Math.sin((GG-y)/38)*7;
+ const add=(cx,cy,rd)=>{cy=Math.min(GG-rd,Math.max(top+rd,cy));B.push([cx,cy,rd,col()])};
+ for(let y=GG-16,k=0;y>top+8;y-=15,k++){const x=sx(y);
+  if(k%2===0)add(x+(k%4?-9:9)+(r()-.5)*6,y-r()*6,17);
+  add(x+(r()-.5)*18,y+(r()-.5)*8,11);
+  add(x+(k%2?14:-14)+(r()-.5)*6,y+(r()-.5)*10,11);
+  add(x-19-r()*6,y+(r()-.5)*10,5);add(x+19+r()*6,y+(r()-.5)*10,5);
+  if(r()>.5)add(x+(r()-.5)*24,y-7,5)}
+ add(sx(top+11),top+11,11);add(sx(top+5)-9,top+5,5);
+ B.sort((a,b)=>b[2]-a[2]);
+ const f=v=>v.toFixed(1);
+ return B.map(([x,y,d,c])=>`<circle cx="${f(x)}" cy="${f(y)}" r="${d}" fill="${c}"/><ellipse cx="${f(x-d*.35)}" cy="${f(y-d*.4)}" rx="${f(d*.28)}" ry="${f(d*.17)}" fill="#fff" stroke="none" opacity=".7"/>`).join("")}
+function gtgSvg(t){const g=t.gtg,ph=GG-5.5*GU;let tk="",lb="";
+ for(let i=0;i<=10;i++){const y=GG-i*GU;tk+=`<line x1="30" x2="44" y1="${y}" y2="${y}"/>`;if(i<10)tk+=`<line x1="30" x2="37" y1="${y-GU/2}" y2="${y-GU/2}"/>`;lb+=`<text x="25" y="${y+3.5}">${i}</text>`}
+ return `<svg viewBox="0 0 400 300" role="img" aria-labelledby="gtg-svgt" font-family="DM Sans,system-ui,sans-serif"><title id="gtg-svgt"></title><defs><linearGradient id="gtgGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7E6B5"/><stop offset=".55" stop-color="#E2C17E"/><stop offset="1" stop-color="#C49A55"/></linearGradient></defs>`+
+ `<rect width="400" height="300" fill="#FFF9F6"/><rect y="${GG}" width="400" height="${300-GG}" fill="#F6EDE4"/><line x1="0" x2="400" y1="${GG}" y2="${GG}" stroke="#EED9C6" stroke-width="1.5"/>`+
+ `<rect x="30" y="${GG-10*GU}" width="10" height="${10*GU}" rx="2" fill="#FFFEFB" stroke="#EED9C6"/><g stroke="#C9B3A2" stroke-width="1">${tk}</g><g font-size="10" text-anchor="end" fill="#6B4A3F">${lb}</g><text x="35" y="${GG-10*GU-8}" font-size="10" text-anchor="middle" fill="#6B4A3F">${g.ft}</text>`+
+ `<line x1="46" x2="330" y1="${ph}" y2="${ph}" stroke="#E3CDB9" stroke-dasharray="2 4"/><line id="gtg-top" x1="46" x2="${GX-30}" stroke="#A6B597" stroke-width="1.5" stroke-dasharray="4 3"/>`+
+ `<ellipse cx="${GX}" cy="${GG}" rx="36" ry="4" fill="#6B4A3F" opacity=".08"/><g id="gtg-g" stroke="#6B4A3F" stroke-opacity=".22" stroke-width=".7"></g>`+
+ `<text id="gtg-hl" x="${GX}" font-size="13" font-weight="600" text-anchor="middle" fill="#6B4A3F"></text>`+
+ `<ellipse cx="285" cy="${GG}" rx="26" ry="3.5" fill="#6B4A3F" opacity=".08"/><g fill="#A6B597"><circle cx="285" cy="${ph+10}" r="10"/><rect x="268" y="${ph+22}" width="34" height="52" rx="13"/></g>`+
+ `<g stroke="#A6B597" stroke-linecap="round" fill="none"><path d="M266 ${ph+30}L259 ${ph+70}" stroke-width="8"/><path d="M304 ${ph+30}L311 ${ph+70}" stroke-width="8"/><path d="M279 ${ph+72}V${GG-5.5}M291 ${ph+72}V${GG-5.5}" stroke-width="11"/></g>`+
+ `<path d="M281 ${ph+12}q4 4 8 0" stroke="#FFFEFB" stroke-width="1.5" fill="none" stroke-linecap="round"/>`+
+ `<text x="285" y="${ph-8}" font-size="11" font-weight="500" text-anchor="middle" fill="#6B4A3F">${g.person}</text>`+
+ `<text x="200" y="289" font-size="12" font-style="italic" text-anchor="middle" fill="#6B4A3F" opacity=".85">${g.cap}</text></svg>`}
+
+const GAL=[["sophie", "Pink gingham baby shower garland", "Guirnalda de baby shower con vichy rosa", "arches birthdays", "sage pink white"], ["princess", "Princess sculpture with number 8", "Escultura de princesa con número 8", "sculptures birthdays", "pink gold white"], ["door", "Organic garland over a doorway", "Guirnalda orgánica sobre una puerta", "arches seasonal", "pink sage yellow"], ["catpair", "Kitty princess columns", "Columnas de gatita princesa", "columns birthdays", "pink white gold"], ["farm", "Farm-themed garland", "Guirnalda temática de granja", "arches birthdays", "sage cream brown"], ["welcome", "Baby girl welcome sculpture", "Escultura de bienvenida para bebé", "sculptures birthdays", "pink sage gold"], ["silverarch", "Chrome silver entrance arch", "Arco de entrada plateado cromado", "arches corporate", "silver"], ["butterfly", "Balloon butterfly", "Mariposa de globos", "sculptures", "black sage pink"], ["lemon", "Lemon-theme garland", "Guirnalda temática de limones", "arches birthdays", "navy yellow white"], ["fox", "Woodland fox column", "Columna del bosque con zorro", "columns birthdays", "sage green cream"], ["easter", "Pastel Easter garland", "Guirnalda pastel de Pascua", "arches seasonal", "pastel"], ["candy", "Candy house installation", "Instalación casa de dulces", "sculptures corporate", "lavender white pink"], ["pinkarch", "Classic spiral arch", "Arco espiral clásico", "arches corporate", "pink mauve"], ["mermaid", "Under the sea mermaid piece", "Pieza de sirena bajo el mar", "sculptures birthdays", "teal pink lavender"], ["prince", "Blue and gold garland", "Guirnalda azul y dorada", "arches birthdays", "blue navy gold white"], ["christmas", "Chrome Christmas backdrop", "Fondo navideño cromado", "seasonal corporate", "silver"], ["treefairy", "Enchanted tree with fairy", "Árbol encantado con hada", "sculptures", "sage pink yellow"], ["italia", "Green, white and red column", "Columna verde, blanco y rojo", "columns corporate", "green white red"], ["elena", "Pink and blue garland with round backdrop", "Guirnalda rosa y azul con fondo redondo", "arches birthdays", "pink blue gold"], ["heartarch", "Valentine’s heart garland", "Guirnalda de corazones de San Valentín", "arches seasonal", "red pink"], ["india", "Tricolor garland", "Guirnalda tricolor", "arches corporate", "orange white green"], ["raccoon", "Woodland raccoon column", "Columna del bosque con mapache", "columns birthdays", "sage green brown"], ["bubble", "Bubble balloon with teddy bear", "Globo burbuja con osito", "helium seasonal", "red"], ["hearts", "Heart balloon backdrop", "Fondo de globos de corazones", "seasonal", "red white"]];
+const COLN={sage:["Sage","Salvia"],pink:["Pink","Rosa"],cream:["Cream","Crema"],white:["White","Blanco"],yellow:["Yellow","Amarillo"],navy:["Navy","Azul marino"],blue:["Blue","Azul"],gold:["Gold","Dorado"],green:["Green","Verde"],red:["Red","Rojo"],brown:["Brown","Café"],silver:["Silver","Plateado"],lavender:["Lavender","Lavanda"],orange:["Orange","Naranja"],mauve:["Mauve","Malva"],teal:["Teal","Turquesa"],pastel:["Pastel","Pastel"],black:["Black","Negro"]};
+const FK=["all","arches","sculptures","columns","birthdays","corporate","seasonal"],FL=["f_all","f_arch","f_sc","f_col","f_bd","f_co","f_se"];
+let FLT="all";
+function drawGal(){const t=T[L],j=L==="en"?1:2;
+ $("#gal-f").innerHTML=FK.map((k,i)=>`<button class="chip" data-f="${k}" aria-pressed="${k===FLT}">${t[FL[i]]}</button>`).join("");
+ $$("#gal-f .chip").forEach(b=>b.onclick=()=>{FLT=b.dataset.f;drawGal()});
+ $("#gal-grid").innerHTML=GAL.map((g,i)=>[g,i]).filter(([g])=>FLT==="all"||g[3].split(" ").includes(FLT)).map(([g,i])=>`<button class="gi" data-g="${i}" aria-label="${g[j]}"><img src="${IMG[g[0]]}" alt="${g[j]}" loading="lazy"></button>`).join("");
+ $$("#gal-grid .gi").forEach(b=>b.onclick=()=>openLb(+b.dataset.g));}
+function openLb(i){const t=T[L],j=L==="en"?1:2,g=GAL[i],ref="BB-"+String(i+1).padStart(2,"0");
+ $("#lbi").src=IMG[g[0]];$("#lbi").alt=g[j];$("#lbh").textContent=g[j];
+ $("#lbm").textContent=g[3].split(" ").map(k=>t[FL[FK.indexOf(k)]]).join(" · ")+" · "+g[4].split(" ").map(c=>COLN[c]?COLN[c][j-1]:c).join(", ")+" · "+ref;
+ $("#lbc").textContent=t.want;$("#lbc").onclick=()=>{$("[name=desc]").value=t.msg_g(g[j]+" ("+ref+")");$("#lb").close();location.hash="quote"};
+ $("#lb").showModal();}
+
+function lead(){const t=T[L],d=minDate();$("#date").min=iso(d);$("#lead-note").textContent=$("#ful").value==="install"?t.lead_inst:t.lead_std}
+function fmtDate(v){const p=v.split("-").map(Number);if(p.length!==3||p.some(isNaN))return v;try{return new Date(p[0],p[1]-1,p[2]).toLocaleDateString(L==="es"?"es-US":"en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"})}catch(e){return v}}
+function formMsg(){const f=new FormData($("#qf")),t=T[L],q=t.msg_q,v=n=>(f.get(n)||"").toString().trim();
+ const ful={delivery:t.o_del,pickup:t.o_pick,install:t.o_inst2}[v("ful")],oc=v("occ"),occ=oc===""?"":oc==="x"?t.occ_other:t.occ[+oc];
+ const rows=[["name",v("name")],["email",v("email")],["phone",v("phone")],["zip",v("zip")],["ful",ful],["date",v("date")&&fmtDate(v("date"))],["occ",occ],["colors",v("colors")],["desc",v("desc")]].filter(r=>r[1]);
+ return q.hi+"\n\n"+rows.map(r=>r[0]==="desc"?`${q.desc}:\n${r[1]}`:`${q[r[0]]}: ${r[1]}`).join("\n")+"\n\n"+q.end}
+
+const DATA={"pricing": {"org": {"t": "ft", "rate": 25, "min": 8, "max": 40}, "std": {"t": "ft", "rate": 19.5, "min": 8, "max": 40}, "gtg": {"t": "ft", "rate": 20, "min": 3, "max": 10, "met": 5}, "col": {"t": "unit", "from": 80}, "bq": {"t": "unit", "from": 37}, "quote": {"t": "quote"}}, "cats": [{"id": "garlands", "en": "Balloon Arches & Garlands", "es": "Arcos y guirnaldas de globos", "den": "Organic and classic arches that frame the moment.", "des": "Arcos orgánicos y clásicos que enmarcan el momento."}, {"id": "columns", "en": "Balloon Columns", "es": "Columnas de globos", "den": "Classic and themed balloon columns, made to order in your colors.", "des": "Columnas de globos clásicas y temáticas, hechas a pedido con tus colores."}, {"id": "sculptures", "en": "Custom Balloon Sculptures", "es": "Esculturas de globos personalizadas", "den": "Artistic, made-to-order pieces for standout events.", "des": "Piezas artísticas hechas a pedido para eventos únicos."}, {"id": "helium", "en": "Helium Balloons & Bouquets", "es": "Globos con helio y ramos", "den": "Personalized bouquets, numbers and letters.", "des": "Ramos personalizados, números y letras."}], "products": [{"id": "gtg", "cat": "garlands", "pr": "gtg", "k": [], "en": "Balloon Garland to Go", "es": "Guirnalda de globos para llevar", "colors": ""}, {"id": "pink-gingham-garland", "cat": "garlands", "pr": "org", "k": ["sophie"], "en": "Pink gingham baby shower garland", "es": "Guirnalda de baby shower con vichy rosa", "colors": "sage pink white"}, {"id": "doorway-garland", "cat": "garlands", "pr": "org", "k": ["door"], "en": "Organic garland over a doorway", "es": "Guirnalda orgánica sobre una puerta", "colors": "pink sage yellow"}, {"id": "farm-garland", "cat": "garlands", "pr": "org", "k": ["farm"], "en": "Farm-themed garland", "es": "Guirnalda temática de granja", "colors": "sage cream brown"}, {"id": "lemon-garland", "cat": "garlands", "pr": "org", "k": ["lemon"], "en": "Lemon-theme garland", "es": "Guirnalda temática de limones", "colors": "navy yellow white"}, {"id": "pastel-easter-garland", "cat": "garlands", "pr": "org", "k": ["easter"], "en": "Pastel Easter garland", "es": "Guirnalda pastel de Pascua", "colors": "pastel"}, {"id": "blue-gold-garland", "cat": "garlands", "pr": "org", "k": ["prince"], "en": "Blue and gold garland", "es": "Guirnalda azul y dorada", "colors": "blue navy gold white"}, {"id": "pink-blue-garland", "cat": "garlands", "pr": "org", "k": ["elena", "garland5"], "en": "Pink and blue garland with round backdrop", "es": "Guirnalda rosa y azul con fondo redondo", "colors": "pink blue gold"}, {"id": "heart-garland", "cat": "garlands", "pr": "org", "k": ["heartarch"], "en": "Valentine’s heart garland", "es": "Guirnalda de corazones de San Valentín", "colors": "red pink"}, {"id": "tricolor-garland", "cat": "garlands", "pr": "org", "k": ["india", "garland6"], "en": "Tricolor garland", "es": "Guirnalda tricolor", "colors": "orange white green"}, {"id": "chrome-silver-arch", "cat": "garlands", "pr": "org", "k": ["silverarch", "garland3"], "en": "Chrome silver entrance arch", "es": "Arco de entrada plateado cromado", "colors": "silver"}, {"id": "chrome-christmas-backdrop", "cat": "garlands", "pr": "org", "k": ["christmas"], "en": "Chrome Christmas backdrop", "es": "Fondo navideño cromado", "colors": "silver"}, {"id": "classic-spiral-arch", "cat": "garlands", "pr": "std", "k": ["pinkarch", "garland1"], "en": "Classic spiral arch", "es": "Arco espiral clásico", "colors": "pink mauve"}, {"id": "kitty-princess-columns", "cat": "columns", "pr": "col", "k": ["catpair"], "en": "Kitty princess columns", "es": "Columnas de gatita princesa", "colors": "pink white gold"}, {"id": "woodland-fox-column", "cat": "columns", "pr": "col", "k": ["fox"], "en": "Woodland fox column", "es": "Columna del bosque con zorro", "colors": "sage green cream"}, {"id": "woodland-raccoon-column", "cat": "columns", "pr": "col", "k": ["raccoon"], "en": "Woodland raccoon column", "es": "Columna del bosque con mapache", "colors": "sage green brown"}, {"id": "green-white-red-column", "cat": "columns", "pr": "col", "k": ["italia"], "en": "Green, white and red column", "es": "Columna verde, blanco y rojo", "colors": "green white red"}, {"id": "princess-sculpture", "cat": "sculptures", "pr": "quote", "k": ["princess"], "en": "Princess sculpture with number 8", "es": "Escultura de princesa con número 8", "colors": "pink gold white"}, {"id": "baby-welcome-sculpture", "cat": "sculptures", "pr": "quote", "k": ["welcome"], "en": "Baby girl welcome sculpture", "es": "Escultura de bienvenida para bebé", "colors": "pink sage gold"}, {"id": "mermaid-sculpture", "cat": "sculptures", "pr": "quote", "k": ["mermaid"], "en": "Under the sea mermaid piece", "es": "Pieza de sirena bajo el mar", "colors": "teal pink lavender"}, {"id": "balloon-butterfly", "cat": "sculptures", "pr": "quote", "k": ["butterfly"], "en": "Balloon butterfly", "es": "Mariposa de globos", "colors": "black sage pink"}, {"id": "candy-house", "cat": "sculptures", "pr": "quote", "k": ["candy"], "en": "Candy house installation", "es": "Instalación casa de dulces", "colors": "lavender white pink"}, {"id": "enchanted-tree", "cat": "sculptures", "pr": "quote", "k": ["treefairy"], "en": "Enchanted tree with fairy", "es": "Árbol encantado con hada", "colors": "sage pink yellow"}, {"id": "heart-backdrop", "cat": "sculptures", "pr": "quote", "k": ["hearts"], "en": "Heart balloon backdrop", "es": "Fondo de globos de corazones", "colors": "red white"}, {"id": "bubble-teddy-bouquet", "cat": "helium", "pr": "bq", "k": ["bubble", "gift4"], "en": "Bubble balloon with teddy bear", "es": "Globo burbuja con osito", "colors": "red"}, {"id": "gold-letters-bouquet", "cat": "helium", "pr": "bq", "k": ["letters"], "en": "Helium bouquet with gold letters", "es": "Ramo con helio y letras doradas", "colors": "gold navy silver"}]};
+
+/* ===== Shop: categories, products, cart (order is sent by text; no online payment) ===== */
+Object.assign(T.en,{cart:"Cart",home:"Home",view:"View Product",view_cat:"View Products",order_here:"Order Here",
+from_ft:v=>`From ${v}/ft`,from_:v=>`From ${v}`,
+pf_note:"Priced by the foot. Choose your length and the starting price updates. We confirm the final price by text.",
+size:"Length (ft)",qty:"Quantity",colors_l:"Colors you’d like",colors_gtg:"Colors (up to 3)",add:"Add to Cart",added:"Added to your cart.",view_cart:"View Cart",
+your_price:"Your starting price",q_item:"This piece is quoted individually. Add it to your cart and we’ll text you the price.",
+inst_tip:"Need installation? Request a quote.",also:"More in this category",shown:"Colors shown",
+cart_h:"Your cart",cart_empty:"Your cart is empty.",remove:"Remove",est:"Estimated total",est_note:"Starting prices. We confirm the final total by text.",
+quote_n:n=>`+ ${n} to be quoted`,to_quote:"To be quoted",co_h:"Checkout",ful_l:"How would you like to receive your order?",pick:"Pickup",del:"Delivery",
+addr:"Delivery address",del_note:"Delivery fee is calculated from your address. We’ll text you the total.",date_l:"Requested date",notes:"Notes (optional)",
+send:"Send Order by Text",co_note:"Online payment isn’t available. Tap “Send Order by Text” to send us your order, then we’ll text you to confirm availability and the total, and send you a secure Square payment link.",pay_sq:"Pay Now with Square",pay_err:"We couldn’t start the payment. Please send your order by text instead.",
+sent_o:"Opening your messaging app with your order. Just tap send! If it doesn’t open, text us at +1 (973) 444-7348.",
+met_s:"Metallic colors",each:"each",
+om:{hi:"Hi Bloom Balloons! I’d like to place this order:",tot:"Estimated total",ful:"Fulfillment",addr:"Delivery address",date:"Requested date",name:"Name",notes:"Notes",colors:"Colors",end:"Please confirm availability and total."}});
+Object.assign(T.es,{cart:"Carrito",home:"Inicio",view:"Ver producto",view_cat:"Ver productos",order_here:"Ordena aquí",
+from_ft:v=>`Desde ${v}/pie`,from_:v=>`Desde ${v}`,
+pf_note:"Precio por pie. Elige el largo y el precio inicial se actualiza. Confirmamos el precio final por texto.",
+size:"Largo (pies)",qty:"Cantidad",colors_l:"Colores que te gustarían",colors_gtg:"Colores (hasta 3)",add:"Agregar al carrito",added:"Agregado a tu carrito.",view_cart:"Ver carrito",
+your_price:"Tu precio inicial",q_item:"Esta pieza se cotiza de forma individual. Agrégala a tu carrito y te enviaremos el precio por texto.",
+inst_tip:"¿Necesitas instalación? Solicita una cotización.",also:"Más en esta categoría",shown:"Colores de la foto",
+cart_h:"Tu carrito",cart_empty:"Tu carrito está vacío.",remove:"Quitar",est:"Total estimado",est_note:"Precios iniciales. Confirmamos el total final por texto.",
+quote_n:n=>`+ ${n} por cotizar`,to_quote:"Por cotizar",co_h:"Finalizar pedido",ful_l:"¿Cómo quieres recibir tu pedido?",pick:"Recogida",del:"Entrega",
+addr:"Dirección de entrega",del_note:"El costo de entrega se calcula según tu dirección. Te enviaremos el total por texto.",date_l:"Fecha deseada",notes:"Notas (opcional)",
+send:"Enviar pedido por texto",co_note:"No hay pago en línea. Toca “Enviar pedido por texto” para enviarnos tu pedido y luego te escribiremos para confirmar la disponibilidad y el total, y te enviaremos un enlace de pago seguro de Square.",pay_sq:"Pagar ahora con Square",pay_err:"No pudimos iniciar el pago. Por favor, envía tu pedido por texto.",
+sent_o:"Abriendo tu app de mensajes con tu pedido. ¡Solo toca enviar! Si no se abre, escríbenos al +1 (973) 444-7348.",
+met_s:"Colores metálicos",each:"c/u",
+om:{hi:"¡Hola, Bloom Balloons! Me gustaría hacer este pedido:",tot:"Total estimado",ful:"Modalidad",addr:"Dirección de entrega",date:"Fecha deseada",name:"Nombre",notes:"Notas",colors:"Colores",end:"Por favor, confirmen la disponibilidad y el total."}});
+/* Garland to Go: pickup OR delivery (delivery is chosen in the cart) */
+Object.assign(T.en.gtg,{tag:"Pickup or delivery",desc:"A ready-made balloon garland in your colors. Pick it up at our studio or have it delivered. Installation is not included."});
+T.en.gtg.info[4]="Pickup or delivery: setup is not included.";T.en.gtg.info[5]="If you pick up: for 6 to 9 ft garlands, bring a small SUV with the seats folded down. Keep sharp objects out of the car, and don’t leave the garland in a hot car for hours or overnight.";T.en.gtg.info[7]="Pickup and delivery orders need at least 3 business days’ notice and are subject to availability.";
+Object.assign(T.es.gtg,{tag:"Recogida o entrega",desc:"Una guirnalda de globos lista, hecha con tus colores. Recógela en nuestro estudio o recíbela a domicilio. No incluye instalación."});
+T.es.gtg.info[4]="Recogida o entrega: no incluye montaje.";T.es.gtg.info[5]="Si la recoges: para guirnaldas de 6 a 9 pies, trae una SUV pequeña con los asientos abatidos. Mantén los objetos filosos fuera del auto y no dejes la guirnalda dentro de un auto caliente por horas ni durante la noche.";T.es.gtg.info[7]="Los pedidos con recogida o entrega requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad.";
+
+const PR=DATA.pricing,P=id=>DATA.products.find(p=>p.id===id),C=id=>DATA.cats.find(c=>c.id===id);
+const pn=p=>p[L],purl=p=>p.id==="gtg"?"garland-to-go.html":"product-"+p.id+".html",curl=c=>"shop-"+c.id+".html",img=k=>"assets/img/"+k+".jpg";
+const usd=v=>"$"+(Number.isInteger(v)?v:v.toFixed(2));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const catOf=id=>DATA.products.filter(p=>p.cat===id);
+function priceLabel(p){const r=PR[p.pr],t=T[L];return r.t==="ft"?t.from_ft(usd(r.rate)):r.t==="unit"?t.from_(usd(r.from)):t.ask_q}
+function lineTotal(i){const p=P(i.id);if(!p)return null;const r=PR[p.pr];return r.t==="ft"?i.ft*(r.rate+(i.met?r.met:0))*i.qty:r.t==="unit"?r.from*i.qty:null}
+const CK="bb-cart";let CART=[];try{const c=JSON.parse(localStorage.getItem(CK)||"[]");if(Array.isArray(c))CART=c.filter(i=>i&&P(i.id))}catch(e){}
+function saveCart(){try{localStorage.setItem(CK,JSON.stringify(CART))}catch(e){}cartBadge()}
+function cartBadge(){const n=CART.reduce((a,i)=>a+i.qty,0);$$(".cart-n").forEach(e=>{e.textContent=n;e.hidden=!n})}
+const ARW=`<button type="button" class="nav prev" aria-label="Previous">‹</button><button type="button" class="nav next" aria-label="Next">›</button>`;
+function car(ks,alt,href){return `<div class="ph car"><div class="trk">${ks.map(k=>`<a href="${href}"><img src="${img(k)}" alt="${esc(alt)}" loading="lazy"></a>`).join("")}</div>${ks.length>1?ARW:""}</div>`}
+function wireCars(root){$$(".car",root).forEach(c=>{const k=$(".trk",c),pv=$(".prev",c),nx=$(".next",c);if(pv)pv.onclick=()=>k.scrollBy({left:-k.clientWidth,behavior:"smooth"});if(nx)nx.onclick=()=>k.scrollBy({left:k.clientWidth,behavior:"smooth"})})}
+function gtgDraw(n,anim){const g=T[L].gtg,top=GG-n*GU,e=$("#gtg-g");if(!e)return;
+ e.innerHTML=gtgBalloons(n);if(anim){e.classList.remove("in");void e.getBoundingClientRect();e.classList.add("in")}
+ const ln=$("#gtg-top");ln.setAttribute("y1",top);ln.setAttribute("y2",top);
+ const hl=$("#gtg-hl");hl.setAttribute("y",top-7);hl.textContent=`${n} ${g.ft}`;$("#gtg-svgt").textContent=g.alt(n)}
+function pcard(p){const t=T[L],u=purl(p);
+ const media=p.k.length?car(p.k,pn(p),u):`<a class="ph gtg-ph" href="${u}" aria-label="${esc(pn(p))}">${gtgSvg(t)}</a>`;
+ return `<article class="card pcard">${media}<div class="body"><h3><a href="${u}">${pn(p)}</a></h3><p class="pprice">${priceLabel(p)}</p><div class="row"><a class="btn pri" href="${u}">${t.view}</a></div></div></article>`}
+const crumbs=a=>`<div class="crumbs" role="navigation" aria-label="Breadcrumb">${a.map(x=>x[1]?`<a href="${x[1]}">${x[0]}</a>`:`<span aria-current="page">${x[0]}</span>`).join("<i>/</i>")}</div>`;
+function setMeta(title,desc){document.title=title+" | Bloom Balloons";const m=$("meta[name=description]");if(m)m.setAttribute("content",desc)}
+function catPrices(c){const t=T[L],k=t.cats;
+ const pc=x=>`<div class="pc"><span>${x[0]}</span><b>${x[1]}</b>${x[2]?`<small>${x[2]}</small>`:""}</div>`;
+ return c.id==="garlands"?pc(k[0][2][0])+pc(k[0][2][1]):c.id==="columns"?pc(k[0][2][2]):c.id==="helium"?pc(k[2][2][0]):`<div class="pc ask"><b>${t.ask_q}</b></div>`}
+
+/* ---- category page ---- */
+function renderCategory(id){const t=T[L],c=C(id),ps=catOf(id);setMeta(c[L],L==="en"?c.den:c.des);
+ $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L]]])+`<h1 class="ph1">${c[L]}</h1><p class="lead">${L==="en"?c.den:c.des}</p><div class="prices cat-pr">${catPrices(c)}</div><div class="grid g3">${ps.map(pcard).join("")}</div><p class="note" style="margin-top:22px">${t.q_from}</p>`;
+ wireCars($("#app"));gtgDraw(6)}
+
+/* ---- product page ---- */
+const ST={};
+function renderProduct(id){const t=T[L],p=P(id),c=C(p.cat),r=PR[p.pr],g=t.gtg,isG=id==="gtg";
+ if(ST.id!==id)Object.assign(ST,{id,ft:r.t==="ft"?(isG?6:r.min):null,met:false,qty:1,ph:0,colors:"",msg:false});
+ setMeta(pn(p),isG?g.desc:`${pn(p)}. ${t.cat_p}`);
+ const media=isG?`<div class="pgal"><div class="ph gtg-ph">${gtgSvg(t)}</div></div>`:
+  `<div class="pgal"><div class="ph pmain"><img id="pm" src="${img(p.k[ST.ph])}" alt="${esc(pn(p))}">${p.k.length>1?ARW:""}</div>${p.k.length>1?`<div class="thumbs">${p.k.map((k,i)=>`<button type="button" data-t="${i}" aria-label="${i+1}" aria-pressed="${i===ST.ph}"><img src="${img(k)}" alt=""></button>`).join("")}</div>`:""}</div>`;
+ let opts="";
+ if(r.t==="ft"){const ns=[];for(let n=r.min;n<=r.max;n++)ns.push(n);
+  opts+=isG?`<fieldset class="gtg-sz"><legend>${t.size}</legend><div class="gtg-opts">${ns.map(n=>`<label><input type="radio" name="p-ft" value="${n}"${n===ST.ft?" checked":""}><span>${n} ${g.ft}</span></label>`).join("")}</div></fieldset><label class="gtg-met"><input type="checkbox" id="p-met"${ST.met?" checked":""}><span>${g.met}</span></label>`
+   :`<label>${t.size}<select id="p-ft">${ns.map(n=>`<option value="${n}"${n===ST.ft?" selected":""}>${n} ${g.ft}</option>`).join("")}</select></label>`}
+ opts+=`<label>${isG?t.colors_gtg:t.colors_l}<input id="p-col" maxlength="80" placeholder="${t.ph_colors}" value="${esc(ST.colors)}"></label>`;
+ opts+=`<div class="qty"><span>${t.qty}</span><div><button type="button" id="q-" aria-label="−">−</button><output id="q-n">${ST.qty}</output><button type="button" id="q+" aria-label="+">+</button></div></div>`;
+ const bullets=isG?g.info:[t.cat_p,t.lead_std,g.tax];
+ const sub=r.t==="ft"?(isG?g.rate:(p.pr==="org"?t.cats[0][2][0][2]:"")):p.pr==="col"?t.cats[0][2][2][2]:"";
+ const cols=p.colors?`<p class="shown">${t.shown}: ${p.colors.split(" ").map(k=>COLN[k]?COLN[k][L==="en"?0:1]:k).join(", ")}</p>`:"";
+ $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L],curl(c)],[pn(p)]])+`<div class="pwrap">${media}<div class="pinfo">${isG?`<span class="gtg-tag">${g.tag}</span>`:""}<h1 class="ph1">${pn(p)}</h1><p class="pbig">${priceLabel(p)}${sub?` <small>· ${sub}</small>`:""}</p>${isG?`<p>${g.desc}</p>`:cols}`+
+  (r.t==="ft"?`<p class="note">${t.pf_note}</p>`:r.t==="quote"?`<p class="note">${t.q_item}</p>`:"")+
+  `<div class="popts">${opts}</div>`+(r.t==="quote"?"":`<div class="pc gtg-sel" aria-live="polite"><span>${t.your_price}</span><b id="p-price"></b><small>${g.tax}</small></div>`)+
+  `<div class="row"><button type="button" class="btn pri big" id="p-add">${t.add}</button><a class="btn big" href="cart.html">${t.view_cart}</a></div><p id="p-msg" role="status">${ST.msg?t.added:""}</p>`+
+  `<ul class="gtg-list">${bullets.map(x=>`<li>${x}</li>`).join("")}</ul><p><a href="index.html#quote">${t.inst_tip}</a></p></div></div>`+
+  `<h2 class="also">${t.also}</h2><div class="grid g3">${catOf(p.cat).filter(x=>x.id!==id).slice(0,3).map(pcard).join("")}</div>`;
+ const upd=()=>{const e=$("#p-price");if(e)e.textContent=t.from_(usd(lineTotal(ST)))};upd();
+ if(isG){gtgDraw(ST.ft);$$("input[name=p-ft]").forEach(x=>x.onchange=()=>{if(x.checked){ST.ft=+x.value;gtgDraw(ST.ft,true);upd()}});$("#p-met").onchange=e=>{ST.met=e.target.checked;upd()}}
+ else{gtgDraw(6);const s=$("#p-ft");if(s)s.onchange=()=>{ST.ft=+s.value;upd()}}
+ $("#p-col").oninput=e=>ST.colors=e.target.value;
+ const q=d=>{ST.qty=Math.max(1,Math.min(20,ST.qty+d));$("#q-n").textContent=ST.qty;upd()};$("#q-").onclick=()=>q(-1);$("#q\\+").onclick=()=>q(1);
+ const show=i=>{ST.ph=(i+p.k.length)%p.k.length;$("#pm").src=img(p.k[ST.ph]);$$(".thumbs button").forEach((b,j)=>b.setAttribute("aria-pressed",j===ST.ph))};
+ $$(".thumbs button").forEach(b=>b.onclick=()=>show(+b.dataset.t));const pv=$(".pmain .prev"),nx=$(".pmain .next");if(pv)pv.onclick=()=>show(ST.ph-1);if(nx)nx.onclick=()=>show(ST.ph+1);
+ $("#p-add").onclick=()=>{const it={id,ft:ST.ft,met:ST.met,colors:ST.colors.trim(),qty:ST.qty};
+  const ex=CART.find(i=>i.id===it.id&&i.ft===it.ft&&i.met===it.met&&i.colors===it.colors);if(ex)ex.qty=Math.min(20,ex.qty+it.qty);else CART.push(it);
+  saveCart();ST.msg=true;$("#p-msg").textContent=t.added};
+ wireCars($("#app"))}
+
+/* ---- cart + checkout ---- */
+/* Square: leave endpoint empty until the Square account is connected through a server function.
+   When set (e.g. "/.netlify/functions/square-checkout"), pickup orders with fixed prices get a "Pay Now with Square" button. */
+const PAY={endpoint:""};
+const MINI=`<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="15" r="9" fill="#F3C1CB"/><circle cx="31" cy="19" r="8" fill="#E2C17E"/><circle cx="20" cy="31" r="9" fill="#F8DCE2"/><circle cx="33" cy="35" r="6" fill="#F3C1CB"/><circle cx="11" cy="26" r="4" fill="#fff" stroke="#EED9C6"/></svg>`;
+const CO={ful:"pickup",name:"",addr:"",date:"",notes:""};
+function itemDesc(i,plain){const t=T[L],p=P(i.id),r=PR[p.pr],a=[];
+ if(r.t==="ft")a.push(`${i.ft} ${t.gtg.ft} × ${usd(r.rate+(i.met?r.met:0))}/${L==="en"?"ft":"pie"}`);
+ if(i.met)a.push(t.met_s);
+ if(r.t==="unit")a.push(`${usd(r.from)} ${t.each}`);
+ if(i.colors)a.push(`${t.om.colors}: ${plain?i.colors:esc(i.colors)}`);
+ return a.join(" · ")}
+function cartTotals(){let s=0,q=0;CART.forEach(i=>{const v=lineTotal(i);if(v==null)q+=i.qty;else s+=v});return{s,q}}
+function totalText(){const t=T[L],{s,q}=cartTotals();return (s||!q?t.from_(usd(s)):"")+(q?(s?" ":"")+t.quote_n(q):"")}
+function orderMsg(){const t=T[L],m=t.om;
+ const rows=CART.map((i,n)=>{const v=lineTotal(i),d=itemDesc(i,true);return `${n+1}. ${pn(P(i.id))}${i.qty>1?" ×"+i.qty:""}${d?"\n   "+d:""}\n   ${v==null?t.to_quote:t.from_(usd(v))}`}).join("\n");
+ const x=[[m.ful,CO.ful==="delivery"?t.del:t.pick]];if(CO.ful==="delivery")x.push([m.addr,CO.addr]);x.push([m.date,CO.date&&fmtDate(CO.date)],[m.name,CO.name],[m.notes,CO.notes]);
+ return `${m.hi}\n\n${rows}\n\n${m.tot}: ${totalText()}\n`+x.filter(r=>r[1]).map(r=>`${r[0]}: ${r[1]}`).join("\n")+`\n\n${m.end}`}
+function renderCart(){const t=T[L];setMeta(t.cart_h,t.co_note);const A=$("#app");
+ if(!CART.length){A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1><p class="lead">${t.cart_empty}</p><div class="row"><a class="btn pri" href="index.html#cats">${t.b_shop}</a></div>`;return}
+ const min=iso(addBiz(today(),3));
+ A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1><div class="cwrap"><div><ul class="clist">${CART.map((i,n)=>{const p=P(i.id),v=lineTotal(i);
+   return `<li><a class="cth${p.k.length?"":" gtg"}" href="${purl(p)}">${p.k.length?`<img src="${img(p.k[0])}" alt="">`:MINI}</a><div class="cinf"><a href="${purl(p)}"><b>${pn(p)}</b></a><small>${itemDesc(i)}</small><div class="qty sm"><div><button type="button" data-q="-1" data-n="${n}" aria-label="−">−</button><output>${i.qty}</output><button type="button" data-q="1" data-n="${n}" aria-label="+">+</button></div><button type="button" class="lnk" data-rm="${n}">${t.remove}</button></div></div><b class="cpr">${v==null?t.to_quote:t.from_(usd(v))}</b></li>`}).join("")}</ul>
+  <div class="pc gtg-sel"><span>${t.est}</span><b>${totalText()}</b><small>${t.est_note} ${t.gtg.tax}</small></div></div>
+  <form id="cof" novalidate><h2>${t.co_h}</h2>
+  <fieldset class="full fulf"><legend>${t.ful_l}</legend><label><input type="radio" name="ful" value="pickup"${CO.ful==="pickup"?" checked":""}><span>${t.pick}</span></label><label><input type="radio" name="ful" value="delivery"${CO.ful==="delivery"?" checked":""}><span>${t.del}</span></label></fieldset>
+  <div class="full" id="co-del"${CO.ful==="delivery"?"":" hidden"}><label>${t.addr}<input name="addr" autocomplete="street-address" value="${esc(CO.addr)}"><span class="err"></span></label><p class="note" style="margin:10px 0 0">${t.del_note}</p></div>
+  <label>${t.f_name}<input name="name" autocomplete="name" value="${esc(CO.name)}"><span class="err"></span></label>
+  <label>${t.date_l}<input name="date" type="date" min="${min}" value="${CO.date}"><span class="err"></span></label>
+  <label class="full">${t.notes}<textarea name="notes" rows="3">${esc(CO.notes)}</textarea></label>
+  <p class="note full">${t.lead_std}</p><p class="note full">${t.co_note}</p>
+  <div class="row full"><button class="btn pri big" type="submit">${t.send}</button>${PAY.endpoint&&!cartTotals().q?`<button class="btn big" type="button" id="co-pay"${CO.ful==="pickup"?"":" hidden"}>${t.pay_sq}</button>`:""}</div><p class="full" id="co-msg" role="status"></p></form></div>`;
+ $$("[data-q]",A).forEach(b=>b.onclick=()=>{const i=CART[+b.dataset.n];i.qty=Math.max(1,Math.min(20,i.qty+ +b.dataset.q));saveCart();renderCart()});
+ $$("[data-rm]",A).forEach(b=>b.onclick=()=>{CART.splice(+b.dataset.rm,1);saveCart();renderCart()});
+ const f=$("#cof"),E=f.elements;
+ f.oninput=e=>{const x=e.target;if(x.getAttribute&&x.getAttribute("aria-invalid")){x.removeAttribute("aria-invalid");const er=x.parentElement.querySelector(".err");if(er)er.textContent=""}CO.name=E.name.value;CO.addr=E.addr.value;CO.date=E.date.value;CO.notes=E.notes.value};
+ $$("input[name=ful]",f).forEach(x=>x.onchange=()=>{CO.ful=x.value;$("#co-del").hidden=CO.ful!=="delivery";const pb=$("#co-pay");if(pb)pb.hidden=CO.ful!=="pickup"});
+ const pb=$("#co-pay");if(pb)pb.onclick=()=>{if(!E.name.value.trim()||!E.date.value||E.date.value<min){$("#co-msg").textContent=t.e_fix;return}
+  fetch(PAY.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lang:L,items:CART,name:CO.name,date:CO.date,notes:CO.notes})}).then(r=>r.json()).then(d=>{if(d&&d.url)location.href=d.url;else throw 0}).catch(()=>{$("#co-msg").textContent=t.pay_err})};
+ f.onsubmit=e=>{e.preventDefault();let ok=true;$$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
+  const bad=(n,m)=>{const i=E[n];i.setAttribute("aria-invalid","true");i.parentElement.querySelector(".err").textContent=m;ok=false};
+  if(!E.name.value.trim())bad("name",t.e_req);
+  if(CO.ful==="delivery"&&!E.addr.value.trim())bad("addr",t.e_req);
+  if(!E.date.value)bad("date",t.e_req);else if(E.date.value<min)bad("date",t.e_date(min));
+  if(!ok){$("#co-msg").textContent=t.e_fix;const x=$("[aria-invalid=true]",f);if(x)x.focus();return}
+  $("#co-msg").textContent=t.sent_o;location.href=smsLink(orderMsg())}}
+
+/* ---- home ---- */
+function renderHome(){const t=T[L],g=t.gtg;setMeta(t.meta_t.replace(" | Bloom Balloons",""),t.meta_d);document.title=t.meta_t;
+ $("#colors").placeholder=t.ph_colors;
+ $("#cats-grid").innerHTML=DATA.cats.map(c=>{const ks=catOf(c.id).filter(p=>p.k.length).map(p=>p.k[0]).slice(0,7),u=curl(c);
+  return `<article class="card" id="${c.id}">${car(ks,c[L],u)}<div class="body"><h3><a href="${u}">${c[L]}</a></h3><p>${L==="en"?c.den:c.des}</p><div class="prices">${catPrices(c)}</div><div class="row"><a class="btn pri" href="${u}">${t.view_cat}</a></div></div></article>`}).join("");
+ $("#gtg-teaser").innerHTML=`<a class="ph gtg-ph" href="garland-to-go.html" aria-label="${g.name}">${gtgSvg(t)}</a><div class="body"><span class="gtg-tag">${g.tag}</span><h3><a href="garland-to-go.html">${g.name}</a></h3><p>${g.desc}</p><div class="prices"><div class="pc"><span>${g.name}</span><b>${g.from}</b><small>${g.rate}</small></div></div><div class="row"><a class="btn pri" href="garland-to-go.html">${t.order_here}</a></div></div>`;
+ wireCars($("#cats-grid"));gtgDraw(6);
+ $("#occ").innerHTML=t.occ.map((o,i)=>`<a class="oc" href="#quote" data-o="${i}"><i aria-hidden="true"><svg viewBox="0 0 24 24">${OCI[i]||""}</svg></i><span>${o}</span></a>`).join("");
+ $$("#occ .oc").forEach(a=>a.onclick=()=>{const e=$("#occ-sel");e.value=a.dataset.o;e.classList.add("hl");setTimeout(()=>e.classList.remove("hl"),1800)});
+ const os=$("#occ-sel"),ov=os.value;os.innerHTML=`<option value="">${t.occ_none}</option>`+t.occ.map((o,i)=>`<option value="${i}">${o}</option>`).join("")+`<option value="x">${t.occ_other}</option>`;os.value=ov;
+ $("#why").innerHTML=t.why.map(w=>`<div class="why"><h3>${w[0]}</h3><p>${w[1]}</p></div>`).join("");
+ $("#steps").innerHTML=t.steps.map(s=>`<li><h3>${s[0]}</h3><p>${s[1]}</p></li>`).join("");
+ const op=$$("#faq-list details").map(d=>d.open);
+ $("#faq-list").innerHTML=t.faq.map((f,i)=>`<details${op[i]?" open":""}><summary>${f[0]}</summary><p>${f[1].replace(/href="#/g,'href="index.html#')}</p></details>`).join("");
+ drawGal();lead()}
+function initHome(){
+ $("#lbx").onclick=()=>$("#lb").close();
+ $("#lb").onclick=e=>{if(e.target.id==="lb")e.target.close()};
+ $("#ful").onchange=lead;
+ $("#sms-form").onclick=e=>{e.currentTarget.href=smsLink(formMsg())};
+ $("#sms-form").onfocus=e=>{e.currentTarget.href=smsLink(formMsg())};
+ $("#sms-form").href=smsLink(T[L].msg_hi);
+ $("#qf").addEventListener("submit",e=>{e.preventDefault();const t=T[L],f=e.target;let ok=true;
+ $$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
+ const bad=(n,m)=>{const i=f.elements[n];i.setAttribute("aria-invalid","true");i.parentElement.querySelector(".err").textContent=m;ok=false};
+ const E=f.elements;lead();
+ if(!E.name.value.trim())bad("name",t.e_req);
+ if(!/^\S+@\S+\.\S+$/.test(E.email.value.trim()))bad("email",t.e_mail);
+ if(!/^\d{5}$/.test(E.zip.value.trim()))bad("zip",t.e_zip);
+ if(!E.date.value)bad("date",t.e_req);else if(E.date.value<E.date.min)bad("date",t.e_date(E.date.min));
+ if(!ok){$("#msg").textContent=t.e_fix;const x=$("[aria-invalid=true]",f);if(x)x.focus();return}
+ $("#msg").textContent=t.sent;
+ location.href=smsLink(formMsg());
+});
+}
+
+/* ---- common ---- */
+function render(){const t=T[L],b=document.body.dataset;document.documentElement.lang=L;
+ $$("[data-i]").forEach(e=>{if(t[e.dataset.i]!=null)e.textContent=t[e.dataset.i]});
+ $$(".lang button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.l===L));
+ $$("[data-sms=default]").forEach(a=>a.href=smsLink(t.msg_hi));
+ $$("[data-sms=ann]").forEach(a=>a.href=smsLink(t.msg_ann));
+ $(".chat").setAttribute("aria-label",t.b_sms);$$(".cartl").forEach(a=>a.setAttribute("aria-label",t.cart));
+ cartBadge();
+ if(b.page==="home")renderHome();else if(b.page==="category")renderCategory(b.id);else if(b.page==="product")renderProduct(b.id);else if(b.page==="cart")renderCart()}
+function boot(){if(document.body.dataset.page==="home")initHome();render()}
+$$(".lang button").forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem("bb-lang",L)}catch(e){}render()});
+$("#burger").onclick=e=>{const o=$("#nav").classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+$$("nav#nav a").forEach(a=>a.addEventListener("click",()=>{$("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded",false)}));
+/* Single-file preview only: window.__PAGES holds every page so links work without a server */
+if(window.__PAGES){const go=(href,push)=>{const[f,h]=href.split("#"),pg=window.__PAGES[f||"index.html"];if(!pg)return false;
+  if(document.body.dataset.file!==(f||"index.html")){document.body.dataset.file=f||"index.html";document.body.dataset.page=pg.page;document.body.dataset.id=pg.id||"";$("main").innerHTML=pg.main;boot()}
+  if(h){const e=document.getElementById(h);if(e)e.scrollIntoView()}else scrollTo(0,0);return true};
+ document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a[href]");if(!a)return;const h=a.getAttribute("href");if(/^[a-z-]+\.html(#.*)?$/.test(h)&&go(h))e.preventDefault()})}
+boot();
