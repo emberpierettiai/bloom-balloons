@@ -2007,6 +2007,146 @@
    "av": true,
    "en": "Mauve and ivory heart balloon trio",
    "es": "Trío de globos corazón malva y marfil"
+  },
+  {
+   "id": "baby-boy-elephant",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-elephant"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Blue elephant, stroller and “It's a Boy” balloon set",
+   "es": "Set de globos elefante azul, cochecito e “It's a Boy”"
+  },
+  {
+   "id": "baby-boy-set",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-babyboy-set"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Baby Boy” balloon set",
+   "es": "Set de globos “Baby Boy”"
+  },
+  {
+   "id": "baby-boy-rainbow",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-baby-rainbow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Baby boy, rainbow and bow balloon set",
+   "es": "Set de globos bebé niño, arcoíris y lazo"
+  },
+  {
+   "id": "baby-boy-plane",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-plane"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Teddy pilot plane balloon set, blue",
+   "es": "Set de globos osito piloto en avión, azul"
+  },
+  {
+   "id": "baby-boy-giraffe",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-giraffe"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Hello Baby” giraffe and safari balloon set",
+   "es": "Set de globos jirafa y safari “Hello Baby”"
+  },
+  {
+   "id": "baby-boy-stroller",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-stroller"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Sage and gold baby stroller balloon set",
+   "es": "Set de globos cochecito verde salvia y dorado"
+  },
+  {
+   "id": "baby-boy-baby",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-baby"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Baby boy foil balloon set",
+   "es": "Set de globos bebé niño"
+  },
+  {
+   "id": "baby-boy-teddy",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-teddy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Cream teddy bear balloon set",
+   "es": "Set de globos osito crema"
+  },
+  {
+   "id": "baby-boy-bow",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-bow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Blue bow and heart balloon set",
+   "es": "Set de globos lazo azul y corazón"
+  },
+  {
+   "id": "baby-boy-hello-baby",
+   "cat": "helium",
+   "ht": [
+    "baby-boy"
+   ],
+   "k": [
+    "hel-bb2-hello-baby"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Hello Baby” blue stripe balloon set",
+   "es": "Set de globos “Hello Baby” a rayas azules"
   }
  ],
  "occs": [
@@ -2199,6 +2339,18 @@
     "#F6EDE4"
    ],
    "k": "hel-bg-elephant"
+  },
+  {
+   "id": "baby-boy",
+   "up": "baby",
+   "en": "Baby Boy",
+   "es": "Niño",
+   "c": [
+    "#A9CBEA",
+    "#D6E6F4",
+    "#F6EDE4"
+   ],
+   "k": "hel-bb2-elephant"
   },
   {
    "id": "gender-reveal",
