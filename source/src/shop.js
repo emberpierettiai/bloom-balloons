@@ -94,7 +94,8 @@ function renderHeliumHub(){const t=T[L],c=C("helium");setMeta(c[L],L==="en"?c.de
 function renderHTheme(id){const t=T[L],h=HT(id),c=C("helium"),up=h.up?HT(h.up):null;
  setMeta(`${h[L]} · ${c[L]}`,`${h[L]}. ${t.cat_p}`);
  const kids=DATA.hthemes.filter(x=>x.up===id);
- const extra=kids.length?`<div class="tiles hsmall htsub">${kids.map(k=>`<a class="tile htile" href="${hturl(k)}">${k.k?`<img src="${img(k.k)}" alt="" loading="lazy">`:helArt(k.c,"#FBF6EC")}<span>${k[L]}</span></a>`).join("")}</div>`:"";
+ const ban=h.ban?`<figure class="hban"><img src="${img(h.ban)}" alt="${esc(L==="en"?h.ban_en||"":h.ban_es||"")}" loading="eager"></figure>`:"";
+ const extra=ban+(kids.length?`<div class="tiles hsmall htsub">${kids.map(k=>`<a class="tile htile" href="${hturl(k)}">${k.k?`<img src="${img(k.k)}" alt="" loading="lazy">`:helArt(k.c,"#FBF6EC")}<span>${k[L]}</span></a>`).join("")}</div>`:"");
  const trail=[[t.home,"index.html"],[c[L],curl(c)]];if(up)trail.push([up[L],hturl(up)]);trail.push([h[L]]);
  listing(h[L],"",htOf(id),trail,extra,t.cat_soon)}
 function renderOccasions(){const t=T[L];setMeta(t.m_occs,t.occ_p||t.m_occs);

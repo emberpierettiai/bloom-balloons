@@ -1163,6 +1163,177 @@
    "av": true,
    "en": "Smiley birthday balloon set",
    "es": "Set de globos carita feliz de cumpleaños"
+  },
+  {
+   "id": "memorial-dove-trio",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-doves"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Dove balloon trio",
+   "es": "Trío de globos de paloma"
+  },
+  {
+   "id": "memorial-butterfly-trio",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-butterflies"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "White and gold butterfly balloon trio",
+   "es": "Trío de globos mariposa blanco y dorado"
+  },
+  {
+   "id": "memorial-cross-trio",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-crosses"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Cross balloon trio",
+   "es": "Trío de globos de cruz"
+  },
+  {
+   "id": "memorial-heavenly-mothers-day",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-mothers-day"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Heavenly Mother's Day” balloon set",
+   "es": "Set de globos “Happy Heavenly Mother's Day”"
+  },
+  {
+   "id": "memorial-heavenly-fathers-day",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-fathers-day"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Heavenly Father's Day” balloon set",
+   "es": "Set de globos “Happy Heavenly Father's Day”"
+  },
+  {
+   "id": "memorial-heavenly-birthday",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-birthday"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Heavenly Birthday” balloon set",
+   "es": "Set de globos “Happy Heavenly Birthday”"
+  },
+  {
+   "id": "memorial-heavenly-anniversary",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-anniversary"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Heavenly Anniversary” balloon set",
+   "es": "Set de globos “Happy Heavenly Anniversary”"
+  },
+  {
+   "id": "memorial-anniversary-in-heaven",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-anniv-heaven"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Anniversary in Heaven” balloon set",
+   "es": "Set de globos “Happy Anniversary in Heaven”"
+  },
+  {
+   "id": "memorial-miss-you-mom",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-miss-mom"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Miss You Mom” heart balloon",
+   "es": "Globo corazón “Miss You Mom”"
+  },
+  {
+   "id": "memorial-miss-you-son",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-miss-son"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Miss You Son” balloon set",
+   "es": "Set de globos “Miss You Son”"
+  },
+  {
+   "id": "memorial-mini-stick",
+   "cat": "helium",
+   "ht": [
+    "memorial"
+   ],
+   "k": [
+    "hel-mem-mini-stick"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Mini heavenly heart balloon on a stick",
+   "es": "Mini globo corazón con varilla"
+  },
+  {
+   "id": "christmas-candy-cane-set",
+   "cat": "helium",
+   "ht": [
+    "christmas"
+   ],
+   "k": [
+    "hel-xmas-candycane"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Santa, reindeer and candy cane balloon set",
+   "es": "Set de globos Papá Noel, reno y bastón de caramelo",
+   "occ": [
+    "seasonal"
+   ]
   }
  ],
  "occs": [
@@ -1391,6 +1562,21 @@
     "#E2C17E",
     "#F6EDE4"
    ]
+  },
+  {
+   "id": "memorial",
+   "big": true,
+   "en": "Memorial",
+   "es": "En memoria",
+   "c": [
+    "#EDE9E3",
+    "#D8D3CC",
+    "#BFB8AF"
+   ],
+   "k": "hel-mem-doves",
+   "ban": "hel-mem-banner",
+   "ban_en": "In honor of your loved one. A complimentary mini foil star balloon on a stick with each memorial balloon you purchase.",
+   "ban_es": "En honor a tu ser querido. Un mini globo estrella de foil con varilla de regalo con cada globo conmemorativo que compres."
   }
  ]
 }
