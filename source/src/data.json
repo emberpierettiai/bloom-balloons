@@ -2147,6 +2147,132 @@
    "av": true,
    "en": "“Hello Baby” blue stripe balloon set",
    "es": "Set de globos “Hello Baby” a rayas azules"
+  },
+  {
+   "id": "bridal-ring-rose",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-ring-rose"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Rose gold ring, “Future Mrs” and “She Said Yes!” balloon set",
+   "es": "Set de globos anillo oro rosa, “Future Mrs” y “She Said Yes!”"
+  },
+  {
+   "id": "bridal-bride-letters",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-bride"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“BRIDE” letter balloon set",
+   "es": "Set de globos de letras “BRIDE”"
+  },
+  {
+   "id": "bridal-champagne",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-champagne"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Champagne, ring and bottle balloon set",
+   "es": "Set de globos copa, anillo y botella"
+  },
+  {
+   "id": "bridal-ring-gold",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-ring-gold"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Gold diamond ring balloon set",
+   "es": "Set de globos anillo de diamante dorado"
+  },
+  {
+   "id": "bridal-ring-silver",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-ring-silver"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Silver diamond ring balloon set",
+   "es": "Set de globos anillo de diamante plateado"
+  },
+  {
+   "id": "bridal-hearts",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-hearts"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "White, gold and ivory heart balloon trio",
+   "es": "Trío de globos corazón blanco, dorado y marfil"
+  },
+  {
+   "id": "bridal-gold-latex",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-gold-latex"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Gold, white and confetti balloon cluster",
+   "es": "Ramo de globos dorado, blanco y confeti"
+  },
+  {
+   "id": "bridal-pearl",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-pearl"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pearl and ivory balloon cluster",
+   "es": "Ramo de globos perla y marfil"
+  },
+  {
+   "id": "bridal-nude",
+   "cat": "helium",
+   "ht": [
+    "milestone"
+   ],
+   "k": [
+    "hel-br-nude"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Nude, white and gold balloon cluster",
+   "es": "Ramo de globos nude, blanco y dorado"
   }
  ],
  "occs": [
@@ -2285,13 +2411,14 @@
   {
    "id": "milestone",
    "big": true,
-   "en": "Milestone Party",
-   "es": "Cumpleaños especiales",
+   "en": "Bridal Shower",
+   "es": "Despedida de soltera",
    "c": [
     "#E2C17E",
-    "#EED9C6",
-    "#6B4A3F"
-   ]
+    "#F6EDE4",
+    "#EED9C6"
+   ],
+   "k": "hel-br-ring-rose"
   },
   {
    "id": "character",
