@@ -439,9 +439,10 @@
    "k": [
     "hel-single"
    ],
-   "en": "Single helium balloon",
-   "es": "Globo con helio individual",
-   "colors": "pink black gold"
+   "en": "Build Your Helium Balloon Bunch",
+   "es": "Arma tu ramo de globos con helio",
+   "colors": "pink black gold",
+   "custom": "bunch"
   },
   {
    "id": "bubble-teddy-bouquet",

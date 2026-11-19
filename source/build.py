@@ -15,7 +15,7 @@ data = json.load(open(os.path.join(SRC, "data.json"), encoding="utf-8"))
 
 # ---------- CSS ----------
 css0 = old[old.find("<style>") + 7: old.find("</style>")]
-css = css0 + rd(os.path.join(SRC, "extra.css")) + rd(os.path.join(SRC, "header.css")) + rd(os.path.join(SRC, "shop.css")) + rd(os.path.join(SRC, "store.css"))
+css = css0 + rd(os.path.join(SRC, "extra.css")) + rd(os.path.join(SRC, "header.css")) + rd(os.path.join(SRC, "shop.css")) + rd(os.path.join(SRC, "store.css")) + rd(os.path.join(SRC, "bunch.css"))
 
 # ---------- JS: keep the live script's data and helpers, replace rendering ----------
 def cut(a, b):
@@ -28,7 +28,8 @@ lead_fn = re.search(r"^function lead\(\)\{.*$", live, re.M).group(0)
 part_form = cut("function fmtDate", '$("#sms-form").addEventListener("click"')
 submit = cut('$("#qf").addEventListener("submit"', "\nrender();")
 shop = rd(os.path.join(SRC, "shop.js")).replace("/*HOME_SUBMIT*/", submit.strip())
-js = "\n".join([part_a, part_gal, lead_fn, part_form, "const DATA=" + json.dumps(data, ensure_ascii=False) + ";", shop])
+bunch = rd(os.path.join(SRC, "bunch.js"))
+js = "\n".join([part_a, part_gal, lead_fn, part_form, "const DATA=" + json.dumps(data, ensure_ascii=False) + ";", bunch, shop])
 assert "</script" not in js
 
 # ---------- HTML ----------
@@ -105,6 +106,13 @@ pages.append(dict(file="shop-by-occasion.html", page="occasions", id="", title="
 for o in data["occs"]:
     pages.append(dict(file=f"occasion-{o['id']}.html", page="occasion", id=o["id"], title=f"{o['en']} | Bloom Balloons", desc=f"{o['en']}. {CAT_P}", main=app(o["en"], CAT_P)))
 pages.append(dict(file="search.html", page="search", id="", title="Search | Bloom Balloons", desc="Search Bloom Balloons products.", main=app("All products", "")))
+NF_MAIN = ('<div class="wrap page" style="text-align:center;max-width:720px">'
+           '<h1 class="ph1" data-i="nf_h"></h1><p class="lead" data-i="nf_p"></p>'
+           '<div class="row" style="justify-content:center;margin-top:26px">'
+           '<a class="btn pri big" href="index.html" data-i="nf_b"></a>'
+           '<a class="btn big" data-sms="default" data-i="b_sms"></a></div></div>')
+pages.append(dict(file="404.html", page="notfound", id="", title="Page not found | Bloom Balloons",
+                  desc="That page doesn't exist. Browse custom balloon decor by Bloom Balloons.", main=NF_MAIN))
 pages.append(dict(file="cart.html", page="cart", id="", title="Your cart | Bloom Balloons", desc="Review your Bloom Balloons order and send it to us by text.", main=app("Your cart", "")))
 
 def body(pg, script):
@@ -124,9 +132,13 @@ for f in ("robots.txt", "googleb4bad141569fb441.html"):
 open(os.path.join(SITE, "assets/site.css"), "w", encoding="utf-8").write(css)
 open(os.path.join(SITE, "assets/site.js"), "w", encoding="utf-8").write(js)
 for pg in pages:
-    open(os.path.join(SITE, pg["file"]), "w", encoding="utf-8").write(head(pg["title"], pg["desc"], pg["file"]) + body(pg, '<script src="assets/site.js"></script>'))
+    html_out = head(pg["title"], pg["desc"], pg["file"]) + body(pg, '<script src="assets/site.js"></script>')
+    if pg["file"] == "404.html":
+        # served for any missing path, so relative links would break
+        html_out = re.sub(r'(href|src)="(?!https?:|//|#|mailto:|tel:|/)', r'\1="/', html_out)
+    open(os.path.join(SITE, pg["file"]), "w", encoding="utf-8").write(html_out)
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-    f'  <url><loc>{BASE}{"" if pg["file"] == "index.html" else pg["file"]}</loc></url>\n' for pg in pages if pg["page"] not in ("cart", "search")) + "</urlset>\n"
+    f'  <url><loc>{BASE}{"" if pg["file"] == "index.html" else pg["file"]}</loc></url>\n' for pg in pages if pg["page"] not in ("cart", "search", "notfound")) + "</urlset>\n"
 open(os.path.join(SITE, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 
 # ---------- single-file offline preview ----------

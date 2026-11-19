@@ -22,10 +22,12 @@ Os arquivos na raiz do repositório são gerados. As fontes ficam nesta pasta `s
 - Arches & Garlands no início: Garland to Go (retirada, $20/ft) x Garland + Installation ($25/ft).
 - Categorias: garlands, columns, sculptures, bouquets, helium, centerpieces (vazia), numbers (oculta, só em ocasiões).
 - Ocasiões: Birthdays, Corporate Events, Holidays & Seasonal, Numbers (from $55).
-- Hélio: página de temas (13 temas), balão avulso $3.50 cada, páginas por tema.
+- Hélio: página de temas (13 temas + quadradinho Single Balloons), páginas por tema.
+- Single Balloons = produto 'Build Your Helium Balloon Bunch' (src/bunch.js + src/bunch.css): ate 3 cores da cartela de 31 cores (src/palette.json, tons tirados do mockup), 1 a 10 balões por cor, notas por cor, prévia SVG de 9 balões em 3 colunas verticais, tamanhos 12" ($3.50 cada, compra online) e 18"/24" encapsulados sob consulta por texto, decal $8 por palavra/símbolo só nos encapsulados.
 - Carrinho termina em "Send Order by Text". Square: só o encaixe (`PAY.endpoint` em shop.js), desligado.
 
 ## Pendências
+- Confirmar com a Michele se as 31 cores da cartela (vieram do mockup do ChatGPT) sao mesmo as que ela tem.
 - Confirmar preços: buquês de flores, arranjos de hélio novos (circo, Make a wish, Feel better) estão "Ask for a quote".
 - Inventário de hélio por tema (nome, tamanho, cores, preço, foto); fotos de capa para os temas ainda com desenho.
 - Balão avulso: foto mostra 12 balões e o preço é por unidade; decidir aviso ou produto "buquê de 12".
