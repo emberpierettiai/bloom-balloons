@@ -45,39 +45,75 @@ Object.assign(T.es,{bunch_h:"Arma tu ramo de globos con helio",bunch_sub:"Elige 
   size:"Tamaño",tot:"Total de globos",price:"Precio estimado",bag:"Bolsa de transporte",dec:"Calcomanía personalizada",decn:n=>`en ${n} ${n===1?"globo":"globos"}`,end:"Por favor, confirmen la disponibilidad y el total."}});
 
 /* ---- preview: 9 balloons, three vertical colour columns ---- */
-const SZ={12:{p:3.5,rows:[200,365,530],x:[128,260,392],rx:56,ry:66,off:[18,-26,4]},
- 18:{p:9.5,rows:[238,432],x:[118,260,402],rx:72,ry:85,off:[22,-30,6]},
- 24:{p:18.99,rows:[300],x:[112,260,408],rx:92,ry:108,off:[26,-34,8]},
- enc:{p:21,rows:[300],x:[112,260,408],rx:92,ry:108,off:[26,-34,8],enc:true}};
+const SZ={12:{p:3.5,rows:[330,500,670],x:[404,512,620],rx:106,ry:127,off:[58,-46,22]},
+ 18:{p:9.5,rows:[400,620],x:[380,512,644],rx:132,ry:158,off:[62,-52,26]},
+ 24:{p:18.99,rows:[580],x:[330,512,694],rx:168,ry:202,off:[58,-52,22]},
+ enc:{p:21,rows:[580],x:[330,512,694],rx:168,ry:202,off:[58,-52,22],enc:true}};
 const BAGP=2.99, BAGCAP=15;
-let BRX=56, BRY=66; const BQX=260, BQY=662;
-function balloon(i,cx,cy,hex){const g="bg"+i,met=hex===PAL[PALI["Metallic Gold"]][1]||hex===PAL[PALI["Metallic Silver"]][1];
- const tipY=cy+BRY-2, st=pale(hex)?` stroke="${shade(hex,0.18)}" stroke-width="1.5"`:"";
- return `<defs><radialGradient id="${g}" cx="34%" cy="26%" r="82%"><stop offset="0" stop-color="${tint(hex,met?0.55:0.4)}"/><stop offset="0.5" stop-color="${hex}"/><stop offset="1" stop-color="${shade(hex,met?0.42:0.34)}"/></radialGradient></defs>`
- +`<g><path d="M${cx-10} ${tipY}L${cx} ${tipY+18}L${cx+10} ${tipY}Z" fill="${shade(hex,pale(hex)?0.16:0.3)}"${st}/>`
- +`<ellipse cx="${cx}" cy="${cy}" rx="${BRX}" ry="${BRY}" fill="url(#${g})"${st}/>`
- +(met?`<ellipse cx="${cx-BRX*0.18}" cy="${cy}" rx="${BRX*0.26}" ry="${BRY*0.82}" fill="${tint(hex,0.6)}" opacity=".45"/>`:"")
- +`<ellipse cx="${cx-BRX*0.34}" cy="${cy-BRY*0.33}" rx="${BRX*0.21}" ry="${BRY*0.14}" fill="#fff" opacity="${met?0.8:0.62}" transform="rotate(-28 ${cx-BRX*0.34} ${cy-BRY*0.33})"/>`
- +`</g>`}
-function balloonEnc(i,cx,cy,hex){const g="bg"+i,st=` stroke="rgba(120,110,105,.35)" stroke-width="1.5"`,tipY=cy+BRY-2;
- const r=(k)=>{const a=(i*53+k*97)%360, rr=(k*37%100)/100; return [cx+Math.cos(a)*BRX*0.82*rr, cy+Math.sin(a*1.7)*BRY*0.82*rr]};
- let dots="";for(let k=1;k<=42;k++){const[px,py]=r(k);dots+=`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${1.6+(k%3)*0.7}" fill="#fff" opacity=".85"/>`}
- return `<defs><radialGradient id="${g}" cx="34%" cy="26%" r="82%"><stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#f2f0ee"/><stop offset="1" stop-color="#cfcbc8"/></radialGradient></defs>`
- +`<g><path d="M${cx-10} ${tipY}L${cx} ${tipY+18}L${cx+10} ${tipY}Z" fill="${shade(hex,0.18)}"${st}/>`
- +`<ellipse cx="${cx}" cy="${cy}" rx="${BRX}" ry="${BRY}" fill="url(#${g})" opacity=".42" stroke="rgba(255,255,255,.8)" stroke-width="2.5"/>`
- +`<ellipse cx="${cx}" cy="${cy+BRY*0.14}" rx="${BRX*0.68}" ry="${BRY*0.62}" fill="${hex}"${pale(hex)?` stroke="${shade(hex,0.16)}" stroke-width="1.2"`:""}/>`
- +`<ellipse cx="${cx-BRX*0.24}" cy="${cy+BRY*0.02}" rx="${BRX*0.17}" ry="${BRY*0.14}" fill="#fff" opacity=".45" transform="rotate(-28 ${cx-BRX*0.24} ${cy+BRY*0.02})"/>`
+const BQX=512, BQY=1180, WY=1400;
+/* photo-style latex balloon: pear body, chrome banding for metallics, specular highlights */
+const isMet=h=>h===bqHex("Metallic Gold")||h===bqHex("Metallic Silver");
+function bodyPath(cx,cy,rx,ry){return `M${cx} ${cy-ry}`
+ +`C${cx+rx*1.1} ${cy-ry*0.82} ${cx+rx*1.02} ${cy+ry*0.42} ${cx+rx*0.2} ${cy+ry*0.93}`
+ +`C${cx+rx*0.09} ${cy+ry*1.0} ${cx-rx*0.09} ${cy+ry*1.0} ${cx-rx*0.2} ${cy+ry*0.93}`
+ +`C${cx-rx*1.02} ${cy+ry*0.42} ${cx-rx*1.1} ${cy-ry*0.82} ${cx} ${cy-ry}Z`}
+function balloonDefs(id,hex){const met=isMet(hex),dk=shade(hex,0.62),md=shade(hex,0.22),lt=tint(hex,0.5);
+ if(met)return `<linearGradient id="${id}" x1="0.04" y1="0" x2="0.96" y2="0.22">`
+  +`<stop offset="0" stop-color="${shade(hex,0.58)}"/><stop offset="0.14" stop-color="${shade(hex,0.18)}"/>`
+  +`<stop offset="0.28" stop-color="${tint(hex,0.7)}"/><stop offset="0.4" stop-color="#ffffff"/><stop offset="0.48" stop-color="${tint(hex,0.72)}"/>`
+  +`<stop offset="0.55" stop-color="${hex}"/><stop offset="0.74" stop-color="${shade(hex,0.3)}"/>`
+  +`<stop offset="0.89" stop-color="${shade(hex,0.5)}"/><stop offset="1" stop-color="${shade(hex,0.66)}"/></linearGradient>`;
+ return `<radialGradient id="${id}" cx="33%" cy="24%" r="86%">`
+  +`<stop offset="0" stop-color="${lt}"/><stop offset="0.34" stop-color="${tint(hex,0.12)}"/>`
+  +`<stop offset="0.68" stop-color="${hex}"/><stop offset="0.9" stop-color="${md}"/>`
+  +`<stop offset="1" stop-color="${dk}"/></radialGradient>`}
+function balloon(i,cx,cy,hex,rx,ry){const id="bg"+i,met=isMet(hex),p=pale(hex);
+ const ty=cy+ry*0.96,st=p?` stroke="${shade(hex,0.14)}" stroke-width="1.6"`:"";
+ return `<defs>${balloonDefs(id,hex)}</defs>`
+ +`<g><path d="${bodyPath(cx,cy,rx,ry)}" fill="url(#${id})"${st}/>`
+ /* rim light along the lower-right edge */
+ +`<path d="${bodyPath(cx,cy,rx,ry)}" fill="none" stroke="${tint(hex,0.75)}" stroke-width="${rx*0.07}" opacity="${met?0.5:0.38}" filter="url(#sb)" clip-path="url(#cl${i})"/>`
+ /* soft highlight, then a sharp one */
+ +`<ellipse cx="${cx-rx*0.36}" cy="${cy-ry*0.38}" rx="${rx*0.3}" ry="${ry*0.2}" fill="#fff" opacity="${met?0.55:0.4}" filter="url(#sb)" transform="rotate(-26 ${cx-rx*0.36} ${cy-ry*0.38})"/>`
+ +`<ellipse cx="${cx-rx*0.38}" cy="${cy-ry*0.42}" rx="${rx*0.13}" ry="${ry*0.075}" fill="#fff" opacity="${met?0.95:0.8}" transform="rotate(-26 ${cx-rx*0.38} ${cy-ry*0.42})"/>`
+ +(met?`<ellipse cx="${cx-rx*0.05}" cy="${cy+ry*0.05}" rx="${rx*0.17}" ry="${ry*0.46}" fill="#fff" opacity=".3" filter="url(#sb)"/>`:"")
+ /* neck and knot */
+ +`<path d="M${cx-rx*0.17} ${ty}L${cx-rx*0.07} ${ty+ry*0.14}L${cx+rx*0.07} ${ty+ry*0.14}L${cx+rx*0.17} ${ty}Z" fill="${shade(hex,p?0.2:0.42)}"/>`
+ +`<ellipse cx="${cx}" cy="${ty+ry*0.15}" rx="${rx*0.08}" ry="${ry*0.05}" fill="${shade(hex,p?0.26:0.5)}"/></g>`}
+function balloonEnc(i,cx,cy,hex,rx,ry){const id="be"+i,ty=cy+ry*0.96,p=pale(hex);
+ let dots="";for(let k=1;k<=70;k++){const a=(i*61+k*137)%360,rr=Math.sqrt((k*53%100)/100);
+  const px=cx+Math.cos(a*Math.PI/180)*rx*0.88*rr, py=cy+Math.sin(a*Math.PI/180)*ry*0.88*rr;
+  dots+=`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${(2+(k%3)*1.1)*(rx/165)}" fill="#fff" opacity=".9"/>`}
+ return `<defs><radialGradient id="${id}" cx="33%" cy="24%" r="86%"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#f4f2f1"/><stop offset="1" stop-color="#c4c0be"/></radialGradient>${balloonDefs(id+"i",hex)}</defs>`
+ +`<g><path d="${bodyPath(cx,cy,rx,ry)}" fill="url(#${id})" opacity=".42" stroke="rgba(255,255,255,.85)" stroke-width="${rx*0.022}"/>`
+ +`<path d="${bodyPath(cx,cy+ry*0.14,rx*0.7,ry*0.68)}" fill="url(#${id}i)"${p?` stroke="${shade(hex,0.16)}" stroke-width="1.4"`:""}/>`
+ +`<ellipse cx="${cx-rx*0.26}" cy="${cy+ry*0.04}" rx="${rx*0.17}" ry="${ry*0.1}" fill="#fff" opacity=".5" filter="url(#sb)" transform="rotate(-26 ${cx-rx*0.26} ${cy+ry*0.04})"/>`
  +dots
- +`<ellipse cx="${cx-BRX*0.34}" cy="${cy-BRY*0.33}" rx="${BRX*0.2}" ry="${BRY*0.13}" fill="#fff" opacity=".75" transform="rotate(-28 ${cx-BRX*0.34} ${cy-BRY*0.33})"/></g>`}
-function bunchSvg(hexes,base,cfg){let s="",rib="";
- BRX=cfg.rx;BRY=cfg.ry;
- const pts=[];
- for(let r=0;r<cfg.rows.length;r++)for(let c=0;c<3;c++)pts.push([c,cfg.x[c],cfg.rows[r]+cfg.off[c]]);
- pts.forEach(([c,x,y],k)=>{rib+=`<path d="M${x} ${y+BRY+16}C${x} ${y+BRY+90} ${x+(BQX-x)*0.55} ${BQY-70} ${BQX} ${BQY}" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"/>`});
- pts.forEach(([c,x,y],k)=>{s+=(cfg.enc?balloonEnc:balloon)(k,x,y,hexes[c])});
- const bb=[[BQX-32,BQY+54,21],[BQX+2,BQY+46,22],[BQX+34,BQY+56,20],[BQX-17,BQY+79,21],[BQX+19,BQY+81,21],[BQX+1,BQY+68,18]]
-  .map((b,j)=>`<ellipse cx="${b[0]}" cy="${b[1]}" rx="${b[2]}" ry="${b[2]*0.92}" fill="${j%2?tint(base,0.12):base}"${pale(base)?` stroke="${shade(base,0.18)}" stroke-width="1.2"`:""}/>`).join("");
- return `<svg viewBox="0 0 520 790" role="img" aria-label="${esc(T[L].prev_cap(pts.length))}"><rect width="520" height="790" fill="#D9D5D8"/><ellipse cx="${BQX}" cy="762" rx="118" ry="13" fill="#000" opacity=".12"/>${rib}${s}<path d="M${BQX-14} ${BQY}q14 -10 28 0" fill="none" stroke="#EFE7DD" stroke-width="3"/>${bb}</svg>`}
+ +`<ellipse cx="${cx-rx*0.36}" cy="${cy-ry*0.4}" rx="${rx*0.26}" ry="${ry*0.17}" fill="#fff" opacity=".6" filter="url(#sb)" transform="rotate(-26 ${cx-rx*0.36} ${cy-ry*0.4})"/>`
+ +`<path d="M${cx-rx*0.17} ${ty}L${cx-rx*0.07} ${ty+ry*0.14}L${cx+rx*0.07} ${ty+ry*0.14}L${cx+rx*0.17} ${ty}Z" fill="rgba(170,165,162,.8)"/></g>`}
+function bunchSvg(cols,base,cfg){const pts=[];
+ for(let r=0;r<cfg.rows.length;r++)for(let c=0;c<3;c++){const k=r*3+c,f=1+(((k*37)%7)-3)/42;
+  pts.push([c,cfg.x[c]+((((k*53)%5)-2)*cfg.rx*0.07),cfg.rows[r]+cfg.off[c]+((((k*29)%5)-2)*cfg.ry*0.05),cfg.rx*f,cfg.ry*f])}
+ const rx=cfg.rx,ry=cfg.ry;
+ let rib="",bal="";
+ pts.forEach(([c,x,y,bx,by],k)=>{const h=cols[c],ty=y+by*1.11;
+  rib+=`<path d="M${x} ${ty}C${x} ${ty+by*0.7} ${x+(BQX-x)*0.6} ${BQY-by*0.9} ${BQX} ${BQY}" fill="none" stroke="${tint(h,0.35)}" stroke-width="${Math.max(1.8,rx*0.022)}" stroke-linecap="round" opacity=".9"/>`});
+ pts.forEach(([c,x,y,bx,by],k)=>{
+  bal+=`<ellipse cx="${x-bx*0.12}" cy="${y-by*0.06}" rx="${bx*0.97}" ry="${by*0.97}" fill="#4f4846" opacity=".34" filter="url(#sh)"/>`;
+  bal+=(cfg.enc?balloonEnc:balloon)(k,x,y,cols[c],bx,by)});
+ /* ribbon bundle down to the weight */
+ let bun="";for(let k=0;k<5;k++){const o=(k-2)*6;
+  bun+=`<path d="M${BQX+o*0.4} ${BQY}C${BQX+o*2.6} ${BQY+90} ${BQX-o*2.2} ${WY-130} ${BQX+o*0.5} ${WY-34}" fill="none" stroke="${tint(cols[k%3],0.35)}" stroke-width="2.6" opacity=".85" stroke-linecap="round"/>`}
+ const wt=[[-60,8],[-24,-18],[20,-16],[56,6],[-40,40],[4,26],[42,38]].map((w,j)=>{const h=cols[j%3],r=40;
+  return `<circle cx="${BQX+w[0]}" cy="${WY+w[1]}" r="${r}" fill="${h}"${pale(h)?` stroke="${shade(h,0.16)}" stroke-width="1.4"`:""}/>`
+  +`<ellipse cx="${BQX+w[0]-r*0.3}" cy="${WY+w[1]-r*0.32}" rx="${r*0.22}" ry="${r*0.14}" fill="#fff" opacity=".6" transform="rotate(-28 ${BQX+w[0]-r*0.3} ${WY+w[1]-r*0.32})"/>`}).join("");
+ return `<svg viewBox="0 0 1024 1536" role="img" aria-label="${esc(T[L].prev_cap(pts.length))}">`
+ +`<defs><linearGradient id="bgw" x1="0" y1="0" x2="0.25" y2="1"><stop offset="0" stop-color="#D5D1D1"/><stop offset="0.62" stop-color="#C6C2C3"/><stop offset="1" stop-color="#B4B0B1"/></linearGradient>`
+ +`<filter id="sb" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="${rx*0.11}"/></filter>`
+ +`<filter id="sh" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="${rx*0.17}"/></filter></defs>`
+ +`<rect width="1024" height="1536" fill="url(#bgw)"/>`
+ +`<ellipse cx="${BQX}" cy="${WY+78}" rx="190" ry="26" fill="#3a3331" opacity=".2" filter="url(#sh)"/>`
+ +rib+bal+bun+wt+`</svg>`}
 
 /* ---- state ---- */
 const BQ={c:[null,null,null],q:[3,3,3],n:["","",""],act:0,size:12,bag:false,dec:false,dw:"",dn:1,msg:""};
@@ -94,7 +130,7 @@ function bqCols(){const f=bqFilled().map(o=>bqHex(o.v));
  return[f[0],f[1],f[2]]}
 const bqCfg=()=>SZ[BQ.size]||SZ[12];
 const bqCount=()=>bqCfg().rows.length*3;
-function bqPreview(){const c=bqCols(),f=bqFilled();return bunchSvg(c,f.length?bqHex(f[0].v):RED,bqCfg())}
+function bqPreview(){const c=bqCols();return bunchSvg(c,c[0],bqCfg())}
 function bqDecWords(){return BQ.dw.trim()?BQ.dw.trim().split(/\s+/).length:0}
 function bqBunch(){return{size:BQ.size,items:bqFilled().map(o=>({c:o.v,q:BQ.q[o.i],n:BQ.n[o.i].trim()})),bag:BQ.bag,decal:(BQ.size==="enc"&&BQ.dec&&bqDecWords())?{t:BQ.dw.trim(),w:bqDecWords(),n:BQ.dn}:null}}
 function bqMsg(kind){const t=T[L],m=t.bm,L1=[];
