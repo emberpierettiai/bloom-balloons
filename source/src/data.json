@@ -37,6 +37,10 @@
   "num": {
    "t": "unit",
    "from": 55
+  },
+  "xmasset": {
+   "t": "unit",
+   "from": 35
   }
  },
  "cats": [
@@ -583,7 +587,7 @@
    "k": [
     "hel-xmas-gingerbread"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Gingerbread, tree and snowman balloon set",
    "es": "Set de globos de galleta de jengibre, árbol y muñeco de nieve",
    "occ": [
@@ -599,7 +603,7 @@
    "k": [
     "hel-xmas-faces"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Christmas friends balloon set",
    "es": "Set de globos de amigos navideños",
    "occ": [
@@ -615,7 +619,7 @@
    "k": [
     "hel-xmas-snowman"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Snowman, stocking and peppermint balloon set",
    "es": "Set de globos de muñeco de nieve, bota y caramelo",
    "occ": [
@@ -631,7 +635,7 @@
    "k": [
     "hel-xmas-reindeer"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Reindeer with gift box balloon set",
    "es": "Set de globos de reno con caja de regalo",
    "occ": [
@@ -647,7 +651,7 @@
    "k": [
     "hel-xmas-santa"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Santa Claus balloon set",
    "es": "Set de globos de Papá Noel",
    "occ": [
@@ -663,7 +667,7 @@
    "k": [
     "hel-xmas-orbs"
    ],
-   "pr": "quote",
+   "pr": "xmasset",
    "en": "Red, green and gold orb balloon set",
    "es": "Set de globos orbe rojo, verde y dorado",
    "occ": [
