@@ -1867,6 +1867,146 @@
    "av": true,
    "en": "“Girl or Boy?” printed balloon cluster",
    "es": "Ramo de globos impresos “Girl or Boy?”"
+  },
+  {
+   "id": "baby-girl-elephant",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-elephant"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink elephant, stroller and “It's a Girl” balloon set",
+   "es": "Set de globos elefante rosa, cochecito e “It's a Girl”"
+  },
+  {
+   "id": "baby-girl-its-a-girl",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-its-a-girl"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“It's a Girl” bottle balloon set",
+   "es": "Set de globos biberón “It's a Girl”"
+  },
+  {
+   "id": "baby-girl-rainbow",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-rainbow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Baby girl, rainbow and bow balloon set",
+   "es": "Set de globos bebé niña, arcoíris y lazo"
+  },
+  {
+   "id": "baby-girl-plane",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-plane"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Teddy pilot plane balloon set",
+   "es": "Set de globos osito piloto en avión"
+  },
+  {
+   "id": "baby-girl-baby",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-baby"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Baby girl with bottle balloon set",
+   "es": "Set de globos bebé niña con biberón"
+  },
+  {
+   "id": "baby-girl-onesie",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-onesie"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Floral onesie balloon set",
+   "es": "Set de globos body floral"
+  },
+  {
+   "id": "baby-girl-bow",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-bow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink bow balloon set",
+   "es": "Set de globos de lazo rosa bebé"
+  },
+  {
+   "id": "baby-girl-ruffle-heart",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-ruffle-heart"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Ruffled pink heart balloon set",
+   "es": "Set de globos corazón rosa con volantes"
+  },
+  {
+   "id": "baby-girl-gingham-heart",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-gingham-heart"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink gingham heart balloon set",
+   "es": "Set de globos corazón a cuadros rosa"
+  },
+  {
+   "id": "baby-girl-hearts",
+   "cat": "helium",
+   "ht": [
+    "baby-girl"
+   ],
+   "k": [
+    "hel-bg-hearts"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Mauve and ivory heart balloon trio",
+   "es": "Trío de globos corazón malva y marfil"
   }
  ],
  "occs": [
@@ -2047,6 +2187,18 @@
     "#F6EDE4"
    ],
    "k": "hel-bs-hotair"
+  },
+  {
+   "id": "baby-girl",
+   "up": "baby",
+   "en": "Baby Girl",
+   "es": "Niña",
+   "c": [
+    "#EE9FB3",
+    "#F8DCE2",
+    "#F6EDE4"
+   ],
+   "k": "hel-bg-elephant"
   },
   {
    "id": "gender-reveal",
