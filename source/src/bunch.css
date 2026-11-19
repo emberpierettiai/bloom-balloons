@@ -56,3 +56,11 @@
  .bq-row{grid-template-columns:62px minmax(0,1fr) 78px;gap:8px}
  .bq-row .bq-n{grid-column:2/-1}
 }
+.bq-size{flex-wrap:wrap;align-items:baseline}
+.bq-size u{text-decoration:none;font:500 .92rem "Playfair Display",Georgia,serif;margin-left:auto}
+.bq-size span{flex:0 0 100%;font-size:.76rem}
+.bq-sizes{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.bq-sizes{grid-template-columns:1fr 1fr}}
+.bq-av{margin:12px 0 0;padding:14px 16px;border-radius:14px;background:var(--sage);border:1px solid var(--olive)}
+.bq-av b{display:block;font:600 .92rem "DM Sans",sans-serif;margin-bottom:3px}
+.bq-av p{margin:0;font-size:.85rem}

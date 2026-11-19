@@ -23,7 +23,7 @@ Os arquivos na raiz do repositório são gerados. As fontes ficam nesta pasta `s
 - Categorias: garlands, columns, sculptures, bouquets, helium, centerpieces (vazia), numbers (oculta, só em ocasiões).
 - Ocasiões: Birthdays, Corporate Events, Holidays & Seasonal, Numbers (from $55).
 - Hélio: página de temas (13 temas + quadradinho Single Balloons), páginas por tema.
-- Single Balloons = produto 'Build Your Helium Balloon Bunch' (src/bunch.js + src/bunch.css): ate 3 cores da cartela de 31 cores (src/palette.json, tons tirados do mockup), 1 a 10 balões por cor, notas por cor, prévia SVG de 9 balões em 3 colunas verticais, tamanhos 12" ($3.50 cada, compra online) e 18"/24" encapsulados sob consulta por texto, decal $8 por palavra/símbolo só nos encapsulados.
+- Single Balloons = produto 'Build Your Helium Balloon Bunch' (src/bunch.js + src/bunch.css): ate 3 cores da cartela de 31 cores (src/palette.json, tons tirados do mockup), 1 a 10 balões por cor, notas por cor, prévia SVG de 9 balões em 3 colunas verticais, tamanhos 12" $3.50, 18" $9.50, 24" $18.99 e Encapsulado $21 (todos compraveis; 18"/24"/encapsulado levam aviso "Subject to availability" na pagina, no carrinho e no texto), bolsa de transporte $2.99 (1 bolsa a cada 15 baloes), decal $8 por palavra/simbolo so no encapsulado. Precos definidos pelo usuario com base na ready4yourparty.com (18" la $7.99, 24" $16.99).
 - Carrinho termina em "Send Order by Text". Square: só o encaixe (`PAY.endpoint` em shop.js), desligado.
 
 ## Pendências

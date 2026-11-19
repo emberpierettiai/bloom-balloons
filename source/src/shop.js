@@ -38,7 +38,7 @@ const usd=v=>"$"+(Number.isInteger(v)?v:v.toFixed(2));
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const catOf=id=>DATA.products.filter(p=>p.cat===id);
 function priceLabel(p){const r=PR[p.pr],t=T[L];return r.t==="each"?`${usd(r.price)} ${t.each}`:r.t==="ft"?t.from_ft(usd(r.rate)):r.t==="unit"?t.from_(usd(r.from)):t.ask_q}
-function lineTotal(i){const p=P(i.id);if(!p)return null;const r=PR[p.pr];if(i.bunch)return PR.hel.price*i.bunch.items.reduce((a,x)=>a+x.q,0)*i.qty;
+function lineTotal(i){const p=P(i.id);if(!p)return null;const r=PR[p.pr];if(i.bunch)return bunchTotal(i.bunch)*i.qty;
  return r.t==="each"?r.price*i.qty:r.t==="ft"?i.ft*(r.rate+(i.met?r.met:0))*i.qty:r.t==="unit"?r.from*i.qty:null}
 const maxQ=p=>PR[p.pr].t==="each"?99:20;
 const helArt=(c,bg)=>`<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect width="400" height="500" fill="${bg||"#FFF9F6"}"/><g fill="none" stroke="#B9A08F" stroke-width="2.5" stroke-linecap="round"><path d="M132 232Q150 330 196 432"/><path d="M200 196Q206 320 200 432"/><path d="M270 240Q250 340 204 432"/></g><ellipse cx="128" cy="150" rx="62" ry="76" fill="${c[0]}"/><path d="M120 224l8 12 8-12z" fill="${c[0]}"/><ellipse cx="104" cy="118" rx="14" ry="22" fill="#fff" opacity=".5" transform="rotate(-20 104 118)"/><ellipse cx="272" cy="160" rx="60" ry="74" fill="${c[1]}"/><path d="M264 232l8 12 8-12z" fill="${c[1]}"/><ellipse cx="250" cy="128" rx="13" ry="21" fill="#fff" opacity=".5" transform="rotate(-20 250 128)"/><ellipse cx="200" cy="108" rx="64" ry="80" fill="${c[2]}" stroke="${c[2]==="#FFFFFF"||c[2]==="#F6EDE4"||c[2]==="#F8DCE2"?"#E6D3C2":"none"}" stroke-width="2"/><path d="M192 186l8 12 8-12z" fill="${c[2]}" stroke="${c[2]==="#FFFFFF"||c[2]==="#F6EDE4"||c[2]==="#F8DCE2"?"#E6D3C2":"none"}"/><ellipse cx="176" cy="74" rx="14" ry="23" fill="#fff" opacity=".55" transform="rotate(-20 176 74)"/><path d="M180 432h40l10 34h-60z" fill="#6B4A3F"/><ellipse cx="200" cy="470" rx="46" ry="6" fill="#6B4A3F" opacity=".12"/></svg>`;
@@ -145,7 +145,7 @@ const PAY={endpoint:""};
 const MINI=`<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="15" r="9" fill="#F3C1CB"/><circle cx="31" cy="19" r="8" fill="#E2C17E"/><circle cx="20" cy="31" r="9" fill="#F8DCE2"/><circle cx="33" cy="35" r="6" fill="#F3C1CB"/><circle cx="11" cy="26" r="4" fill="#fff" stroke="#EED9C6"/></svg>`;
 const CO={ful:"pickup",name:"",addr:"",date:"",notes:""};
 function itemDesc(i,plain){const t=T[L],p=P(i.id),r=PR[p.pr],a=[];
- if(i.bunch){a.push(i.bunch.size+"″");i.bunch.items.forEach(x=>a.push(`${x.q}× ${x.c}${x.n?" ("+(plain?x.n:esc(x.n))+")":""}`));return a.join(" · ")}
+ if(i.bunch){const b=i.bunch;a.push(t.sz_name(b.size));b.items.forEach(x=>a.push(`${x.q}× ${x.c}${x.n?" ("+(plain?x.n:esc(x.n))+")":""}`));if(b.bag)a.push(t.bag_n(bagsFor(b.items.reduce((s,x)=>s+x.q,0)),usd(bagsFor(b.items.reduce((s,x)=>s+x.q,0))*BAGP)));if(b.decal)a.push(`${t.bm.dec}: “${plain?b.decal.t:esc(b.decal.t)}” ${t.bm.decn(b.decal.n)}`);if(b.size!==12)a.push(t.avail_h);return a.join(" · ")}
  if(r.t==="ft")a.push(`${i.ft} ${t.gtg.ft} × ${usd(r.rate+(i.met?r.met:0))}/${L==="en"?"ft":"pie"}`);
  if(i.met)a.push(t.met_s);
  if(r.t==="unit")a.push(`${usd(r.from)} ${t.each}`);
