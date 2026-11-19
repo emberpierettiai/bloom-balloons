@@ -2558,6 +2558,118 @@
    "occ": [
     "seasonal"
    ]
+  },
+  {
+   "id": "get-well-bear-rainbow",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-bear"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Get Well Soon” teddy bear balloon set",
+   "es": "Set de globos osito “Get Well Soon”"
+  },
+  {
+   "id": "get-well-snail",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-snail"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Speedy Recovery” snail balloon set",
+   "es": "Set de globos caracol “Speedy Recovery”"
+  },
+  {
+   "id": "get-well-cloud-sun",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-cloud-sun"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Get Well Soon” cloud and sun balloon set",
+   "es": "Set de globos nube y sol “Get Well Soon”"
+  },
+  {
+   "id": "get-well-lemon",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-lemon"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Sending You a Big Squeeze” lemon balloon set",
+   "es": "Set de globos limón “Sending You a Big Squeeze”"
+  },
+  {
+   "id": "get-well-stack",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-stack"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Get Well Soon” stacked balloon set",
+   "es": "Set de globos apilados “Get Well Soon”"
+  },
+  {
+   "id": "get-well-rainbow",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-rainbow"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Blue rainbow “Get Well Soon” balloon set",
+   "es": "Set de globos arcoíris azul “Get Well Soon”"
+  },
+  {
+   "id": "get-well-sun",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-sun"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Rainbow and sun “Get Well Soon” balloon set",
+   "es": "Set de globos arcoíris y sol “Get Well Soon”"
+  },
+  {
+   "id": "get-well-lilac",
+   "cat": "helium",
+   "ht": [
+    "get-well"
+   ],
+   "k": [
+    "hel-gw-lilac"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Lilac rainbow “Get Well Soon” balloon set",
+   "es": "Set de globos arcoíris lila “Get Well Soon”"
   }
  ],
  "occs": [
@@ -2835,6 +2947,7 @@
   },
   {
    "id": "get-well",
+   "big": true,
    "en": "Get Well",
    "es": "Recupérate pronto",
    "c": [
@@ -2842,7 +2955,7 @@
     "#B9CBAE",
     "#A9CBEA"
    ],
-   "k": "hel-getwell"
+   "k": "hel-gw-bear"
   },
   {
    "id": "retirement",
