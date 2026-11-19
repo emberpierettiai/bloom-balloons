@@ -2443,6 +2443,125 @@
    "occ": [
     "seasonal"
    ]
+  },
+  {
+   "id": "easter-bunny",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-bunny"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Easter bunny with carrot balloon set",
+   "es": "Set de globos conejito de Pascua con zanahoria",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-bunny-bow",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-bunny-bow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Bunny with bow balloon set",
+   "es": "Set de globos conejita con lazo",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-chick",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-chick"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Chick in egg balloon set",
+   "es": "Set de globos pollito en el huevo",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-happy",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-happy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Happy Easter” floral balloon set",
+   "es": "Set de globos floral “Happy Easter”",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-hoppy",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-hoppy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Hoppy Easter” bunny balloon set",
+   "es": "Set de globos conejito “Hoppy Easter”",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-eggs",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-eggs"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pastel Easter egg balloon trio",
+   "es": "Trío de globos huevo de Pascua pastel",
+   "occ": [
+    "seasonal"
+   ]
+  },
+  {
+   "id": "easter-egg-lilac",
+   "cat": "helium",
+   "ht": [
+    "character"
+   ],
+   "k": [
+    "hel-ea-egg-lilac"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Lilac Easter egg balloon set",
+   "es": "Set de globos huevo de Pascua lila",
+   "occ": [
+    "seasonal"
+   ]
   }
  ],
  "occs": [
@@ -2581,17 +2700,6 @@
    "k": "hel-br-ring-rose"
   },
   {
-   "id": "character",
-   "big": true,
-   "en": "Character Party",
-   "es": "Fiesta de personajes",
-   "c": [
-    "#D9534F",
-    "#4A7FD4",
-    "#F2C94C"
-   ]
-  },
-  {
    "id": "baby",
    "big": true,
    "en": "Baby Shower & Gender Reveal",
@@ -2661,6 +2769,18 @@
     "#E2C17E"
    ],
    "k": "hel-val-ruby-champagne"
+  },
+  {
+   "id": "character",
+   "big": true,
+   "en": "Easter",
+   "es": "Pascua",
+   "c": [
+    "#B6D7B0",
+    "#F7D9E3",
+    "#F6EDA2"
+   ],
+   "k": "hel-ea-bunny"
   },
   {
    "id": "mothers-day",
