@@ -45,10 +45,13 @@ Object.assign(T.es,{bunch_h:"Arma tu ramo de globos con helio",bunch_sub:"Elige 
   size:"Tamaño",tot:"Total de globos",price:"Precio estimado",bag:"Bolsa de transporte",dec:"Calcomanía personalizada",decn:n=>`en ${n} ${n===1?"globo":"globos"}`,end:"Por favor, confirmen la disponibilidad y el total."}});
 
 /* ---- preview: 9 balloons, three vertical colour columns ---- */
-const SZ={12:{p:3.5,rows:[300,448,596,744],x:[428,512,596],rx:95,ry:114,off:[54,-44,20]},
- 18:{p:9.5,rows:[350,530,710],x:[418,512,606],rx:116,ry:139,off:[58,-48,22]},
- 24:{p:18.99,rows:[440,700],x:[390,512,634],rx:148,ry:178,off:[62,-52,24]},
- enc:{p:21,rows:[440,700],x:[390,512,634],rx:148,ry:178,off:[62,-52,24],enc:true}};
+const SZ={12:{p:3.5,rx:93,ry:112,top:292},
+ 18:{p:9.5,rx:110,ry:132,top:286},
+ 24:{p:18.99,rx:124,ry:149,top:262},
+ enc:{p:21,rx:124,ry:149,top:262,enc:true}};
+/* classic helium bouquet: narrow at the top, fanning out toward the bottom (9 balloons) */
+const POS=[[1,0.07,0],[0,-0.91,1.34],[2,1.04,1.32],[0,-1.63,2.68],[1,0.04,2.72],[2,1.72,2.64],
+ [0,-1.91,4.01],[1,-0.15,4.06],[2,1.59,3.98]];
 const BAGP=2.99, BAGCAP=15;
 const BQX=512, BQY=1180, WY=1400;
 /* photo-real latex balloon: round body, layered shading, mirror chrome */
@@ -107,9 +110,8 @@ function balloonEnc(i,cx,cy,hex,rx,ry){const id="be"+i,d=bodyPath(cx,cy,rx,ry),t
  +`<ellipse cx="${cx-rx*0.37}" cy="${cy-ry*0.47}" rx="${rx*0.14}" ry="${ry*0.08}" fill="#fff" opacity=".9" transform="rotate(-28 ${cx-rx*0.37} ${cy-ry*0.47})"/>`
  +neck(cx,ty,rx,ry,"rgba(176,171,168,.85)","rgba(150,145,142,.9)")+`</g>`}
 function bunchSvg(cols,base,cfg){const pts=[];
- for(let r=0;r<cfg.rows.length;r++)for(let c=0;c<3;c++){const k=r*3+c,f=1+(((k*37)%7)-3)/40;
-  pts.push([c,cfg.x[c]+((((k*53)%7)-3)*cfg.rx*0.1),cfg.rows[r]+cfg.off[c]+((((k*29)%5)-2)*cfg.ry*0.07),
-   cfg.rx*f,cfg.ry*f,(((k*41)%13)-6)*1.1])}
+ POS.forEach(([c,dx,dy],k)=>{const f=1+(((k*37)%7)-3)/40;
+  pts.push([c,BQX+dx*cfg.rx,cfg.top+dy*cfg.ry,cfg.rx*f,cfg.ry*f,(((k*41)%13)-6)*1.2])});
  const rx=cfg.rx;let rib="",bal="";
  pts.forEach(([c,x,y,bx,by,rot])=>{const h=cols[c],a=rot*Math.PI/180,L=by*1.11;
   const nx=x-L*Math.sin(a),ny=y+L*Math.cos(a);
@@ -120,7 +122,7 @@ function bunchSvg(cols,base,cfg){const pts=[];
    +(cfg.enc?balloonEnc:balloon)(k,x,y,cols[c],bx,by)+`</g>`});
  let bun="";for(let k=0;k<5;k++){const o=(k-2)*6;
   bun+=`<path d="M${BQX+o*0.4} ${BQY}C${BQX+o*2.6} ${BQY+90} ${BQX-o*2.2} ${WY-130} ${BQX+o*0.5} ${WY-34}" fill="none" stroke="${tint(cols[k%3],0.3)}" stroke-width="2.4" opacity=".8" stroke-linecap="round"/>`}
- const wt=[[-60,8],[-24,-18],[20,-16],[56,6],[-40,40],[4,26],[42,38]].map((w,j)=>{const h=cols[j%3],r=40,X=BQX+w[0],Y=WY+w[1];
+ const wt=[[-50,6],[-18,-16],[18,-14],[48,4],[-32,32],[22,28]].map((w,j)=>{const h=cols[j%3],r=34,X=BQX+w[0],Y=WY+w[1];
   return `<circle cx="${X}" cy="${Y}" r="${r}" fill="${h}"${pale(h)?` stroke="${shade(h,0.16)}" stroke-width="1.4"`:""}/>`
   +`<circle cx="${X}" cy="${Y}" r="${r}" fill="url(#wsh)"/>`
   +`<ellipse cx="${X-r*0.3}" cy="${Y-r*0.33}" rx="${r*0.2}" ry="${r*0.12}" fill="#fff" opacity=".65" transform="rotate(-28 ${X-r*0.3} ${Y-r*0.33})"/>`}).join("");
@@ -149,7 +151,7 @@ function bqCols(){const f=bqFilled().map(o=>bqHex(o.v));
  if(f.length===2)return[f[0],f[0],f[1]];
  return[f[0],f[1],f[2]]}
 const bqCfg=()=>SZ[BQ.size]||SZ[12];
-const bqCount=()=>bqCfg().rows.length*3;
+const bqCount=()=>POS.length;
 function bqPreview(){const c=bqCols();return bunchSvg(c,c[0],bqCfg())}
 function bqDecWords(){return BQ.dw.trim()?BQ.dw.trim().split(/\s+/).length:0}
 function bqBunch(){return{size:BQ.size,items:bqFilled().map(o=>({c:o.v,q:BQ.q[o.i],n:BQ.n[o.i].trim()})),bag:BQ.bag,decal:(BQ.size==="enc"&&BQ.dec&&bqDecWords())?{t:BQ.dw.trim(),w:bqDecWords(),n:BQ.dn}:null}}
