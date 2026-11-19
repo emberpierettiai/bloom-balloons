@@ -1155,7 +1155,8 @@
    "id": "girls-birthday-smiley",
    "cat": "helium",
    "ht": [
-    "girls-birthday"
+    "girls-birthday",
+    "boys-birthday"
    ],
    "k": [
     "hel-gb-smiley"
@@ -1614,6 +1615,118 @@
    "av": true,
    "en": "White and gold “Happy Anniversary” balloon set",
    "es": "Set de globos blanco y dorado “Happy Anniversary”"
+  },
+  {
+   "id": "boys-birthday-space",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-space"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Astronaut, rocket and spaceship balloon set",
+   "es": "Set de globos astronauta, cohete y nave"
+  },
+  {
+   "id": "boys-birthday-gamer",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-gamer"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Gamer controller birthday balloon set",
+   "es": "Set de globos de control de videojuego"
+  },
+  {
+   "id": "boys-birthday-pixel",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-pixel"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pixel game birthday balloon set",
+   "es": "Set de globos de cumpleaños estilo pixel"
+  },
+  {
+   "id": "boys-birthday-animals",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-animals"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Party animals balloon set",
+   "es": "Set de globos de animalitos de fiesta"
+  },
+  {
+   "id": "boys-birthday-trophy",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-trophy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Trophy and soccer ball balloon set",
+   "es": "Set de globos trofeo y balón de fútbol"
+  },
+  {
+   "id": "boys-birthday-football",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-football"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Football birthday balloon set",
+   "es": "Set de globos de fútbol americano"
+  },
+  {
+   "id": "boys-birthday-teal",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-teal"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Teal birthday balloon set",
+   "es": "Set de globos de cumpleaños turquesa"
+  },
+  {
+   "id": "boys-birthday-navy",
+   "cat": "helium",
+   "ht": [
+    "boys-birthday"
+   ],
+   "k": [
+    "hel-bb-navy"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Navy confetti birthday balloon set",
+   "es": "Set de globos de cumpleaños azul marino con confeti"
   }
  ],
  "occs": [
@@ -1688,7 +1801,8 @@
     "#4A7FD4",
     "#7BC47F",
     "#F2C94C"
-   ]
+   ],
+   "k": "hel-bb-space"
   },
   {
    "id": "holidays",
