@@ -1727,6 +1727,146 @@
    "av": true,
    "en": "Navy confetti birthday balloon set",
    "es": "Set de globos de cumpleaños azul marino con confeti"
+  },
+  {
+   "id": "baby-shower-hot-air",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-hotair"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Boy or Girl?” hot air balloon and bottles set",
+   "es": "Set de globo aerostático “Boy or Girl?” y biberones"
+  },
+  {
+   "id": "baby-shower-babies-question",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-babies-question"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Girl or Boy?” and baby balloon set",
+   "es": "Set de globos “Girl or Boy?” y bebés"
+  },
+  {
+   "id": "baby-shower-boy-girl-letters",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-letters"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“BOY” and “GIRL” letter balloon set",
+   "es": "Set de globos de letras “BOY” y “GIRL”"
+  },
+  {
+   "id": "baby-shower-gold-question",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-gold"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Gold “Boy or Girl?” balloon set",
+   "es": "Set de globos dorado “Boy or Girl?”"
+  },
+  {
+   "id": "baby-shower-ohbaby",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-ohbaby"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Oh Baby” bottle balloon set",
+   "es": "Set de globos biberón “Oh Baby”"
+  },
+  {
+   "id": "baby-shower-babies",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-babies"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Baby foil balloon set",
+   "es": "Set de globos de bebés"
+  },
+  {
+   "id": "baby-shower-bows-hearts",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-bows-hearts"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pink and blue bow and heart balloon set",
+   "es": "Set de globos lazo y corazón rosa y azul"
+  },
+  {
+   "id": "baby-shower-blue-bow",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-blue-bow"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Blue bow and hearts balloon set",
+   "es": "Set de globos lazo azul y corazones"
+  },
+  {
+   "id": "baby-shower-hearts",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-hearts"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "Pastel heart balloon trio",
+   "es": "Trío de globos corazón pastel bebé"
+  },
+  {
+   "id": "baby-shower-latex",
+   "cat": "helium",
+   "ht": [
+    "baby-shower"
+   ],
+   "k": [
+    "hel-bs-latex"
+   ],
+   "pr": "set13",
+   "av": true,
+   "en": "“Girl or Boy?” printed balloon cluster",
+   "es": "Ramo de globos impresos “Girl or Boy?”"
   }
  ],
  "occs": [
@@ -1887,11 +2027,35 @@
   {
    "id": "baby",
    "big": true,
-   "en": "Baby Party",
-   "es": "Fiesta de bebé",
+   "en": "Baby Shower & Gender Reveal",
+   "es": "Baby Shower y Revelación de Género",
    "c": [
     "#F3C1CB",
     "#A9CBEA",
+    "#F6EDE4"
+   ],
+   "k": "hel-bs-babies-question"
+  },
+  {
+   "id": "baby-shower",
+   "up": "baby",
+   "en": "Baby Shower",
+   "es": "Baby Shower",
+   "c": [
+    "#F3C1CB",
+    "#A9CBEA",
+    "#F6EDE4"
+   ],
+   "k": "hel-bs-hotair"
+  },
+  {
+   "id": "gender-reveal",
+   "up": "baby",
+   "en": "Gender Reveal",
+   "es": "Revelación de Género",
+   "c": [
+    "#5B8FD9",
+    "#EE9FB3",
     "#F6EDE4"
    ]
   },
