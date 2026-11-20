@@ -3,26 +3,26 @@
 Object.assign(T.en,{h_theme:"Themes",h_nothm:"No theme matches.",h_ph:"Search balloons or pick a theme…",h_all:"All themes",h_none:"No helium balloons match that search.",av_s:"Subject to availability",av_h:"Check availability",av_p:"This set is subject to availability. Text us to confirm it and your date before you order.",sb_h:"Single Balloons",nf_h:"Page not found",nf_p:"That page doesn’t exist, or it moved. Let’s get you back to the balloons.",nf_b:"Go to the home page",hub_p:"Pick a theme to see helium balloons for your celebration.",hub_all:"All helium balloons",hel_inc:"One latex balloon filled with helium. Price is per balloon: add as many as you need.",hel_i1:"Colors: tell us the colors you want in the box above.",hel_i2:"Pickup or local delivery in South Florida. The delivery fee is calculated from your address.",hel_i3:"Colors and arrangement may vary slightly from the photos.",pick_av:"Pickup or delivery available",f_price:"Price",f_occ:"Occasion",f_any:"All",p_u50:"Under $50",p_50:"$50 to $100",p_o100:"Over $100",p_q:"Quote only",cr_h:"Custom request",cr_p:"Every celebration is different. Want other colors, a theme or a different size? Text us and we’ll customize it for you.",m_hel:"Helium Balloons",m_bq:"Balloon Bouquets",togo:"TO GO",chip_pick:"You pick up",chip_inst:"We install",gtg_why:"Ready-made, no installation: that’s why it costs less.",inst_name:"Balloon Garland + Installation",inst_note:"Installed by us at your event. 8 ft minimum. Travel fee not included.",m_cen:"Centerpieces",cat_soon:"Photos coming soon. Text us or request a quote for this category.",m_occs:"Shop by Occasion",m_decor:"Balloon Decor",search_ph:"Search products",shop_now:"Shop now",quick:"Quick view",from_w:"From",sort:"Sort by",s_feat:"Featured",s_lo:"Price, low to high",s_hi:"Price, high to low",s_az:"Alphabetically, A-Z",res_h:q=>`Results for “${q}”`,res_none:"No products found.",res_all:"All products",items:n=>`${n} ${n===1?"product":"products"}`,cart:"Cart",home:"Home",view:"View Product",view_cat:"View Products",order_here:"Order Here",
 from_ft:v=>`From ${v}/ft`,from_:v=>`From ${v}`,
 pf_note:"Priced by the foot. Choose your length and the starting price updates. We confirm the final price by text.",
-size:"Length (ft)",qty:"Quantity",colors_l:"Colors you’d like",colors_gtg:"Colors (up to 3)",add:"Add to Cart",added:"Added to your cart.",view_cart:"View Cart",
+size:"Length (ft)",qty:"Quantity",colors_l:"Colors you’d like",colors_gtg:"Colors (up to 3)",
 your_price:"Your starting price",q_item:"This piece is quoted individually. Add it to your cart and we’ll text you the price.",
 inst_tip:"Need installation? Request a quote.",also:"More in this category",shown:"Colors shown",
-cart_h:"Your cart",cart_empty:"Your cart is empty.",remove:"Remove",est:"Estimated total",est_note:"Starting prices. We confirm the final total by text.",
-quote_n:n=>`+ ${n} to be quoted`,to_quote:"To be quoted",co_h:"Checkout",ful_l:"How would you like to receive your order?",pick:"Pickup",del:"Delivery",
+remove:"Remove",est:"Estimated total",est_note:"Starting prices. We confirm the final total by text.",
+quote_n:n=>`+ ${n} to be quoted`,to_quote:"To be quoted",ful_l:"How would you like to receive your order?",pick:"Pickup",del:"Delivery",
 addr:"Delivery address",del_note:"Delivery fee is calculated from your address. We’ll text you the total.",date_l:"Requested date",notes:"Notes (optional)",
-send:"Send Order by Text",co_note:"Online payment isn’t available. Tap “Send Order by Text” to send us your order, then we’ll text you to confirm availability and the total, and send you a secure Square payment link.",pay_sq:"Pay Now with Square",pay_err:"We couldn’t start the payment. Please send your order by text instead.",
+send:"Send Order by Text",
 sent_o:"Opening your messaging app with your order. Just tap send! If it doesn’t open, text us at +1 (973) 444-7348.",
 met_s:"Metallic colors",each:"each",
 om:{hi:"Hi Bloom Balloons! I’d like to place this order:",tot:"Estimated total",ful:"Fulfillment",addr:"Delivery address",date:"Requested date",name:"Name",notes:"Notes",colors:"Colors",end:"Please confirm availability and total."}});
 Object.assign(T.es,{h_theme:"Temas",h_nothm:"Ningún tema coincide.",h_ph:"Busca globos o elige un tema…",h_all:"Todos los temas",h_none:"Ningún globo con helio coincide con esa búsqueda.",av_s:"Sujeto a disponibilidad",av_h:"Consulta la disponibilidad",av_p:"Este set está sujeto a disponibilidad. Escríbenos para confirmarlo y confirmar tu fecha antes de ordenar.",sb_h:"Globos individuales",nf_h:"Página no encontrada",nf_p:"Esa página no existe o fue movida. Volvamos a los globos.",nf_b:"Ir a la página de inicio",hub_p:"Elige un tema para ver globos con helio para tu celebración.",hub_all:"Todos los globos con helio",hel_inc:"Un globo de látex inflado con helio. El precio es por globo: agrega los que necesites.",hel_i1:"Colores: dinos los colores que quieres en la casilla de arriba.",hel_i2:"Recogida o entrega local en el sur de Florida. El costo de entrega se calcula según tu dirección.",hel_i3:"Los colores y el arreglo pueden variar un poco respecto a las fotos.",pick_av:"Recogida o entrega disponibles",f_price:"Precio",f_occ:"Ocasión",f_any:"Todos",p_u50:"Menos de $50",p_50:"$50 a $100",p_o100:"Más de $100",p_q:"Solo cotización",cr_h:"Pedido especial",cr_p:"Cada celebración es diferente. ¿Quieres otros colores, un tema o un tamaño distinto? Escríbenos y lo personalizamos para ti.",m_hel:"Globos con helio",m_bq:"Ramos de globos",togo:"PARA LLEVAR",chip_pick:"Tú la recoges",chip_inst:"Nosotros instalamos",gtg_why:"Lista para llevar, sin instalación: por eso cuesta menos.",inst_name:"Guirnalda de globos + instalación",inst_note:"La instalamos en tu evento. Mínimo 8 pies. No incluye traslado.",m_cen:"Centros de mesa",cat_soon:"Fotos próximamente. Escríbenos o solicita una cotización para esta categoría.",m_occs:"Comprar por ocasión",m_decor:"Decoración con globos",search_ph:"Buscar productos",shop_now:"Ver todo",quick:"Vista rápida",from_w:"Desde",sort:"Ordenar por",s_feat:"Destacados",s_lo:"Precio, de menor a mayor",s_hi:"Precio, de mayor a menor",s_az:"Alfabéticamente, A-Z",res_h:q=>`Resultados para “${q}”`,res_none:"No se encontraron productos.",res_all:"Todos los productos",items:n=>`${n} ${n===1?"producto":"productos"}`,cart:"Carrito",home:"Inicio",view:"Ver producto",view_cat:"Ver productos",order_here:"Ordena aquí",
 from_ft:v=>`Desde ${v}/pie`,from_:v=>`Desde ${v}`,
 pf_note:"Precio por pie. Elige el largo y el precio inicial se actualiza. Confirmamos el precio final por texto.",
-size:"Largo (pies)",qty:"Cantidad",colors_l:"Colores que te gustarían",colors_gtg:"Colores (hasta 3)",add:"Agregar al carrito",added:"Agregado a tu carrito.",view_cart:"Ver carrito",
+size:"Largo (pies)",qty:"Cantidad",colors_l:"Colores que te gustarían",colors_gtg:"Colores (hasta 3)",
 your_price:"Tu precio inicial",q_item:"Esta pieza se cotiza de forma individual. Agrégala a tu carrito y te enviaremos el precio por texto.",
 inst_tip:"¿Necesitas instalación? Solicita una cotización.",also:"Más en esta categoría",shown:"Colores de la foto",
 cart_h:"Tu carrito",cart_empty:"Tu carrito está vacío.",remove:"Quitar",est:"Total estimado",est_note:"Precios iniciales. Confirmamos el total final por texto.",
 quote_n:n=>`+ ${n} por cotizar`,to_quote:"Por cotizar",co_h:"Finalizar pedido",ful_l:"¿Cómo quieres recibir tu pedido?",pick:"Recogida",del:"Entrega",
 addr:"Dirección de entrega",del_note:"El costo de entrega se calcula según tu dirección. Te enviaremos el total por texto.",date_l:"Fecha deseada",notes:"Notas (opcional)",
-send:"Enviar pedido por texto",co_note:"No hay pago en línea. Toca “Enviar pedido por texto” para enviarnos tu pedido y luego te escribiremos para confirmar la disponibilidad y el total, y te enviaremos un enlace de pago seguro de Square.",pay_sq:"Pagar ahora con Square",pay_err:"No pudimos iniciar el pago. Por favor, envía tu pedido por texto.",
+send:"Enviar pedido por texto",co_note:"No hay pago en línea. Toca “Enviar pedido por texto” para enviarnos tu pedido y luego te escribiremos para confirmar la disponibilidad y el total, y te enviaremos un enlace de pago seguro de Square.",
 sent_o:"Abriendo tu app de mensajes con tu pedido. ¡Solo toca enviar! Si no se abre, escríbenos al +1 (973) 444-7348.",
 met_s:"Colores metálicos",each:"c/u",
 om:{hi:"¡Hola, Bloom Balloons! Me gustaría hacer este pedido:",tot:"Total estimado",ful:"Modalidad",addr:"Dirección de entrega",date:"Fecha deseada",name:"Nombre",notes:"Notas",colors:"Colores",end:"Por favor, confirmen la disponibilidad y el total."}});
@@ -31,6 +31,75 @@ Object.assign(T.en.gtg,{tag:"Pickup or delivery",desc:"A ready-made balloon garl
 T.en.gtg.info[4]="Pickup or delivery: setup is not included.";T.en.gtg.info[5]="If you pick up: for 6 to 9 ft garlands, bring a small SUV with the seats folded down. Keep sharp objects out of the car, and don’t leave the garland in a hot car for hours or overnight.";T.en.gtg.info[7]="Pickup and delivery orders need at least 3 business days’ notice and are subject to availability.";
 Object.assign(T.es.gtg,{tag:"Recogida o entrega",desc:"Una guirnalda de globos lista, hecha con tus colores. Recógela en nuestro estudio o recíbela a domicilio. No incluye instalación."});
 T.es.gtg.info[4]="Recogida o entrega: no incluye montaje.";T.es.gtg.info[5]="Si la recoges: para guirnaldas de 6 a 9 pies, trae una SUV pequeña con los asientos abatidos. Mantén los objetos filosos fuera del auto y no dejes la guirnalda dentro de un auto caliente por horas ni durante la noche.";T.es.gtg.info[7]="Los pedidos con recogida o entrega requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad.";
+
+/* ---- Prioridade 0: vocabulario de ORCAMENTO, nunca de compra ---- */
+Object.assign(T.en,{
+ add:"Add to Quote",added:"Added to your quote request.",view_cart:"View Quote List",
+ cart:"Quote List",cart_h:"Your Quote List",cart_empty:"Your quote list is empty.",
+ co_h:"Request your quote",send:"Send Quote Request by Text",
+ from_:v=>`Starting at ${v}`,est:"Estimated starting total",
+ est_note:"Starting prices only. This is not a final total.",
+ to_quote:"Custom Quote",quote_n:n=>`+ ${n} custom quote${n>1?"s":""}`,
+ q_item:"This piece is quoted individually. Add it to your quote list and we’ll send you the price.",
+ pf_note:"Priced by the foot. Choose your length and the starting price updates. We confirm the final price in your quote.",
+ how_h:"How it works",
+ steps:[["Choose your design","Browse the shop and add what you like to your quote list, with your colors, sizes and dates."],
+  ["Send your quote request","Send it by text or email. Nothing is charged and no date is held yet."],
+  ["We confirm the final design and price","We reply with availability and a final price for your exact design, materials, location and fulfillment."],
+  ["Approve, pay securely and reserve your date","Once you approve, we send you a secure Square payment link. Your date is reserved after the deposit is paid."]],
+ qr_note:"This is a quote request, not a confirmed order. Final pricing depends on customization, materials, fulfillment and location.",
+ res_note:"Your event date is only reserved after you approve the quote and pay the deposit Bloom Balloons requests.",
+ co_note:"No payment is taken on this site. Send your request and we’ll reply with availability and the final price.",
+ sent_o:"Opening your messaging app with your quote request. Just tap send!",
+ sent_e:"Opening your email app with your quote request. Just tap send!",
+ send_em:"Send Quote Request by Email",em_sub:"Quote request — Bloom Balloons",
+ f_zip2:"Event ZIP code",f_bud:"Your budget (optional)",ph_bud:"e.g. $200–$300",
+ ful_l:"How would you like to receive it?",inst_w:"Installation",
+ lead_i:"Installations need at least 20 days’ notice and are subject to availability.",
+ m_pick:"Pickup only",m_pd:"Pickup or delivery",m_inst:"Installation only",
+ conf_h:"These pieces are handled differently",
+ conf_p:"Your list mixes items that can’t be received the same way. Send the request anyway and we’ll confirm with you how each piece is handled — nothing is calculated or charged automatically.",
+ conf_i:(n,m)=>`${n}: ${m}`});
+Object.assign(T.es,{
+ add:"Agregar a la cotización",added:"Agregado a tu solicitud de cotización.",view_cart:"Ver lista de cotización",
+ cart:"Lista de cotización",cart_h:"Tu lista de cotización",cart_empty:"Tu lista de cotización está vacía.",
+ co_h:"Solicita tu cotización",send:"Enviar solicitud por mensaje",
+ from_:v=>`Desde ${v}`,est:"Total inicial estimado",
+ est_note:"Solo precios iniciales. Esto no es un total final.",
+ to_quote:"Cotización personalizada",quote_n:n=>`+ ${n} cotización${n>1?"es":""} personalizada${n>1?"s":""}`,
+ q_item:"Esta pieza se cotiza de forma individual. Agrégala a tu lista de cotización y te enviamos el precio.",
+ pf_note:"Precio por pie. Elige el largo y el precio inicial se actualiza. Confirmamos el precio final en tu cotización.",
+ how_h:"Cómo funciona",
+ steps:[["Elige tu diseño","Recorre la tienda y agrega lo que te guste a tu lista de cotización, con tus colores, tamaños y fechas."],
+  ["Envía tu solicitud","Envíala por mensaje o correo. No se cobra nada ni se aparta ninguna fecha todavía."],
+  ["Confirmamos el diseño y el precio final","Te respondemos con la disponibilidad y el precio final para tu diseño, materiales, ubicación y modalidad."],
+  ["Aprueba, paga de forma segura y aparta tu fecha","Cuando apruebes, te enviamos un enlace seguro de pago de Square. Tu fecha queda apartada al pagar el anticipo."]],
+ qr_note:"Esta es una solicitud de cotización, no un pedido confirmado. El precio final depende de la personalización, los materiales, la modalidad y la ubicación.",
+ res_note:"Tu fecha solo queda apartada después de que apruebes la cotización y pagues el anticipo que te pida Bloom Balloons.",
+ co_note:"En este sitio no se cobra nada. Envía tu solicitud y te respondemos con la disponibilidad y el precio final.",
+ sent_o:"Abriendo tu app de mensajes con tu solicitud. ¡Solo toca enviar!",
+ sent_e:"Abriendo tu app de correo con tu solicitud. ¡Solo toca enviar!",
+ send_em:"Enviar solicitud por correo",em_sub:"Solicitud de cotización — Bloom Balloons",
+ f_zip2:"Código postal del evento",f_bud:"Tu presupuesto (opcional)",ph_bud:"ej. $200–$300",
+ ful_l:"¿Cómo quieres recibirlo?",inst_w:"Instalación",
+ lead_i:"Las instalaciones requieren mínimo 20 días de anticipación y están sujetas a disponibilidad.",
+ m_pick:"Solo recogida",m_pd:"Recogida o entrega",m_inst:"Solo instalación",
+ conf_h:"Estas piezas se entregan de forma distinta",
+ conf_p:"Tu lista mezcla artículos que no se pueden recibir de la misma forma. Envía la solicitud igual y confirmamos contigo cómo se maneja cada pieza; no se calcula ni se cobra nada automáticamente.",
+ conf_i:(n,m)=>`${n}: ${m}`});
+Object.assign(T.en.om,{hi:"Hi Bloom Balloons! I’d like to request a quote for:",tot:"Estimated starting total",ful:"Fulfillment",zip:"Event ZIP code",bud:"Budget",end:"This is a quote request. Please confirm availability and the final price."});
+Object.assign(T.es.om,{hi:"¡Hola, Bloom Balloons! Quisiera una cotización para:",tot:"Total inicial estimado",ful:"Modalidad",zip:"Código postal del evento",bud:"Presupuesto",end:"Esta es una solicitud de cotización. Por favor confirmen la disponibilidad y el precio final."});
+/* Garland to Go: somente retirada (confirmado pelo dono) */
+T.en.gtg.note="No payment is taken on this site. Add it to your quote list and send the request; we’ll reply with availability and the final price.";
+T.es.gtg.note="En este sitio no se cobra nada. Agrégala a tu lista de cotización y envía la solicitud; te respondemos con la disponibilidad y el precio final.";
+T.en.gtg.tag="Pickup only";T.es.gtg.tag="Solo recogida";
+T.en.gtg.desc="A ready-made balloon garland in your colors, to pick up at our studio. Installation is not included.";
+T.es.gtg.desc="Una guirnalda de globos lista, hecha con tus colores, para recoger en nuestro estudio. No incluye instalación.";
+T.en.gtg.info[4]="Pickup only: delivery and setup are not included.";
+T.es.gtg.info[4]="Solo recogida: no incluye entrega ni montaje.";
+T.en.gtg.info[7]="Pickup orders need at least 3 business days’ notice and are subject to availability.";
+T.es.gtg.info[7]="Los pedidos para recoger requieren mínimo 3 días hábiles de anticipación y están sujetos a disponibilidad.";
+
 
 const PR=DATA.pricing,P=id=>DATA.products.find(p=>p.id===id),C=id=>DATA.cats.find(c=>c.id===id);
 const pn=p=>p[L],purl=p=>p.id==="gtg"?"garland-to-go.html":"product-"+p.id+".html",curl=c=>"shop-"+c.id+".html",img=k=>"assets/img/"+k+".jpg";
@@ -164,8 +233,8 @@ function renderProduct(id){const t=T[L],p=P(id),c=C(p.cat),r=PR[p.pr],g=t.gtg,is
  const cols=p.colors?`<p class="shown">${t.shown}: ${p.colors.split(" ").map(k=>COLN[k]?COLN[k][L==="en"?0:1]:k).join(", ")}</p>`:"";
  $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L],curl(c)],[pn(p)]])+`<div class="pwrap">${media}<div class="pinfo">${isG?`<span class="gtg-tag">${g.tag}</span>`:""}<h1 class="ph1">${pn(p)}</h1><p class="pbig">${priceLabel(p)}${sub?` <small>· ${sub}</small>`:""}</p>${isG?`<p>${g.desc}</p>`:cols}`+
   (isE?`<p>${t.hel_inc}</p>`:"")+(r.t==="ft"?`<p class="note">${t.pf_note}</p>`:r.t==="quote"?`<p class="note">${t.q_item}</p>`:"")+(p.av?`<div class="pavbox"><b>${t.av_h}</b><p>${t.av_p}</p></div>`:"")+
-  `<div class="popts">${opts}</div>`+(r.t==="quote"?"":`<div class="pc gtg-sel" aria-live="polite"><span>${isE?"Total":t.your_price}</span><b id="p-price"></b><small>${g.tax}</small></div>`)+
-  `<div class="row"><button type="button" class="btn pri big" id="p-add">${t.add}</button></div><p id="p-msg" role="status">${ST.msg?`${t.added} <a href="cart.html">${t.view_cart}</a>`:""}</p>`+(isH?`<p class="pickav"><b>✓ ${t.pick_av}</b><small>${t.lead_std}</small></p>`:"")+
+  `<div class="popts">${opts}</div>`+(r.t==="quote"?"":`<div class="pc gtg-sel" aria-live="polite"><span>${t.your_price}</span><b id="p-price"></b><small>${g.tax}</small></div>`)+
+  `<div class="row"><button type="button" class="btn pri big" id="p-add">${t.add}</button></div><p id="p-msg" role="status">${ST.msg?`${t.added} <a href="cart.html">${t.view_cart}</a>`:""}</p>`+`<p class="qrline">${t.qr_note}</p>`+`<p class="pickav"><b>✓ ${modeTxt(p)}</b><small>${MODES(p)[0]==="install"?t.lead_i:t.lead_std}</small></p>`+
   `<ul class="gtg-list">${bullets.map(x=>`<li>${x}</li>`).join("")}</ul><p><a href="index.html#quote">${t.inst_tip}</a></p></div></div>`+
   `<h2 class="also ctr">${t.also}</h2><div class="pgrid">${catOf(p.cat).filter(x=>x.id!==id).slice(0,4).map(pcard).join("")}</div>`;
  const upd=()=>{const e=$("#p-price");if(e)e.textContent=isE?usd(lineTotal(ST)):t.from_(usd(lineTotal(ST)))};upd();
@@ -180,12 +249,18 @@ function renderProduct(id){const t=T[L],p=P(id),c=C(p.cat),r=PR[p.pr],g=t.gtg,is
   saveCart();ST.msg=true;$("#p-msg").innerHTML=`${t.added} <a href="cart.html">${t.view_cart}</a>`};
  wireCars($("#app"))}
 
-/* ---- cart + checkout ---- */
-/* Square: leave endpoint empty until the Square account is connected through a server function.
-   When set (e.g. "/.netlify/functions/square-checkout"), pickup orders with fixed prices get a "Pay Now with Square" button. */
-const PAY={endpoint:""};
+/* ---- lista de orcamento ---- */
 const MINI=`<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="15" r="9" fill="#F3C1CB"/><circle cx="31" cy="19" r="8" fill="#E2C17E"/><circle cx="20" cy="31" r="9" fill="#F8DCE2"/><circle cx="33" cy="35" r="6" fill="#F3C1CB"/><circle cx="11" cy="26" r="4" fill="#fff" stroke="#EED9C6"/></svg>`;
-const CO={ful:"pickup",name:"",addr:"",date:"",notes:""};
+/* ---- modalidade por produto (item 11) ---- */
+const MODES=p=>p.id==="gtg"?["pickup"]:(p.cat==="garlands"||p.cat==="sculptures")?["install"]:["pickup","delivery"];
+const modeTxt=p=>{const t=T[L],m=MODES(p);return m[0]==="install"?t.m_inst:m.length===1?t.m_pick:t.m_pd};
+function cartModes(){const t=T[L],sets=CART.map(i=>MODES(P(i.id)));
+ const inter=sets.length?sets.reduce((a,b)=>a.filter(x=>b.includes(x))):[];
+ const union=[...new Set([].concat.apply([],sets))];
+ return {inter,union,hasInst:union.indexOf("install")>=0}}
+function minDate(){return iso(cartModes().hasInst?new Date(today().getTime()+20*864e5):addBiz(today(),3))}
+const CO={ful:"pickup",name:"",addr:"",zip:"",bud:"",date:"",notes:""};
+
 function itemDesc(i,plain){const t=T[L],p=P(i.id),r=PR[p.pr],a=[];
  if(i.bunch){const b=i.bunch;a.push(t.sz_name(b.size));b.items.forEach(x=>a.push(`${x.q}× ${x.c}${x.n?" ("+(plain?x.n:esc(x.n))+")":""}`));if(b.bag)a.push(t.bag_n(bagsFor(b.items.reduce((s,x)=>s+x.q,0)),usd(bagsFor(b.items.reduce((s,x)=>s+x.q,0))*BAGP)));if(b.decal)a.push(`${t.bm.dec}: “${plain?b.decal.t:esc(b.decal.t)}” ${t.bm.decn(b.decal.n)}`);if(b.size!==12)a.push(t.avail_h);return a.join(" · ")}
  if(r.t==="ft")a.push(`${i.ft} ${t.gtg.ft} × ${usd(r.rate+(i.met?r.met:0))}/${L==="en"?"ft":"pie"}`);
@@ -195,39 +270,54 @@ function itemDesc(i,plain){const t=T[L],p=P(i.id),r=PR[p.pr],a=[];
  if(i.colors)a.push(`${t.om.colors}: ${plain?i.colors:esc(i.colors)}`);
  return a.join(" · ")}
 function cartTotals(){let s=0,q=0;CART.forEach(i=>{const v=lineTotal(i);if(v==null)q+=i.qty;else s+=v});return{s,q}}
-function totalText(){const t=T[L],{s,q}=cartTotals();return (s||!q?t.from_(usd(s)):"")+(q?(s?" ":"")+t.quote_n(q):"")}
+function totalText(){const t=T[L],{s,q}=cartTotals();if(!s&&q)return t.to_quote;return (s||!q?t.from_(usd(s)):"")+(q?(s?" ":"")+t.quote_n(q):"")}
 function orderMsg(){const t=T[L],m=t.om;
  const rows=CART.map((i,n)=>{const v=lineTotal(i),d=itemDesc(i,true);return `${n+1}. ${pn(P(i.id))}${i.qty>1?" ×"+i.qty:""}${d?"\n   "+d:""}\n   ${v==null?t.to_quote:PR[P(i.id).pr].t==="each"?usd(v):t.from_(usd(v))}`}).join("\n");
- const x=[[m.ful,CO.ful==="delivery"?t.del:t.pick]];if(CO.ful==="delivery")x.push([m.addr,CO.addr]);x.push([m.date,CO.date&&fmtDate(CO.date)],[m.name,CO.name],[m.notes,CO.notes]);
+ const fl=CO.ful==="delivery"?t.del:CO.ful==="install"?t.inst_w:t.pick;
+ const x=[[m.ful,fl]];if(CO.ful==="delivery")x.push([m.addr,CO.addr]);
+ x.push([m.zip,CO.zip],[m.date,CO.date&&fmtDate(CO.date)],[m.name,CO.name],[m.bud,CO.bud],[m.notes,CO.notes]);
  return `${m.hi}\n\n${rows}\n\n${m.tot}: ${totalText()}\n`+x.filter(r=>r[1]).map(r=>`${r[0]}: ${r[1]}`).join("\n")+`\n\n${m.end}`}
+const MAILTO="contact@bigdreamevents.com";
+function mailLink(){const t=T[L];return "mailto:"+MAILTO+"?subject="+encodeURIComponent(t.em_sub)+"&body="+encodeURIComponent(orderMsg())}
+function howHTML(){const t=T[L];return `<section class="hiw"><h2>${t.how_h}</h2><ol>${t.steps.map(x=>`<li><b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>`).join("")}</ol></section>`}
 function renderCart(){const t=T[L];setMeta(t.cart_h,t.co_note);const A=$("#app");
- if(!CART.length){A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1><p class="lead">${t.cart_empty}</p><div class="row"><a class="btn pri" href="index.html">${t.b_shop}</a></div>`;return}
- const min=iso(addBiz(today(),3));
- A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1><div class="cwrap"><div><ul class="clist">${CART.map((i,n)=>{const p=P(i.id),v=lineTotal(i);
-   return `<li><a class="cth${p.k.length?"":" gtg"}" href="${purl(p)}">${p.k.length?`<img src="${img(p.k[0])}" alt="">`:MINI}</a><div class="cinf"><a href="${purl(p)}"><b>${pn(p)}</b></a><small>${itemDesc(i)}</small><div class="qty sm"><div><button type="button" data-q="-1" data-n="${n}" aria-label="−">−</button><output>${i.qty}</output><button type="button" data-q="1" data-n="${n}" aria-label="+">+</button></div><button type="button" class="lnk" data-rm="${n}">${t.remove}</button></div></div><b class="cpr">${v==null?t.to_quote:PR[p.pr].t==="each"?usd(v):t.from_(usd(v))}</b></li>`}).join("")}</ul>
+ if(!CART.length){A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1><p class="lead">${t.cart_empty}</p><div class="row"><a class="btn pri" href="index.html">${t.b_shop}</a></div>`+howHTML();return}
+ const M=cartModes(),min=minDate(),opts=M.inter.length?M.inter:M.union,lab={pickup:t.pick,delivery:t.del,install:t.inst_w};
+ if(opts.indexOf(CO.ful)<0)CO.ful=opts[0];
+ const conf=M.inter.length?"":`<div class="pconf"><b>${t.conf_h}</b><p>${t.conf_p}</p><ul>${CART.map(i=>{const x=P(i.id);return `<li>${esc(pn(x))} — ${modeTxt(x)}</li>`}).join("")}</ul></div>`;
+ const needAddr=CO.ful!=="pickup";
+ A.innerHTML=crumbs([[t.home,"index.html"],[t.cart_h]])+`<h1 class="ph1">${t.cart_h}</h1>
+  <div class="qrbox"><b>${t.qr_note}</b><p>${t.res_note}</p></div>${conf}
+  <div class="cwrap"><div><ul class="clist">${CART.map((i,n)=>{const x=P(i.id),v=lineTotal(i);
+   return `<li><a class="cth${x.k.length?"":" gtg"}" href="${purl(x)}">${x.k.length?`<img src="${img(x.k[0])}" alt="">`:MINI}</a><div class="cinf"><a href="${purl(x)}"><b>${pn(x)}</b></a><small>${itemDesc(i)}</small><small class="cmod">${modeTxt(x)}</small><div class="qty sm"><div><button type="button" data-q="-1" data-n="${n}" aria-label="−">−</button><output>${i.qty}</output><button type="button" data-q="1" data-n="${n}" aria-label="+">+</button></div><button type="button" class="lnk" data-rm="${n}">${t.remove}</button></div></div><b class="cpr">${v==null?t.to_quote:PR[x.pr].t==="each"?usd(v):t.from_(usd(v))}</b></li>`}).join("")}</ul>
   <div class="pc gtg-sel"><span>${t.est}</span><b>${totalText()}</b><small>${t.est_note} ${t.gtg.tax}</small></div></div>
   <form id="cof" novalidate><h2>${t.co_h}</h2>
-  <fieldset class="full fulf"><legend>${t.ful_l}</legend><label><input type="radio" name="ful" value="pickup"${CO.ful==="pickup"?" checked":""}><span>${t.pick}</span></label><label><input type="radio" name="ful" value="delivery"${CO.ful==="delivery"?" checked":""}><span>${t.del}</span></label></fieldset>
-  <div class="full" id="co-del"${CO.ful==="delivery"?"":" hidden"}><label>${t.addr}<input name="addr" autocomplete="street-address" value="${esc(CO.addr)}"><span class="err"></span></label><p class="note" style="margin:10px 0 0">${t.del_note}</p></div>
+  <fieldset class="full fulf"><legend>${t.ful_l}</legend>${opts.map(o=>`<label><input type="radio" name="ful" value="${o}"${CO.ful===o?" checked":""}><span>${lab[o]}</span></label>`).join("")}</fieldset>
+  <div class="full" id="co-del"${needAddr?"":" hidden"}><label>${t.addr}<input name="addr" autocomplete="street-address" value="${esc(CO.addr)}"><span class="err"></span></label><p class="note" style="margin:10px 0 0">${t.del_note}</p></div>
   <label>${t.f_name}<input name="name" autocomplete="name" value="${esc(CO.name)}"><span class="err"></span></label>
+  <label>${t.f_zip2}<input name="zip" inputmode="numeric" maxlength="10" autocomplete="postal-code" value="${esc(CO.zip)}"><span class="err"></span></label>
   <label>${t.date_l}<input name="date" type="date" min="${min}" value="${CO.date}"><span class="err"></span></label>
+  <label>${t.f_bud}<input name="bud" maxlength="40" placeholder="${esc(t.ph_bud)}" value="${esc(CO.bud)}"></label>
   <label class="full">${t.notes}<textarea name="notes" rows="3">${esc(CO.notes)}</textarea></label>
-  <p class="note full">${t.lead_std}</p><p class="note full">${t.co_note}</p>
-  <div class="row full"><button class="btn pri big" type="submit">${t.send}</button>${PAY.endpoint&&!cartTotals().q?`<button class="btn big" type="button" id="co-pay"${CO.ful==="pickup"?"":" hidden"}>${t.pay_sq}</button>`:""}</div><p class="full" id="co-msg" role="status"></p></form></div>`;
+  <p class="note full">${M.hasInst?t.lead_i:t.lead_std}</p><p class="note full">${t.co_note}</p>
+  <div class="row full"><button class="btn pri big" type="submit">${t.send}</button><button class="btn big" type="button" id="co-em">${t.send_em}</button></div>
+  <p class="full" id="co-msg" role="status"></p></form></div>`+howHTML();
  $$("[data-q]",A).forEach(b=>b.onclick=()=>{const i=CART[+b.dataset.n];i.qty=Math.max(1,Math.min(maxQ(P(i.id)),i.qty+ +b.dataset.q));saveCart();renderCart()});
  $$("[data-rm]",A).forEach(b=>b.onclick=()=>{CART.splice(+b.dataset.rm,1);saveCart();renderCart()});
  const f=$("#cof"),E=f.elements;
- f.oninput=e=>{const x=e.target;if(x.getAttribute&&x.getAttribute("aria-invalid")){x.removeAttribute("aria-invalid");const er=x.parentElement.querySelector(".err");if(er)er.textContent=""}CO.name=E.name.value;CO.addr=E.addr.value;CO.date=E.date.value;CO.notes=E.notes.value};
- $$("input[name=ful]",f).forEach(x=>x.onchange=()=>{CO.ful=x.value;$("#co-del").hidden=CO.ful!=="delivery";const pb=$("#co-pay");if(pb)pb.hidden=CO.ful!=="pickup"});
- const pb=$("#co-pay");if(pb)pb.onclick=()=>{if(!E.name.value.trim()||!E.date.value||E.date.value<min){$("#co-msg").textContent=t.e_fix;return}
-  fetch(PAY.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lang:L,items:CART,name:CO.name,date:CO.date,notes:CO.notes})}).then(r=>r.json()).then(d=>{if(d&&d.url)location.href=d.url;else throw 0}).catch(()=>{$("#co-msg").textContent=t.pay_err})};
- f.onsubmit=e=>{e.preventDefault();let ok=true;$$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
+ f.oninput=e=>{const x=e.target;if(x.getAttribute&&x.getAttribute("aria-invalid")){x.removeAttribute("aria-invalid");const er=x.parentElement.querySelector(".err");if(er)er.textContent=""}
+  CO.name=E.name.value;CO.addr=E.addr.value;CO.zip=E.zip.value;CO.bud=E.bud.value;CO.date=E.date.value;CO.notes=E.notes.value};
+ $$("input[name=ful]",f).forEach(x=>x.onchange=()=>{CO.ful=x.value;$("#co-del").hidden=CO.ful==="pickup"});
+ const check=()=>{let ok=true;$$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
   const bad=(n,m)=>{const i=E[n];i.setAttribute("aria-invalid","true");i.parentElement.querySelector(".err").textContent=m;ok=false};
   if(!E.name.value.trim())bad("name",t.e_req);
-  if(CO.ful==="delivery"&&!E.addr.value.trim())bad("addr",t.e_req);
+  if(CO.ful!=="pickup"&&!E.addr.value.trim())bad("addr",t.e_req);
+  if(CO.ful!=="pickup"&&!E.zip.value.trim())bad("zip",t.e_req);
   if(!E.date.value)bad("date",t.e_req);else if(E.date.value<min)bad("date",t.e_date(min));
-  if(!ok){$("#co-msg").textContent=t.e_fix;const x=$("[aria-invalid=true]",f);if(x)x.focus();return}
-  $("#co-msg").textContent=t.sent_o;location.href=smsLink(orderMsg())}}
+  if(!ok){$("#co-msg").textContent=t.e_fix;const x=$("[aria-invalid=true]",f);if(x)x.focus()}
+  return ok};
+ $("#co-em").onclick=()=>{if(!check())return;$("#co-msg").textContent=t.sent_e;location.href=mailLink()};
+ f.onsubmit=e=>{e.preventDefault();if(!check())return;$("#co-msg").textContent=t.sent_o;location.href=smsLink(orderMsg())}}
 
 /* ---- home ---- */
 function renderHome(){const t=T[L],g=t.gtg;setMeta(t.meta_t.replace(" | Bloom Balloons",""),t.meta_d);document.title=t.meta_t;

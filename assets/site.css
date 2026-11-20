@@ -287,6 +287,23 @@ a.gtg-ph{display:block}
 .hpo.cur::before{color:#d9c6b4}
 .hpe{margin:0;padding:12px 14px;font:.9rem/1.3 system-ui,sans-serif;color:#8a7a6e;text-align:center}
 .tbar.tbar1{justify-content:flex-end}
+/* Prioridade 0: orcamento, nunca compra */
+.qrbox{margin:0 0 26px;padding:15px 18px;border:1px solid #e4d8cb;border-left:4px solid #5b4336;border-radius:12px;background:#FBF6EC}
+.qrbox b{display:block;font:600 .92rem/1.45 system-ui,sans-serif;color:#5b4336}
+.qrbox p{margin:7px 0 0;font:.86rem/1.5 system-ui,sans-serif;color:#6f5d50}
+.qrline{margin:10px 0 0;font:.82rem/1.5 system-ui,sans-serif;color:#7b6859}
+.cmod{display:block;margin-top:2px;font:500 .78rem/1.3 system-ui,sans-serif;color:#8a7a6e}
+.pconf{margin:0 0 18px;padding:14px 17px;border:1px solid #e0cdb6;border-radius:12px;background:#fdf4e7}
+.pconf b{display:block;font:600 .9rem/1.4 system-ui,sans-serif;color:#7a5a30}
+.pconf p{margin:6px 0 0;font:.85rem/1.5 system-ui,sans-serif;color:#6f5d50}
+.pconf ul{margin:9px 0 0;padding-left:19px;font:.85rem/1.6 system-ui,sans-serif;color:#6f5d50}
+.hiw{margin:46px 0 0;padding:28px 24px;border:1px solid var(--champ);border-radius:18px;background:#FBF6EC}
+.hiw h2{margin:0 0 18px;text-align:center}
+.hiw ol{margin:0;padding:0;list-style:none;counter-reset:hw;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.hiw li{counter-increment:hw;position:relative;padding:16px 16px 16px 54px;border-radius:12px;background:#fff;border:1px solid var(--champ)}
+.hiw li::before{content:counter(hw);position:absolute;left:16px;top:16px;width:26px;height:26px;border-radius:50%;background:#5b4336;color:#fff;font:600 .85rem/26px system-ui,sans-serif;text-align:center}
+.hiw li b{display:block;font:600 .95rem/1.35 system-ui,sans-serif;color:#5b4336}
+.hiw li span{display:block;margin-top:5px;font:.85rem/1.5 system-ui,sans-serif;color:#6f5d50}
 /* ---- storefront look: display headings, tiles, product rows ---- */
 :root{--disp:"Bebas Neue","Oswald","Arial Narrow",sans-serif}
 h1,h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
