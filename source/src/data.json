@@ -2768,6 +2768,202 @@
    "av": true,
    "en": "“Congratulations” balloon trio",
    "es": "Trío de globos “Congratulations”"
+  },
+  {
+   "id": "st-patricks-beer-mug",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-mug"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Happy St. Patrick’s Day” beer mug balloon set",
+   "es": "Set de globos tarro de cerveza “Happy St. Patrick’s Day”"
+  },
+  {
+   "id": "st-patricks-shamrock",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-shamrock"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Green shamrock and gold chrome balloon set",
+   "es": "Set de globos trébol verde y dorado cromado"
+  },
+  {
+   "id": "st-patricks-clover-flag",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-trio"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Four-leaf clover, Irish flag and beer mug balloon set",
+   "es": "Set de globos trébol de cuatro hojas, bandera irlandesa y tarro de cerveza"
+  },
+  {
+   "id": "st-patricks-leprechaun-hat",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-hat"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Leprechaun hat and shamrock balloon set",
+   "es": "Set de globos sombrero de duende y trébol"
+  },
+  {
+   "id": "st-patricks-horseshoe",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-horseshoe"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Lucky horseshoe and shamrock balloon set",
+   "es": "Set de globos herradura de la suerte y trébol"
+  },
+  {
+   "id": "st-patricks-pot-of-gold",
+   "cat": "helium",
+   "ht": [
+    "st-patricks"
+   ],
+   "k": [
+    "hel-sp-pot"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Pot of gold, rainbow and leprechaun balloon set",
+   "es": "Set de globos olla de oro, arcoíris y duende"
+  },
+  {
+   "id": "usa-flag-star",
+   "cat": "helium",
+   "ht": [
+    "usa"
+   ],
+   "k": [
+    "hel-us-star"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "American flag star balloon set",
+   "es": "Set de globos estrella con bandera de Estados Unidos"
+  },
+  {
+   "id": "usa-eagle-flag",
+   "cat": "helium",
+   "ht": [
+    "usa"
+   ],
+   "k": [
+    "hel-us-eagle"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Bald eagle and American flag balloon set",
+   "es": "Set de globos águila calva y bandera de Estados Unidos"
+  },
+  {
+   "id": "usa-stars-stripes-bow",
+   "cat": "helium",
+   "ht": [
+    "usa"
+   ],
+   "k": [
+    "hel-us-bow"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Stars and stripes bow balloon set",
+   "es": "Set de globos moño de barras y estrellas"
+  },
+  {
+   "id": "welcome-home-sunny",
+   "cat": "helium",
+   "ht": [
+    "welcome-home"
+   ],
+   "k": [
+    "hel-wh-sun"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Welcome Home” sunny house balloon set",
+   "es": "Set de globos “Welcome Home” casita y sol"
+  },
+  {
+   "id": "welcome-home-cabin",
+   "cat": "helium",
+   "ht": [
+    "welcome-home"
+   ],
+   "k": [
+    "hel-wh-wood"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Welcome Home” wooden house and cream hearts balloon set",
+   "es": "Set de globos “Welcome Home” casa de madera y corazones crema"
+  },
+  {
+   "id": "welcome-home-welcome-back",
+   "cat": "helium",
+   "ht": [
+    "welcome-home"
+   ],
+   "k": [
+    "hel-wh-back"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Welcome Home” and “Welcome Back” balloon set",
+   "es": "Set de globos “Welcome Home” y “Welcome Back”"
+  },
+  {
+   "id": "welcome-home-red-house",
+   "cat": "helium",
+   "ht": [
+    "welcome-home"
+   ],
+   "k": [
+    "hel-wh-red"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Welcome Home” house and red heart balloon set",
+   "es": "Set de globos “Welcome Home” casita y corazón rojo"
+  },
+  {
+   "id": "welcome-home-neutral",
+   "cat": "helium",
+   "ht": [
+    "welcome-home"
+   ],
+   "k": [
+    "hel-wh-beige"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Welcome Home” house and neutral hearts balloon set",
+   "es": "Set de globos “Welcome Home” casita y corazones neutros"
   }
  ],
  "occs": [
@@ -2977,6 +3173,30 @@
    "k": "hel-val-ruby-champagne"
   },
   {
+   "id": "st-patricks",
+   "big": true,
+   "en": "St. Patrick's Day",
+   "es": "Día de San Patricio",
+   "c": [
+    "#1E7A3C",
+    "#8CC63F",
+    "#E2C17E"
+   ],
+   "k": "hel-sp-shamrock"
+  },
+  {
+   "id": "usa",
+   "big": true,
+   "en": "USA & Patriotic",
+   "es": "EE. UU. y Patriótico",
+   "c": [
+    "#B22234",
+    "#FFFFFF",
+    "#3C3B6E"
+   ],
+   "k": "hel-us-star"
+  },
+  {
    "id": "character",
    "big": true,
    "en": "Easter",
@@ -3043,7 +3263,9 @@
     "#B9CBAE",
     "#E2C17E",
     "#A9CBEA"
-   ]
+   ],
+   "big": true,
+   "k": "hel-wh-beige"
   },
   {
    "id": "get-well",
