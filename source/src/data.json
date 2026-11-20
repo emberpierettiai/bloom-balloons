@@ -3163,101 +3163,101 @@
   },
   {
    "id": "number-deer-daisy",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-deer"
    ],
    "pr": "num",
    "av": true,
    "en": "Deer and daisies number balloon stack",
-   "es": "Columna de globos con número, venadito y margaritas"
+   "es": "Columna de globos con número, venadito y margaritas",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-two-the-moon",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-moon"
    ],
    "pr": "num",
    "av": true,
    "en": "“Two the Moon” number balloon stack",
-   "es": "Columna de globos con número “Two the Moon”"
+   "es": "Columna de globos con número “Two the Moon”",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-berry-first",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-berry"
    ],
    "pr": "num",
    "av": true,
    "en": "“Berry First Birthday” strawberry number balloon stack",
-   "es": "Columna de globos con número “Berry First Birthday” de fresas"
+   "es": "Columna de globos con número “Berry First Birthday” de fresas",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-capybara",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-capybara"
    ],
    "pr": "num",
    "av": true,
    "en": "Capybara and flowers number balloon stack",
-   "es": "Columna de globos con número, capibaras y flores"
+   "es": "Columna de globos con número, capibaras y flores",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-teddy-blue",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-teddy"
    ],
    "pr": "num",
    "av": true,
    "en": "Blue teddy bear number balloon stack",
-   "es": "Columna de globos con número y ositos azules"
+   "es": "Columna de globos con número y ositos azules",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-pink-cow",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-cow"
    ],
    "pr": "num",
    "av": true,
    "en": "Pink cow and flowers number balloon stack",
-   "es": "Columna de globos con número, vaquita rosa y flores"
+   "es": "Columna de globos con número, vaquita rosa y flores",
+   "occ": [
+    "numbers"
+   ]
   },
   {
    "id": "number-safari",
-   "cat": "helium",
-   "ht": [
-    "numbers"
-   ],
+   "cat": "numbers",
    "k": [
     "hel-num-safari"
    ],
    "pr": "num",
    "av": true,
    "en": "Safari animals number balloon stack",
-   "es": "Columna de globos con número y animales de safari"
+   "es": "Columna de globos con número y animales de safari",
+   "occ": [
+    "numbers"
+   ]
   }
  ],
  "occs": [
