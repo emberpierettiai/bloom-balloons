@@ -3160,6 +3160,104 @@
    "av": true,
    "en": "“Let’s Party” bear and “Happy New Year” gift balloon set",
    "es": "Set de globos osito “Let’s Party” y regalo “Happy New Year”"
+  },
+  {
+   "id": "number-deer-daisy",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-deer"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "Deer and daisies number balloon stack",
+   "es": "Columna de globos con número, venadito y margaritas"
+  },
+  {
+   "id": "number-two-the-moon",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-moon"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "“Two the Moon” number balloon stack",
+   "es": "Columna de globos con número “Two the Moon”"
+  },
+  {
+   "id": "number-berry-first",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-berry"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "“Berry First Birthday” strawberry number balloon stack",
+   "es": "Columna de globos con número “Berry First Birthday” de fresas"
+  },
+  {
+   "id": "number-capybara",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-capybara"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "Capybara and flowers number balloon stack",
+   "es": "Columna de globos con número, capibaras y flores"
+  },
+  {
+   "id": "number-teddy-blue",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-teddy"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "Blue teddy bear number balloon stack",
+   "es": "Columna de globos con número y ositos azules"
+  },
+  {
+   "id": "number-pink-cow",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-cow"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "Pink cow and flowers number balloon stack",
+   "es": "Columna de globos con número, vaquita rosa y flores"
+  },
+  {
+   "id": "number-safari",
+   "cat": "helium",
+   "ht": [
+    "numbers"
+   ],
+   "k": [
+    "hel-num-safari"
+   ],
+   "pr": "num",
+   "av": true,
+   "en": "Safari animals number balloon stack",
+   "es": "Columna de globos con número y animales de safari"
   }
  ],
  "occs": [
