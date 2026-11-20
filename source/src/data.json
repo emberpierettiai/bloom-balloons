@@ -2964,6 +2964,132 @@
    "av": true,
    "en": "“Welcome Home” house and neutral hearts balloon set",
    "es": "Set de globos “Welcome Home” casita y corazones neutros"
+  },
+  {
+   "id": "communion-baptism-gold",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-baptism-gold"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Baptism” gold cross and greenery balloon set",
+   "es": "Set de globos “Baptism” cruz dorada y follaje"
+  },
+  {
+   "id": "communion-dove-blue",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-dove-blue"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Dove and blue “First Communion” cross balloon set",
+   "es": "Set de globos paloma y cruz azul “First Communion”"
+  },
+  {
+   "id": "communion-first-communion-pink",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-communion-pink"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Pink “First Communion” cross and wreath balloon set",
+   "es": "Set de globos cruz rosa “First Communion” y corona de hojas"
+  },
+  {
+   "id": "communion-cross-pink-sage",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-cross-pink-sage"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Pink floral cross with pink and sage balloon set",
+   "es": "Set de globos cruz floral rosa con rosa y verde salvia"
+  },
+  {
+   "id": "communion-bautizo-pink",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-bautizo-pink"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Mi Bautizo” pink and silver cross balloon set",
+   "es": "Set de globos “Mi Bautizo” rosa y cruz plateada"
+  },
+  {
+   "id": "communion-bautizo-blue",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-bautizo-blue"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Mi Bautizo” blue and silver cross balloon set",
+   "es": "Set de globos “Mi Bautizo” azul y cruz plateada"
+  },
+  {
+   "id": "communion-daisy-blue",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-daisy-blue"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Blue daisy cross balloon set",
+   "es": "Set de globos cruz azul con margarita"
+  },
+  {
+   "id": "communion-daisy-pink",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-daisy-pink"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Pink daisy cross balloon set",
+   "es": "Set de globos cruz rosa con margarita"
+  },
+  {
+   "id": "communion-gold-cross",
+   "cat": "helium",
+   "ht": [
+    "communion"
+   ],
+   "k": [
+    "hel-fc-gold-cross"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Gold cross with white and gold balloon set",
+   "es": "Set de globos cruz dorada con blanco y dorado"
   }
  ],
  "occs": [
@@ -3254,6 +3380,18 @@
     "#FFFFFF"
    ],
    "k": "hel-gr-cap"
+  },
+  {
+   "id": "communion",
+   "big": true,
+   "en": "First Communion & Baptism",
+   "es": "Primera Comunión y Bautizo",
+   "c": [
+    "#FFFFFF",
+    "#E2C17E",
+    "#B9CBAE"
+   ],
+   "k": "hel-fc-baptism-gold"
   },
   {
    "id": "welcome-home",
