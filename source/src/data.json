@@ -450,21 +450,6 @@
    "custom": "bunch"
   },
   {
-   "id": "bubble-teddy-bouquet",
-   "cat": "helium",
-   "pr": "bq",
-   "k": [
-    "bubble",
-    "gift4"
-   ],
-   "en": "Bubble balloon with teddy bear",
-   "es": "Globo burbuja con osito",
-   "colors": "red",
-   "ht": [
-    "valentines"
-   ]
-  },
-  {
    "id": "gold-letters-bouquet",
    "cat": "helium",
    "pr": "bq",

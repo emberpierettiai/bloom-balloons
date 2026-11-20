@@ -24,6 +24,9 @@ def cut(a, b):
     return live[i:j]
 part_a = cut("const SMS_NUM", "function gtgCard")
 part_gal = cut("const GAL=", '$("#lbx").onclick')
+# o balao bolha com ursinho vermelho saiu do catalogo: tirar tambem da galeria da home
+part_gal, _n = re.subn(r'\["bubble",[^\]]*\],\s*', "", part_gal)
+assert _n == 1, f"entrada do bubble na galeria: esperava 1, achei {_n}"
 lead_fn = re.search(r"^function lead\(\)\{.*$", live, re.M).group(0)
 part_form = cut("function fmtDate", '$("#sms-form").addEventListener("click"')
 submit = cut('$("#qf").addEventListener("submit"', "\nrender();")
