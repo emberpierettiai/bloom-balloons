@@ -268,6 +268,25 @@ a.gtg-ph{display:block}
 .tiles.hsmall.htsub{margin:26px 0 8px}
 .hban{margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--champ);line-height:0}
 .hban img{width:100%;height:auto;display:block}
+/* barra de busca + menu de temas do Helium */
+.htools{margin:20px 0 24px}
+.hsearch{display:flex;flex-direction:row;align-items:center;gap:10px;max-width:430px;margin:0 auto;border:1px solid var(--champ);background:#fff;border-radius:999px;padding:0 18px;height:46px}
+.hsearch .hsi{flex:0 0 auto;width:17px;height:17px;fill:none;stroke:#9a8674;stroke-width:2;stroke-linecap:round}
+.hsearch input{flex:1 1 auto;min-width:0;height:100%;margin:0;padding:0;border:0;outline:0;border-radius:0;background:transparent;font:.95rem/1 system-ui,sans-serif;color:#5b4336}
+.hsearch input::-webkit-search-cancel-button{cursor:pointer}
+.hsearch input::placeholder{color:#a79689}
+.hsearch:focus-within{border-color:#c6ab86}
+.htnav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:940px;margin:16px auto 0}
+.htn{flex:0 0 auto;padding:6px 14px;border:1px solid var(--champ);border-radius:999px;background:#FBF6EC;color:#6f5d50;text-decoration:none;font:500 .82rem/1.35 system-ui,sans-serif;white-space:nowrap}
+.htn:hover{background:#fff;color:#5b4336}
+.htn.on{background:#5b4336;border-color:#5b4336;color:#fff}
+.hsr{margin:4px 0 0}
+#app.hsq>*:not(.crumbs):not(.ph1):not(.htools):not(.hsr){display:none}
+@media(max-width:700px){
+ .htnav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:7px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .htnav::-webkit-scrollbar{display:none}
+ .htn{padding:6px 12px;font-size:.78rem}
+}
 /* ---- storefront look: display headings, tiles, product rows ---- */
 :root{--disp:"Bebas Neue","Oswald","Arial Narrow",sans-serif}
 h1,h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
