@@ -359,7 +359,7 @@ function bqWire(p){const t=T[L];
 
 
 /* ===== Shop: categories, products, cart (order is sent by text; no online payment) ===== */
-Object.assign(T.en,{h_theme:"Theme",h_ph:"Search helium balloons…",h_all:"All themes",h_none:"No helium balloons match that search.",av_s:"Subject to availability",av_h:"Check availability",av_p:"This set is subject to availability. Text us to confirm it and your date before you order.",sb_h:"Single Balloons",nf_h:"Page not found",nf_p:"That page doesn’t exist, or it moved. Let’s get you back to the balloons.",nf_b:"Go to the home page",hub_p:"Pick a theme to see helium balloons for your celebration.",hub_all:"All helium balloons",hel_inc:"One latex balloon filled with helium. Price is per balloon: add as many as you need.",hel_i1:"Colors: tell us the colors you want in the box above.",hel_i2:"Pickup or local delivery in South Florida. The delivery fee is calculated from your address.",hel_i3:"Colors and arrangement may vary slightly from the photos.",pick_av:"Pickup or delivery available",f_price:"Price",f_occ:"Occasion",f_any:"All",p_u50:"Under $50",p_50:"$50 to $100",p_o100:"Over $100",p_q:"Quote only",cr_h:"Custom request",cr_p:"Every celebration is different. Want other colors, a theme or a different size? Text us and we’ll customize it for you.",m_hel:"Helium Balloons",m_bq:"Balloon Bouquets",togo:"TO GO",chip_pick:"You pick up",chip_inst:"We install",gtg_why:"Ready-made, no installation: that’s why it costs less.",inst_name:"Balloon Garland + Installation",inst_note:"Installed by us at your event. 8 ft minimum. Travel fee not included.",m_cen:"Centerpieces",cat_soon:"Photos coming soon. Text us or request a quote for this category.",m_occs:"Shop by Occasion",m_decor:"Balloon Decor",search_ph:"Search products",shop_now:"Shop now",quick:"Quick view",from_w:"From",sort:"Sort by",s_feat:"Featured",s_lo:"Price, low to high",s_hi:"Price, high to low",s_az:"Alphabetically, A-Z",res_h:q=>`Results for “${q}”`,res_none:"No products found.",res_all:"All products",items:n=>`${n} ${n===1?"product":"products"}`,cart:"Cart",home:"Home",view:"View Product",view_cat:"View Products",order_here:"Order Here",
+Object.assign(T.en,{h_theme:"Themes",h_nothm:"No theme matches.",h_ph:"Search balloons or pick a theme…",h_all:"All themes",h_none:"No helium balloons match that search.",av_s:"Subject to availability",av_h:"Check availability",av_p:"This set is subject to availability. Text us to confirm it and your date before you order.",sb_h:"Single Balloons",nf_h:"Page not found",nf_p:"That page doesn’t exist, or it moved. Let’s get you back to the balloons.",nf_b:"Go to the home page",hub_p:"Pick a theme to see helium balloons for your celebration.",hub_all:"All helium balloons",hel_inc:"One latex balloon filled with helium. Price is per balloon: add as many as you need.",hel_i1:"Colors: tell us the colors you want in the box above.",hel_i2:"Pickup or local delivery in South Florida. The delivery fee is calculated from your address.",hel_i3:"Colors and arrangement may vary slightly from the photos.",pick_av:"Pickup or delivery available",f_price:"Price",f_occ:"Occasion",f_any:"All",p_u50:"Under $50",p_50:"$50 to $100",p_o100:"Over $100",p_q:"Quote only",cr_h:"Custom request",cr_p:"Every celebration is different. Want other colors, a theme or a different size? Text us and we’ll customize it for you.",m_hel:"Helium Balloons",m_bq:"Balloon Bouquets",togo:"TO GO",chip_pick:"You pick up",chip_inst:"We install",gtg_why:"Ready-made, no installation: that’s why it costs less.",inst_name:"Balloon Garland + Installation",inst_note:"Installed by us at your event. 8 ft minimum. Travel fee not included.",m_cen:"Centerpieces",cat_soon:"Photos coming soon. Text us or request a quote for this category.",m_occs:"Shop by Occasion",m_decor:"Balloon Decor",search_ph:"Search products",shop_now:"Shop now",quick:"Quick view",from_w:"From",sort:"Sort by",s_feat:"Featured",s_lo:"Price, low to high",s_hi:"Price, high to low",s_az:"Alphabetically, A-Z",res_h:q=>`Results for “${q}”`,res_none:"No products found.",res_all:"All products",items:n=>`${n} ${n===1?"product":"products"}`,cart:"Cart",home:"Home",view:"View Product",view_cat:"View Products",order_here:"Order Here",
 from_ft:v=>`From ${v}/ft`,from_:v=>`From ${v}`,
 pf_note:"Priced by the foot. Choose your length and the starting price updates. We confirm the final price by text.",
 size:"Length (ft)",qty:"Quantity",colors_l:"Colors you’d like",colors_gtg:"Colors (up to 3)",add:"Add to Cart",added:"Added to your cart.",view_cart:"View Cart",
@@ -372,7 +372,7 @@ send:"Send Order by Text",co_note:"Online payment isn’t available. Tap “Send
 sent_o:"Opening your messaging app with your order. Just tap send! If it doesn’t open, text us at +1 (973) 444-7348.",
 met_s:"Metallic colors",each:"each",
 om:{hi:"Hi Bloom Balloons! I’d like to place this order:",tot:"Estimated total",ful:"Fulfillment",addr:"Delivery address",date:"Requested date",name:"Name",notes:"Notes",colors:"Colors",end:"Please confirm availability and total."}});
-Object.assign(T.es,{h_theme:"Tema",h_ph:"Buscar globos con helio…",h_all:"Todos los temas",h_none:"Ningún globo con helio coincide con esa búsqueda.",av_s:"Sujeto a disponibilidad",av_h:"Consulta la disponibilidad",av_p:"Este set está sujeto a disponibilidad. Escríbenos para confirmarlo y confirmar tu fecha antes de ordenar.",sb_h:"Globos individuales",nf_h:"Página no encontrada",nf_p:"Esa página no existe o fue movida. Volvamos a los globos.",nf_b:"Ir a la página de inicio",hub_p:"Elige un tema para ver globos con helio para tu celebración.",hub_all:"Todos los globos con helio",hel_inc:"Un globo de látex inflado con helio. El precio es por globo: agrega los que necesites.",hel_i1:"Colores: dinos los colores que quieres en la casilla de arriba.",hel_i2:"Recogida o entrega local en el sur de Florida. El costo de entrega se calcula según tu dirección.",hel_i3:"Los colores y el arreglo pueden variar un poco respecto a las fotos.",pick_av:"Recogida o entrega disponibles",f_price:"Precio",f_occ:"Ocasión",f_any:"Todos",p_u50:"Menos de $50",p_50:"$50 a $100",p_o100:"Más de $100",p_q:"Solo cotización",cr_h:"Pedido especial",cr_p:"Cada celebración es diferente. ¿Quieres otros colores, un tema o un tamaño distinto? Escríbenos y lo personalizamos para ti.",m_hel:"Globos con helio",m_bq:"Ramos de globos",togo:"PARA LLEVAR",chip_pick:"Tú la recoges",chip_inst:"Nosotros instalamos",gtg_why:"Lista para llevar, sin instalación: por eso cuesta menos.",inst_name:"Guirnalda de globos + instalación",inst_note:"La instalamos en tu evento. Mínimo 8 pies. No incluye traslado.",m_cen:"Centros de mesa",cat_soon:"Fotos próximamente. Escríbenos o solicita una cotización para esta categoría.",m_occs:"Comprar por ocasión",m_decor:"Decoración con globos",search_ph:"Buscar productos",shop_now:"Ver todo",quick:"Vista rápida",from_w:"Desde",sort:"Ordenar por",s_feat:"Destacados",s_lo:"Precio, de menor a mayor",s_hi:"Precio, de mayor a menor",s_az:"Alfabéticamente, A-Z",res_h:q=>`Resultados para “${q}”`,res_none:"No se encontraron productos.",res_all:"Todos los productos",items:n=>`${n} ${n===1?"producto":"productos"}`,cart:"Carrito",home:"Inicio",view:"Ver producto",view_cat:"Ver productos",order_here:"Ordena aquí",
+Object.assign(T.es,{h_theme:"Temas",h_nothm:"Ningún tema coincide.",h_ph:"Busca globos o elige un tema…",h_all:"Todos los temas",h_none:"Ningún globo con helio coincide con esa búsqueda.",av_s:"Sujeto a disponibilidad",av_h:"Consulta la disponibilidad",av_p:"Este set está sujeto a disponibilidad. Escríbenos para confirmarlo y confirmar tu fecha antes de ordenar.",sb_h:"Globos individuales",nf_h:"Página no encontrada",nf_p:"Esa página no existe o fue movida. Volvamos a los globos.",nf_b:"Ir a la página de inicio",hub_p:"Elige un tema para ver globos con helio para tu celebración.",hub_all:"Todos los globos con helio",hel_inc:"Un globo de látex inflado con helio. El precio es por globo: agrega los que necesites.",hel_i1:"Colores: dinos los colores que quieres en la casilla de arriba.",hel_i2:"Recogida o entrega local en el sur de Florida. El costo de entrega se calcula según tu dirección.",hel_i3:"Los colores y el arreglo pueden variar un poco respecto a las fotos.",pick_av:"Recogida o entrega disponibles",f_price:"Precio",f_occ:"Ocasión",f_any:"Todos",p_u50:"Menos de $50",p_50:"$50 a $100",p_o100:"Más de $100",p_q:"Solo cotización",cr_h:"Pedido especial",cr_p:"Cada celebración es diferente. ¿Quieres otros colores, un tema o un tamaño distinto? Escríbenos y lo personalizamos para ti.",m_hel:"Globos con helio",m_bq:"Ramos de globos",togo:"PARA LLEVAR",chip_pick:"Tú la recoges",chip_inst:"Nosotros instalamos",gtg_why:"Lista para llevar, sin instalación: por eso cuesta menos.",inst_name:"Guirnalda de globos + instalación",inst_note:"La instalamos en tu evento. Mínimo 8 pies. No incluye traslado.",m_cen:"Centros de mesa",cat_soon:"Fotos próximamente. Escríbenos o solicita una cotización para esta categoría.",m_occs:"Comprar por ocasión",m_decor:"Decoración con globos",search_ph:"Buscar productos",shop_now:"Ver todo",quick:"Vista rápida",from_w:"Desde",sort:"Ordenar por",s_feat:"Destacados",s_lo:"Precio, de menor a mayor",s_hi:"Precio, de mayor a menor",s_az:"Alfabéticamente, A-Z",res_h:q=>`Resultados para “${q}”`,res_none:"No se encontraron productos.",res_all:"Todos los productos",items:n=>`${n} ${n===1?"producto":"productos"}`,cart:"Carrito",home:"Inicio",view:"Ver producto",view_cat:"Ver productos",order_here:"Ordena aquí",
 from_ft:v=>`Desde ${v}/pie`,from_:v=>`Desde ${v}`,
 pf_note:"Precio por pie. Elige el largo y el precio inicial se actualiza. Confirmamos el precio final por texto.",
 size:"Largo (pies)",qty:"Cantidad",colors_l:"Colores que te gustarían",colors_gtg:"Colores (hasta 3)",add:"Agregar al carrito",added:"Agregado a tu carrito.",view_cart:"Ver carrito",
@@ -425,16 +425,15 @@ const itile=(href,label,ico,photo)=>`<a class="itile" href="${href}"><span class
 const TAGS=Object.fromEntries(GAL.map(g=>[g[0],g[3].split(" ")]));
 const tagsOf=p=>(p.k.length&&TAGS[p.k[0]]||[]).concat(p.occ||[]);
 const occOf=id=>DATA.products.filter(p=>tagsOf(p).includes(id)),O=id=>DATA.occs.find(o=>o.id===id),ourl=o=>"occasion-"+o.id+".html";
-let SORT="feat",FP="",FO="";
+let SORT="feat";const FP="",FO="";
 function sorted(ps){const a=ps.slice();if(SORT==="lo")a.sort((x,y)=>basePrice(x)-basePrice(y));else if(SORT==="hi")a.sort((x,y)=>(basePrice(y)%1e9)-(basePrice(x)%1e9));else if(SORT==="az")a.sort((x,y)=>pn(x).localeCompare(pn(y)));return a}
 function listing(title,desc,all,trail,extra,empty){const t=T[L];
- const oc=DATA.occs.filter(o=>all.some(p=>tagsOf(p).includes(o.id)));if(FO&&!oc.some(o=>o.id===FO))FO="";
  const inP=p=>{const v=basePrice(p);return !FP||(FP==="q"?v>=1e9:v<1e9&&(FP==="u50"?v<50:FP==="50"?v>=50&&v<=100:v>100))};
  const ps=all.filter(p=>inP(p)&&(!FO||tagsOf(p).includes(FO)));
  const sel=(id,lab,cur,os)=>`<label class="sortl">${lab}<select id="${id}">${os.map(o=>`<option value="${o[0]}"${o[0]===cur?" selected":""}>${o[1]}</option>`).join("")}</select></label>`;
- $("#app").innerHTML=crumbs(trail)+`<h1 class="ph1 ctr">${title}</h1>${desc?`<p class="lead ctr">${desc}</p>`:""}${extra||""}<div class="tbar"${all.length?"":" hidden"}><div class="fgrp">${sel("f-price",t.f_price,FP,[["",t.f_any],["u50",t.p_u50],["50",t.p_50],["o100",t.p_o100],["q",t.p_q]])}${oc.length?sel("f-occ",t.f_occ,FO,[["",t.f_any]].concat(oc.map(o=>[o.id,o[L]]))):""}</div><div class="fgrp"><span>${t.items(ps.length)}</span>${sel("sort",t.sort,SORT,[["feat",t.s_feat],["lo",t.s_lo],["hi",t.s_hi],["az",t.s_az]])}</div></div>${ps.length?`<div class="pgrid">${sorted(ps).map(pcard).join("")}</div>`:`<p class="lead ctr">${all.length?t.res_none:(empty||t.res_none)}</p>${empty&&!all.length?`<div class="row" style="justify-content:center"><a class="btn pri" href="index.html#quote">${t.b_quote}</a><a class="btn" data-sms="default" href="${smsLink(t.msg_hi)}">${t.b_sms}</a></div>`:""}`}`;
+ $("#app").innerHTML=crumbs(trail)+`<h1 class="ph1 ctr">${title}</h1>${desc?`<p class="lead ctr">${desc}</p>`:""}${extra||""}<div class="tbar tbar1"${all.length?"":" hidden"}><div class="fgrp"><span>${t.items(ps.length)}</span>${sel("sort",t.sort,SORT,[["feat",t.s_feat],["lo",t.s_lo],["hi",t.s_hi],["az",t.s_az]])}</div></div>${ps.length?`<div class="pgrid">${sorted(ps).map(pcard).join("")}</div>`:`<p class="lead ctr">${all.length?t.res_none:(empty||t.res_none)}</p>${empty&&!all.length?`<div class="row" style="justify-content:center"><a class="btn pri" href="index.html#quote">${t.b_quote}</a><a class="btn" data-sms="default" href="${smsLink(t.msg_hi)}">${t.b_sms}</a></div>`:""}`}`;
  $("#app").insertAdjacentHTML("beforeend",`<section class="creq"><h2>${t.cr_h}</h2><p>${t.cr_p}</p><div class="row"><a class="btn pri" href="${smsLink(t.msg_hi)}">${t.b_sms}</a><a class="btn" href="index.html#quote">${t.b_quote}</a></div></section>`);
- $("#sort").onchange=e=>{SORT=e.target.value;render()};$("#f-price").onchange=e=>{FP=e.target.value;render()};const fo=$("#f-occ");if(fo)fo.onchange=e=>{FO=e.target.value;render()};wireCars($("#app"));gtgDraw(6)}
+ $("#sort").onchange=e=>{SORT=e.target.value;render()};wireCars($("#app"));gtgDraw(6)}
 const crumbs=a=>`<div class="crumbs" role="navigation" aria-label="Breadcrumb">${a.map(x=>x[1]?`<a href="${x[1]}">${x[0]}</a>`:`<span aria-current="page">${x[0]}</span>`).join("<i>/</i>")}</div>`;
 function setMeta(title,desc){document.title=title+" | Bloom Balloons";const m=$("meta[name=description]");if(m)m.setAttribute("content",desc)}
 function catPrices(c){const t=T[L],k=t.cats;
@@ -444,40 +443,57 @@ function catPrices(c){const t=T[L],k=t.cats;
 /* ---- category page ---- */
 function renderCategory(id){const t=T[L],c=C(id);setMeta(c[L],L==="en"?c.den:c.des);
  listing(c[L],L==="en"?c.den:c.des,catOf(id),[[t.home,"index.html"],[c[L]]],`<div class="prices cat-pr">${catPrices(c)}</div>`,t.cat_soon)}
-/* ---- barra de busca + menu de temas, so dentro de Helium ---- */
+/* ---- caixa unica: digita para buscar, clica para ver os temas ---- */
 const nrm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+function htList(){const c=C("helium"),out=[[T[L].h_all,curl(c),"",0]];
+ DATA.hthemes.filter(h=>!h.up).forEach(h=>{out.push([h[L],hturl(h),h.id,0]);
+  DATA.hthemes.filter(k=>k.up===h.id).forEach(k=>out.push([k[L],hturl(k),k.id,1]))});
+ return out}
 function heliumTools(cur){const t=T[L],c=C("helium");
- const h0=cur?HT(cur):null,act=h0?(h0.up||h0.id):"";
- const opt=(lab,val,on)=>`<option value="${val}"${on?" selected":""}>${lab}</option>`;
- let opts=opt(t.h_all,curl(c),!cur);
- DATA.hthemes.filter(h=>!h.up).forEach(h=>{opts+=opt(h[L],hturl(h),h.id===cur);
-  DATA.hthemes.filter(k=>k.up===h.id).forEach(k=>{opts+=opt("\u2014 "+k[L],hturl(k),k.id===cur)})});
- return `<div class="htools"><label class="hsearch"><svg class="hsi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg><input id="hq" type="search" autocomplete="off" placeholder="${esc(t.h_ph)}" aria-label="${esc(t.h_ph)}"></label><label class="htsel"><span>${esc(t.h_theme)}</span><select id="hsel" aria-label="${esc(t.h_theme)}">${opts}</select></label></div><div class="hsr" id="hsr" hidden></div>`}
-function wireHTools(){const t=T[L],q=$("#hq"),out=$("#hsr"),app=$("#app");if(!q)return;
- const sel=$("#hsel");if(sel)sel.onchange=e=>{const v=e.target.value;if(v)location.href=v};
- const run=()=>{const raw=q.value.trim(),v=nrm(raw);
+ return `<div class="htools"><div class="hcombo">`
+  +`<svg class="hsi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>`
+  +`<input id="hq" type="text" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="hpan" aria-autocomplete="list" placeholder="${esc(t.h_ph)}" aria-label="${esc(t.h_ph)}">`
+  +`<button type="button" id="hqb" class="hcarw" aria-label="${esc(t.h_theme)}" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>`
+  +`<div class="hpan" id="hpan" role="listbox" aria-label="${esc(t.h_theme)}" hidden></div></div></div><div class="hsr" id="hsr" hidden></div>`}
+function wireHTools(cur){const t=T[L],q=$("#hq"),pan=$("#hpan"),arw=$("#hqb"),out=$("#hsr"),app=$("#app");if(!q)return;
+ let open=false,hi=-1,items=[];
+ const draw=v=>{items=htList().filter(x=>!v||nrm(x[0]).includes(v));hi=-1;
+  pan.innerHTML=items.length?items.map((x,i)=>`<a class="hpo${x[2]&&x[2]===cur?" cur":""}${x[3]?" hpsub":""}" role="option" aria-selected="${x[2]&&x[2]===cur?"true":"false"}" data-i="${i}" href="${x[1]}">${esc(x[0])}</a>`).join(""):`<p class="hpe">${esc(t.h_nothm)}</p>`};
+ const show=()=>{open=true;pan.hidden=false;q.setAttribute("aria-expanded","true")};
+ const hide=()=>{open=false;pan.hidden=true;q.setAttribute("aria-expanded","false");hi=-1;mark()};
+ const mark=()=>{[...pan.querySelectorAll(".hpo")].forEach((a,i)=>a.classList.toggle("on",i===hi));
+  if(hi>=0){const el=pan.querySelectorAll(".hpo")[hi];if(el&&el.scrollIntoView)el.scrollIntoView({block:"nearest"})}};
+ const results=raw=>{const v=nrm(raw);
   if(!v){app.classList.remove("hsq");out.hidden=true;out.innerHTML="";return}
   const ths=DATA.hthemes.filter(h=>nrm(h.en+" "+h.es).includes(v));
   const ps=catOf("helium").filter(p=>nrm(p.en+" "+p.es).includes(v)||(p.ht||[]).some(id=>ths.some(h=>h.id===id)));
   app.classList.add("hsq");out.hidden=false;
   out.innerHTML=`<h2 class="also ctr">${t.res_h(esc(raw))}</h2>`
-   +(ths.length?`<div class="tiles hsmall htsub">${ths.map(h=>`<a class="tile htile" href="${hturl(h)}">${h.k?`<img src="${img(h.k)}" alt="" loading="lazy">`:helArt(h.c,"#FBF6EC")}<span>${h[L]}</span></a>`).join("")}</div>`:"")
-   +(ps.length?`<div class="pgrid" style="margin-top:22px">${ps.map(pcard).join("")}</div>`:`<p class="lead ctr">${t.h_none}</p>`);
+   +(ps.length?`<div class="pgrid" style="margin-top:4px">${ps.map(pcard).join("")}</div>`:`<p class="lead ctr">${t.h_none}</p>`);
   wireCars(out)};
- q.oninput=run;q.onsearch=run}
+ q.oninput=()=>{const raw=q.value.trim();draw(nrm(raw));show();results(raw)};
+ q.onfocus=()=>{if(!open){draw(nrm(q.value.trim()));show()}};
+ arw.onclick=()=>{if(open)hide();else{draw(nrm(q.value.trim()));show();q.focus()}};
+ q.onkeydown=e=>{
+  if(e.key==="Escape"){if(open){hide();e.preventDefault()}else if(q.value){q.value="";results("")}return}
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!open){draw(nrm(q.value.trim()));show()}
+   const n=pan.querySelectorAll(".hpo").length;if(!n)return;hi=e.key==="ArrowDown"?(hi+1)%n:(hi<=0?n-1:hi-1);mark();return}
+  if(e.key==="Enter"&&open&&hi>=0){e.preventDefault();const el=pan.querySelectorAll(".hpo")[hi];if(el)location.href=el.getAttribute("href")}};
+ document.addEventListener("click",e=>{if(open&&!e.target.closest(".hcombo"))hide()});
+ draw("")}
 function renderHeliumHub(){const t=T[L],c=C("helium");setMeta(c[L],L==="en"?c.den:c.des);
  const card=h=>`<a class="hcard" href="${hturl(h)}"><span class="hart">${h.k?`<img src="${img(h.k)}" alt="" loading="lazy">`:helArt(h.c,"#FBF6EC")}</span><span class="hlbl">${h[L]}</span></a>`;
  const small=h=>`<a class="tile htile" href="${hturl(h)}">${h.k?`<img src="${img(h.k)}" alt="" loading="lazy">`:helArt(h.c,"#FBF6EC")}<span>${h[L]}</span></a>`;
  const sbp=P("single-helium-balloon"),sb=`<a class="hcard" href="${purl(sbp)}"><span class="hart"><img src="${img("hel-single")}" alt="" loading="lazy"></span><span class="hlbl">${t.sb_h}</span></a>`;
  $("#app").innerHTML=crumbs([[t.home,"index.html"],[c[L]]])+`<h1 class="ph1 ctr">${c[L]}</h1><p class="lead ctr">${t.hub_p}</p>${heliumTools("")}<div class="hgrid">${sb}${DATA.hthemes.filter(h=>h.big&&!h.up).map(card).join("")}</div><div class="tiles hsmall">${DATA.hthemes.filter(h=>!h.big&&!h.up).map(small).join("")}</div><h2 class="also ctr">${t.hub_all}</h2><div class="prices cat-pr">${catPrices(c)}</div><div class="pgrid" style="margin-top:22px">${catOf("helium").map(pcard).join("")}</div><section class="creq"><h2>${t.cr_h}</h2><p>${t.cr_p}</p><div class="row"><a class="btn pri" href="${smsLink(t.msg_hi)}">${t.b_sms}</a><a class="btn" href="index.html#quote">${t.b_quote}</a></div></section>`;
- wireCars($("#app"));wireHTools()}
+ wireCars($("#app"));wireHTools("")}
 function renderHTheme(id){const t=T[L],h=HT(id),c=C("helium"),up=h.up?HT(h.up):null;
  setMeta(`${h[L]} · ${c[L]}`,`${h[L]}. ${t.cat_p}`);
  const kids=DATA.hthemes.filter(x=>x.up===id);
  const ban=h.ban?`<figure class="hban"><img src="${img(h.ban)}" alt="${esc(L==="en"?h.ban_en||"":h.ban_es||"")}" loading="eager"></figure>`:"";
  const extra=heliumTools(id)+ban+(kids.length?`<div class="tiles hsmall htsub">${kids.map(k=>`<a class="tile htile" href="${hturl(k)}">${k.k?`<img src="${img(k.k)}" alt="" loading="lazy">`:helArt(k.c,"#FBF6EC")}<span>${k[L]}</span></a>`).join("")}</div>`:"");
  const trail=[[t.home,"index.html"],[c[L],curl(c)]];if(up)trail.push([up[L],hturl(up)]);trail.push([h[L]]);
- listing(h[L],"",htOf(id),trail,extra,t.cat_soon);wireHTools()}
+ listing(h[L],"",htOf(id),trail,extra,t.cat_soon);wireHTools(id)}
 function renderOccasions(){const t=T[L];setMeta(t.m_occs,t.occ_p||t.m_occs);
  $("#app").innerHTML=crumbs([[t.home,"index.html"],[t.m_occs]])+`<h1 class="ph1 ctr">${t.m_occs}</h1><div class="tiles big">${DATA.occs.map(o=>tile(ourl(o),o[L],o.k)).join("")}</div>`}
 function renderOccasion(id){const t=T[L],o=O(id);setMeta(o[L],o[L]+". "+t.cat_p);
