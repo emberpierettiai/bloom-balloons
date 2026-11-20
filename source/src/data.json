@@ -97,7 +97,8 @@
    "den": "Balloon centerpieces for your tables, made to order in your colors.",
    "des": "Centros de mesa con globos, hechos a pedido con tus colores.",
    "k": "",
-   "ico": "cat-centerpieces.webp"
+   "ico": "cat-centerpieces.webp",
+   "hidden": true
   },
   {
    "id": "numbers",
