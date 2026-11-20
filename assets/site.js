@@ -412,7 +412,7 @@ Object.assign(T.en,{
  sent_o:"Opening your messaging app with your quote request. Just tap send!",
  sent_e:"Opening your email app with your quote request. Just tap send!",
  send_em:"Send Quote Request by Email",em_sub:"Quote request — Bloom Balloons",
- f_zip2:"Event ZIP code",f_bud:"Your budget (optional)",ph_bud:"e.g. $200–$300",
+ f_contact:"Phone or email",ph_contact:"So we can reply with your quote",f_zip2:"Event ZIP code",f_bud:"Your budget (optional)",ph_bud:"e.g. $200–$300",
  ful_l:"How would you like to receive it?",inst_w:"Installation",
  lead_i:"Installations need at least 20 days’ notice and are subject to availability.",
  m_pick:"Pickup only",m_pd:"Pickup or delivery",m_inst:"Installation only",
@@ -439,15 +439,15 @@ Object.assign(T.es,{
  sent_o:"Abriendo tu app de mensajes con tu solicitud. ¡Solo toca enviar!",
  sent_e:"Abriendo tu app de correo con tu solicitud. ¡Solo toca enviar!",
  send_em:"Enviar solicitud por correo",em_sub:"Solicitud de cotización — Bloom Balloons",
- f_zip2:"Código postal del evento",f_bud:"Tu presupuesto (opcional)",ph_bud:"ej. $200–$300",
+ f_contact:"Teléfono o correo",ph_contact:"Para responderte con tu cotización",f_zip2:"Código postal del evento",f_bud:"Tu presupuesto (opcional)",ph_bud:"ej. $200–$300",
  ful_l:"¿Cómo quieres recibirlo?",inst_w:"Instalación",
  lead_i:"Las instalaciones requieren mínimo 20 días de anticipación y están sujetas a disponibilidad.",
  m_pick:"Solo recogida",m_pd:"Recogida o entrega",m_inst:"Solo instalación",
  conf_h:"Estas piezas se entregan de forma distinta",
  conf_p:"Tu lista mezcla artículos que no se pueden recibir de la misma forma. Envía la solicitud igual y confirmamos contigo cómo se maneja cada pieza; no se calcula ni se cobra nada automáticamente.",
  conf_i:(n,m)=>`${n}: ${m}`});
-Object.assign(T.en.om,{hi:"Hi Bloom Balloons! I’d like to request a quote for:",tot:"Estimated starting total",ful:"Fulfillment",zip:"Event ZIP code",bud:"Budget",end:"This is a quote request. Please confirm availability and the final price."});
-Object.assign(T.es.om,{hi:"¡Hola, Bloom Balloons! Quisiera una cotización para:",tot:"Total inicial estimado",ful:"Modalidad",zip:"Código postal del evento",bud:"Presupuesto",end:"Esta es una solicitud de cotización. Por favor confirmen la disponibilidad y el precio final."});
+Object.assign(T.en.om,{contact:"Phone or email",hi:"Hi Bloom Balloons! I’d like to request a quote for:",tot:"Estimated total",ful:"Fulfillment",zip:"Event ZIP code",bud:"Budget",end:"This is a quote request. Please confirm availability and the final price."});
+Object.assign(T.es.om,{contact:"Teléfono o correo",hi:"¡Hola, Bloom Balloons! Quisiera una cotización para:",tot:"Total estimado",ful:"Modalidad",zip:"Código postal del evento",bud:"Presupuesto",end:"Esta es una solicitud de cotización. Por favor confirmen la disponibilidad y el precio final."});
 /* Garland to Go: somente retirada (confirmado pelo dono) */
 T.en.gtg.note="No payment is taken on this site. Add it to your quote list and send the request; we’ll reply with availability and the final price.";
 T.es.gtg.note="En este sitio no se cobra nada. Agrégala a tu lista de cotización y envía la solicitud; te respondemos con la disponibilidad y el precio final.";
@@ -618,7 +618,7 @@ function cartModes(){const t=T[L],sets=CART.map(i=>MODES(P(i.id)));
  const union=[...new Set([].concat.apply([],sets))];
  return {inter,union,hasInst:union.indexOf("install")>=0}}
 function minDate(){return iso(cartModes().hasInst?new Date(today().getTime()+20*864e5):addBiz(today(),3))}
-const CO={ful:"pickup",name:"",addr:"",zip:"",bud:"",date:"",notes:""};
+const CO={ful:"pickup",name:"",contact:"",addr:"",zip:"",bud:"",date:"",notes:""};
 
 function itemDesc(i,plain){const t=T[L],p=P(i.id),r=PR[p.pr],a=[];
  if(i.bunch){const b=i.bunch;a.push(t.sz_name(b.size));b.items.forEach(x=>a.push(`${x.q}× ${x.c}${x.n?" ("+(plain?x.n:esc(x.n))+")":""}`));if(b.bag)a.push(t.bag_n(bagsFor(b.items.reduce((s,x)=>s+x.q,0)),usd(bagsFor(b.items.reduce((s,x)=>s+x.q,0))*BAGP)));if(b.decal)a.push(`${t.bm.dec}: “${plain?b.decal.t:esc(b.decal.t)}” ${t.bm.decn(b.decal.n)}`);if(b.size!==12)a.push(t.avail_h);return a.join(" · ")}
@@ -634,7 +634,7 @@ function orderMsg(){const t=T[L],m=t.om;
  const rows=CART.map((i,n)=>{const v=lineTotal(i),d=itemDesc(i,true);return `${n+1}. ${pn(P(i.id))}${i.qty>1?" ×"+i.qty:""}${d?"\n   "+d:""}\n   ${v==null?t.to_quote:PR[P(i.id).pr].t==="each"?usd(v):t.from_(usd(v))}`}).join("\n");
  const fl=CO.ful==="delivery"?t.del:CO.ful==="install"?t.inst_w:t.pick;
  const x=[[m.ful,fl]];if(CO.ful==="delivery")x.push([m.addr,CO.addr]);
- x.push([m.zip,CO.zip],[m.date,CO.date&&fmtDate(CO.date)],[m.name,CO.name],[m.bud,CO.bud],[m.notes,CO.notes]);
+ x.push([m.zip,CO.zip],[m.date,CO.date&&fmtDate(CO.date)],[m.name,CO.name],[m.contact,CO.contact],[m.bud,CO.bud],[m.notes,CO.notes]);
  return `${m.hi}\n\n${rows}\n\n${m.tot}: ${totalText()}\n`+x.filter(r=>r[1]).map(r=>`${r[0]}: ${r[1]}`).join("\n")+`\n\n${m.end}`}
 const MAILTO="contact@bigdreamevents.com";
 function mailLink(){const t=T[L];return "mailto:"+MAILTO+"?subject="+encodeURIComponent(t.em_sub)+"&body="+encodeURIComponent(orderMsg())}
@@ -654,6 +654,7 @@ function renderCart(){const t=T[L];setMeta(t.cart_h,t.co_note);const A=$("#app")
   <fieldset class="full fulf"><legend>${t.ful_l}</legend>${opts.map(o=>`<label><input type="radio" name="ful" value="${o}"${CO.ful===o?" checked":""}><span>${lab[o]}</span></label>`).join("")}</fieldset>
   <div class="full" id="co-del"${needAddr?"":" hidden"}><label>${t.addr}<input name="addr" autocomplete="street-address" value="${esc(CO.addr)}"><span class="err"></span></label><p class="note" style="margin:10px 0 0">${t.del_note}</p></div>
   <label>${t.f_name}<input name="name" autocomplete="name" value="${esc(CO.name)}"><span class="err"></span></label>
+  <label>${t.f_contact}<input name="contact" autocomplete="email" placeholder="${esc(t.ph_contact)}" value="${esc(CO.contact)}"><span class="err"></span></label>
   <label>${t.f_zip2}<input name="zip" inputmode="numeric" maxlength="10" autocomplete="postal-code" value="${esc(CO.zip)}"><span class="err"></span></label>
   <label>${t.date_l}<input name="date" type="date" min="${min}" value="${CO.date}"><span class="err"></span></label>
   <label>${t.f_bud}<input name="bud" maxlength="40" placeholder="${esc(t.ph_bud)}" value="${esc(CO.bud)}"></label>
@@ -665,11 +666,12 @@ function renderCart(){const t=T[L];setMeta(t.cart_h,t.co_note);const A=$("#app")
  $$("[data-rm]",A).forEach(b=>b.onclick=()=>{CART.splice(+b.dataset.rm,1);saveCart();renderCart()});
  const f=$("#cof"),E=f.elements;
  f.oninput=e=>{const x=e.target;if(x.getAttribute&&x.getAttribute("aria-invalid")){x.removeAttribute("aria-invalid");const er=x.parentElement.querySelector(".err");if(er)er.textContent=""}
-  CO.name=E.name.value;CO.addr=E.addr.value;CO.zip=E.zip.value;CO.bud=E.bud.value;CO.date=E.date.value;CO.notes=E.notes.value};
+  CO.name=E.name.value;CO.contact=E.contact.value;CO.addr=E.addr.value;CO.zip=E.zip.value;CO.bud=E.bud.value;CO.date=E.date.value;CO.notes=E.notes.value};
  $$("input[name=ful]",f).forEach(x=>x.onchange=()=>{CO.ful=x.value;$("#co-del").hidden=CO.ful==="pickup"});
  const check=()=>{let ok=true;$$(".err",f).forEach(x=>x.textContent="");$$("[aria-invalid]",f).forEach(x=>x.removeAttribute("aria-invalid"));
   const bad=(n,m)=>{const i=E[n];i.setAttribute("aria-invalid","true");i.parentElement.querySelector(".err").textContent=m;ok=false};
   if(!E.name.value.trim())bad("name",t.e_req);
+  if(!E.contact.value.trim())bad("contact",t.e_req);
   if(CO.ful!=="pickup"&&!E.addr.value.trim())bad("addr",t.e_req);
   if(CO.ful!=="pickup"&&!E.zip.value.trim())bad("zip",t.e_req);
   if(!E.date.value)bad("date",t.e_req);else if(E.date.value<min)bad("date",t.e_date(min));
