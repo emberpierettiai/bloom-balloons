@@ -3090,6 +3090,76 @@
    "av": true,
    "en": "Gold cross with white and gold balloon set",
    "es": "Set de globos cruz dorada con blanco y dorado"
+  },
+  {
+   "id": "new-year-black-gold-stars",
+   "cat": "helium",
+   "ht": [
+    "new-year"
+   ],
+   "k": [
+    "hel-ny-stars"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Happy New Year” black and gold stars balloon set",
+   "es": "Set de globos “Happy New Year” estrellas negras y doradas"
+  },
+  {
+   "id": "new-year-champagne-black",
+   "cat": "helium",
+   "ht": [
+    "new-year"
+   ],
+   "k": [
+    "hel-ny-bottle-black"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Happy New Year” black champagne bottle and glass balloon set",
+   "es": "Set de globos “Happy New Year” botella negra de champán y copa"
+  },
+  {
+   "id": "new-year-cheers-green",
+   "cat": "helium",
+   "ht": [
+    "new-year"
+   ],
+   "k": [
+    "hel-ny-cheers-green"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Cheers to You” champagne and green bottle balloon set",
+   "es": "Set de globos “Cheers to You” champán y botella verde"
+  },
+  {
+   "id": "new-year-disco-star",
+   "cat": "helium",
+   "ht": [
+    "new-year"
+   ],
+   "k": [
+    "hel-ny-disco"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "Gold disco ball and “Happy New Year” star balloon set",
+   "es": "Set de globos bola de disco dorada y estrella “Happy New Year”"
+  },
+  {
+   "id": "new-year-bear-gift",
+   "cat": "helium",
+   "ht": [
+    "new-year"
+   ],
+   "k": [
+    "hel-ny-bear-gift"
+   ],
+   "pr": "set35",
+   "av": true,
+   "en": "“Let’s Party” bear and “Happy New Year” gift balloon set",
+   "es": "Set de globos osito “Let’s Party” y regalo “Happy New Year”"
   }
  ],
  "occs": [
@@ -3202,6 +3272,18 @@
     "#E2C17E"
    ],
    "k": "hel-xmas-gingerbread"
+  },
+  {
+   "id": "new-year",
+   "big": true,
+   "en": "New Year's Eve",
+   "es": "Año Nuevo",
+   "c": [
+    "#1A1A1A",
+    "#E2C17E",
+    "#FFFFFF"
+   ],
+   "k": "hel-ny-stars"
   },
   {
    "id": "numbers",
