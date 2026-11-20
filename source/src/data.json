@@ -460,7 +460,8 @@
    "es": "Globo burbuja con osito",
    "colors": "red",
    "ht": [
-    "valentines"
+    "valentines",
+    "bubble"
    ]
   },
   {
@@ -3258,6 +3259,104 @@
    "occ": [
     "numbers"
    ]
+  },
+  {
+   "id": "bubble-bear-roses",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-bear-roses"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "Personalized bubble balloon with teddy bear and fresh roses",
+   "es": "Globo burbuja personalizado con osito y rosas naturales"
+  },
+  {
+   "id": "bubble-bunny-box",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-bunny"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "Personalized bubble balloon gift box with plush bunny",
+   "es": "Caja regalo con globo burbuja personalizado y conejito de peluche"
+  },
+  {
+   "id": "bubble-welcome-baby",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-baby-bear"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "“Welcome Baby” bubble balloon gift box with teddy bear and booties",
+   "es": "Caja regalo “Welcome Baby” con globo burbuja, osito y zapatitos"
+  },
+  {
+   "id": "bubble-easter-pink",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-easter-pink"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "Personalized “Happy Easter” bubble balloon gift box, pink",
+   "es": "Caja regalo “Happy Easter” con globo burbuja personalizado, rosa"
+  },
+  {
+   "id": "bubble-easter-sage",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-easter-green"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "Personalized “Happy Easter” bubble balloon gift box, sage",
+   "es": "Caja regalo “Happy Easter” con globo burbuja personalizado, verde salvia"
+  },
+  {
+   "id": "bubble-mothers-day-roses",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-mom-roses"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "“Happy Mother’s Day” bubble balloon with white roses gift box",
+   "es": "Globo burbuja “Happy Mother’s Day” con caja de rosas blancas"
+  },
+  {
+   "id": "bubble-mothers-day-orb",
+   "cat": "helium",
+   "ht": [
+    "bubble"
+   ],
+   "k": [
+    "hel-bub-mom-orb"
+   ],
+   "pr": "quote",
+   "av": true,
+   "en": "“Happy Mother’s Day” orb balloon display with pearl frame",
+   "es": "Exhibidor de globo orbe “Happy Mother’s Day” con marco de perlas"
   }
  ],
  "occs": [
@@ -3465,6 +3564,18 @@
     "#EE9FB3",
     "#F6EDE4"
    ]
+  },
+  {
+   "id": "bubble",
+   "big": true,
+   "en": "Bubble Balloons",
+   "es": "Globos burbuja",
+   "c": [
+    "#F3D9DC",
+    "#E2C17E",
+    "#FBF6EC"
+   ],
+   "k": "hel-bub-bear-roses"
   },
   {
    "id": "valentines",
